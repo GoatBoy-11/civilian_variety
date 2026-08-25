@@ -1,0 +1,581 @@
+[
+  {
+    "//": "Inherits the wandering package from the bystander: aggression 0, morale 0, flees only below 60% HP.  Slightly sturdier for the hard hat, boots and a life of physical work.",
+    "id": "mon_cv_construction_worker",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "construction worker"
+    },
+    "description": "Hard hat still on, high-visibility layers still buckled, boots still laced.  Whatever they were building will not be finished, and some part of them seems to be waiting for a foreman to call it a day.",
+    "hp": 85,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 2,
+    "death_drops": "cv_construction_worker_drops"
+  },
+  {
+    "//": "Same wandering package as the bystander.  Grease-stained and used to heavy work, but no tougher than anyone else once the shouting starts.",
+    "id": "mon_cv_mechanic",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "mechanic"
+    },
+    "description": "Coveralls worn through at the knees, hands black to the wrist, a rag still hanging from one pocket.  They keep glancing back toward the bay as though there is a job on the lift that somebody ought to finish.",
+    "hp": 80,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 3
+      }
+    ],
+    "death_drops": "cv_mechanic_drops"
+  },
+  {
+    "//": "Closest the monster AI gets to 'searching for survivors': PATH_AVOID_DANGER_2 is deleted so they route toward trouble instead of around it, BASHES lets them force doors and walls, and high aggression plus high morale means they engage and do not flee.  Aggression 100 is safe against the player because the civilians faction lists player as friendly - same arrangement the bundled mod's police officer uses.",
+    "id": "mon_cv_firefighter",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "firefighter"
+    },
+    "description": "Turnout coat buckled, helmet still on, breathing hard through the mask.  They move toward the noise rather than away from it, forcing doors as they go, working through a building the way they were trained to - as though somebody in here can still be carried out.",
+    "hp": 90,
+    "speed": 100,
+    "diff": 6,
+    "aggression": 100,
+    "morale": 100,
+    "regen_morale": true,
+    "vision_day": 40,
+    "vision_night": 5,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 6
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_fire": 14,
+    "monster_weapon": "cv_firefighter_weapon",
+    "death_drops": "cv_firefighter_drops",
+    "delete": {
+      "flags": [
+        "PATH_AVOID_DANGER_2"
+      ]
+    },
+    "extend": {
+      "flags": [
+        "BASHES",
+        "PUSH_MON"
+      ]
+    },
+    "//9": "Turnout gear is heat and cut protection, not plate.  Trained and fearless, but swinging an axe at something that does not feel pain is not their job.",
+    "zombify_into": "mon_zombie_fireman",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_FIREFIGHTER_UPGRADE"
+    },
+    "//10": "Turns exclusively into the vanilla firefighter zombie, through both routes.  mon_zombie_fireman keeps the turnout gear as armor - bash 6, cut 10, bullet 14, fire 10 - so the thing that made the living firefighter hard to kill is still there afterwards.  Without the second route the inherited bystander upgrade pool would turn them into an ordinary zombie and the gear would be lost, which is the same trap the clown hit."
+  },
+  {
+    "//": "Split by gender purely so attire can match the sprites: variants are cosmetic and cannot drive loot, so gendered clothing needs two monster ids.  Behaviour is the standard wandering package.",
+    "id": "mon_cv_businessman",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "businessman"
+    },
+    "description": "Suit still pressed, tie still knotted, shoes still polished.  They carry themselves like someone on their way to a meeting that has not been formally cancelled, and seem to regard the whole situation as an unusually severe downturn.",
+    "death_drops": "cv_businessman_drops"
+  },
+  {
+    "//": "Split by gender purely so attire can match the sprites: variants are cosmetic and cannot drive loot, so gendered clothing needs two monster ids.  Behaviour is the standard wandering package.",
+    "id": "mon_cv_businesswoman",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "businesswoman"
+    },
+    "description": "Blazer buttoned, heels traded for something sensible, phone still in hand out of habit.  There is a briskness to them that suggests they have not yet accepted that there is nobody left to report to.",
+    "death_drops": "cv_businesswoman_drops"
+  },
+  {
+    "//": "Five sprites, all female (sheet indices 36-40).  Standard wandering package.",
+    "id": "mon_cv_sex_worker",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "sex worker"
+    },
+    "description": "Dressed for a shift that ended some time ago, and underdressed for everything since.  They watch the street with the flat, practised patience of somebody long used to waiting around in bad places, and seem no more alarmed now than they were last week.",
+    "death_drops": "cv_sex_worker_drops"
+  },
+  {
+    "//": "Male sprites (sheet 48-51).  Split by gender only so attire can match the art; variants are cosmetic and cannot drive loot.",
+    "id": "mon_cv_doctor",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "doctor"
+    },
+    "description": "Lab coat still on over hospital greens, stethoscope still round their neck.  They keep starting toward one thing and then another, the way somebody does when the list of people who need them has become longer than the day.",
+    "death_drops": "cv_doctor_drops_m"
+  },
+  {
+    "//": "Two sprites (sheet 56-57), both female.",
+    "id": "mon_cv_nurse",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "nurse"
+    },
+    "description": "White uniform, cap still pinned in place, sleeves pushed up past the elbow.  Of everyone left standing in this building they look the least surprised by any of it, and the most tired.",
+    "death_drops": "cv_nurse_drops"
+  },
+  {
+    "//": "Female sprites (sheet 52-55).  Same monster in every respect but the wardrobe.",
+    "id": "mon_cv_doctor_f",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_doctor",
+    "name": {
+      "str": "doctor"
+    },
+    "death_drops": "cv_doctor_drops_f"
+  },
+  {
+    "//": "Male sprites (sheet 58-60).  Ordinary white-collar staff, distinct from the businessman archetype: shirt and tie rather than a suit, clerical clutter rather than a gold watch.",
+    "id": "mon_cv_office_worker",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "office worker"
+    },
+    "description": "Lanyard gone, shirt untucked on one side, still carrying whatever was on the desk when the building emptied.  They keep glancing back toward a floor they worked on for years as though somebody up there is going to tell them what the procedure is.",
+    "death_drops": "cv_office_drops_m"
+  },
+  {
+    "//": "Female sprites (sheet 61-63).  Same monster but for the wardrobe.",
+    "id": "mon_cv_office_worker_f",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_office_worker",
+    "name": {
+      "str": "office worker"
+    },
+    "death_drops": "cv_office_drops_f"
+  },
+  {
+    "//": "Male sprites (sheet 64-71).  Split by gender only so attire can match the art; both variants share the gender-neutral display name.",
+    "//2": "Heavier and slower than the standard bystander.  Upgrades via a single-member group rather than `into`: copy-from inherits the parent's `into_group`, and the loader rejects a monster that ends up with both (\"both into and into_group defined\").",
+    "id": "mon_cv_bystander_fat",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "fat bystander"
+    },
+    "description": "Carrying more weight than the situation allows for, and plainly aware of it.  They are already out of breath, already falling behind, and something in their face suggests they have worked out how this ends for them.",
+    "volume": "92500 ml",
+    "weight": "128000 g",
+    "hp": 95,
+    "speed": 75,
+    "dodge": 0,
+    "zombify_into": "mon_zombie_fat",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_FAT_UPGRADE"
+    },
+    "death_drops": "cv_fat_drops_m"
+  },
+  {
+    "//": "Female sprites (sheet 72-79).  Same monster but for the wardrobe.",
+    "id": "mon_cv_bystander_fat_f",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander_fat",
+    "name": {
+      "str": "fat bystander"
+    },
+    "death_drops": "cv_fat_drops_f"
+  },
+  {
+    "//": "Ten sprites (sheet 80-89), all male.  Cowardly: morale is negative so monster::attitude returns MATT_FLEE unconditionally (src/monster.cpp:1951).  anger_triggers still raise anger when hurt, so a cornered one can briefly turn and swing before running again -- 'rarely fights back' rather than 'never'.",
+    "id": "mon_cv_geek",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "geeky bystander"
+    },
+    "description": "Glasses, a shirt with something printed on it, and a bag that is far too heavy for running.  They have clearly thought a great deal about situations like this one and are discovering, in real time, that none of it helps.",
+    "aggression": -20,
+    "morale": -40,
+    "hp": 65,
+    "speed": 85,
+    "dodge": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 1
+      }
+    ],
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED"
+    ],
+    "death_drops": "cv_geek_drops",
+    "zombify_into": "mon_cv_zombie_nerd",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_NERD_UPGRADE"
+    },
+    "//3": "Both routes out of life lead to the same place: zombify_into on death, and a single-member upgrade group over time.  Without the second, the inherited bystander into_group would turn them into ordinary zombies and the glasses would be lost.  It must be a group rather than `into`, or it collides with the inherited into_group and fails to load - see DESIGN.md 13.4.",
+    "//10": "Slower than an ordinary bystander at 90, which is the point of the archetype: the description says the bag is far too heavy for running, and they flee unconditionally.  Previously 100 - faster than everyone else on the street and impossible to catch, contradicting both."
+  },
+  {
+    "//": "Four sprites (sheet 90-93), male.  Braver: positive morale keeps them out of the flee branch entirely, and positive aggression means they engage rather than ignore.  Armed from a farm-tool group.",
+    "id": "mon_cv_farmer",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "farmer"
+    },
+    "description": "Sun-worn, unhurried, and holding whatever was closest to hand when the noise started.  They have spent their life dealing with things that get into the crop or the herd, and appear to have quietly filed this under the same heading.",
+    "aggression": 60,
+    "morale": 80,
+    "regen_morale": true,
+    "hp": 100,
+    "speed": 95,
+    "diff": 4,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 4
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "vision_day": 30,
+    "monster_weapon": "cv_farmer_weapon",
+    "death_drops": "cv_farmer_drops_m"
+  },
+  {
+    "//": "Two sprites (sheet 94-95), female.  Same farmer in every respect but the wardrobe.",
+    "id": "mon_cv_farmer_f",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_farmer",
+    "name": {
+      "str": "farmer"
+    },
+    "death_drops": "cv_farmer_drops_f"
+  },
+  {
+    "//": "Sprites 102-103.  The Futile Fighter's willingness with a professional's training: brave rather than reckless, and deliberately melee-only - no sidearm, so killing one never hands the player a free gun.",
+    "//2": "PATH_AVOID_DANGER_2 is deleted so they route toward trouble like the firefighter does, which is what makes them read as protecting people rather than milling about.",
+    "id": "mon_cv_police",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "police officer"
+    },
+    "description": "Uniform still buttoned, baton already out, moving toward the shouting rather than away from it.  Whatever they were told to do in a situation like this, nobody has been on the radio for a while, so they appear to have settled on the obvious.",
+    "hp": 90,
+    "speed": 95,
+    "diff": 5,
+    "aggression": 70,
+    "morale": 80,
+    "regen_morale": true,
+    "vision_day": 40,
+    "vision_night": 4,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 5
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "zombify_into": "mon_zombie_cop",
+    "monster_weapon": "cv_police_weapon",
+    "death_drops": "cv_police_drops",
+    "delete": {
+      "flags": [
+        "PATH_AVOID_DANGER_2"
+      ]
+    },
+    "extend": {
+      "flags": [
+        "BASHES"
+      ]
+    },
+    "//9": "A patrol officer in a stab vest with a baton.  Competent, not a soldier.",
+    "//10": "Nudged below the player base of 100 (src/creature.cpp:188) so nothing in the roster matches your pace exactly.  Still quicker than SWAT, who carries a shield and heavy armour."
+  },
+  {
+    "//": "Sprite 101.  Rare, city-spawning, and the toughest friendly in the mod - riot armour and a shield put them well above the police officer, but they are still melee-only.",
+    "id": "mon_cv_swat",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_police",
+    "name": {
+      "str": "SWAT officer"
+    },
+    "description": "Riot helmet down, shield up, advancing at a walk.  They have clearly decided that the way through this is the way they were trained for, and are working the street one doorway at a time.",
+    "hp": 130,
+    "speed": 95,
+    "diff": 8,
+    "aggression": 80,
+    "morale": 100,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 7
+      }
+    ],
+    "armor_bash": 6,
+    "armor_cut": 7,
+    "armor_bullet": 8,
+    "zombify_into": "mon_zombie_swat",
+    "monster_weapon": "cv_swat_weapon",
+    "death_drops": "cv_swat_drops",
+    "//9": "Left the strongest human in the mod on HP and skill, but the armour is no longer immunity: a vanilla zombie hits 3d3 bash (3-9, avg 6), so at 12 every blow rounded to nothing.  Values are restated here rather than inherited because copy-from mon_cv_police would otherwise drag the police numbers in.",
+    "dodge": 2
+  },
+  {
+    "//": "Armed counterpart to mon_cv_police, cloning the Civilians mod's overconfident officer: aggression 100, morale 100, vision 50, and the same gun profile (cooldown 10, skills gun 2 / pistol 3, dex 8, per 10, range 0-14, 150/150 costs).",
+    "//2": "Four sprites on civilian_variety_cop_handgun.png, cells 0-3.  The uniform is unisex, so male and female share one monster rather than being split - there is no gendered attire to vary.",
+    "id": "mon_cv_cop_pistol",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "armed police officer"
+    },
+    "description": "Sidearm drawn, back to a wall, watching an intersection they have plainly decided not to give up.  There is nobody left to radio and nowhere in particular to fall back to, so they are simply holding it.",
+    "diff": 5,
+    "aggression": 100,
+    "morale": 100,
+    "regen_morale": true,
+    "hp": 90,
+    "speed": 95,
+    "vision_day": 50,
+    "vision_night": 3,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 5
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "zombify_into": "mon_zombie_cop",
+    "starting_ammo": {
+      "40fmj": 9999
+    },
+    "monster_weapon": "cv_cop_pistol_weapon",
+    "death_drops": "cv_cop_pistol_drops",
+    "delete": {
+      "flags": [
+        "PATH_AVOID_DANGER_2"
+      ]
+    },
+    "extend": {
+      "flags": [
+        "HIT_AND_RUN"
+      ]
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 10,
+        "gun_type": "cv_cop_glock22",
+        "ammo_type": "40fmj",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "pistol",
+            3
+          ]
+        ],
+        "fake_dex": 8,
+        "fake_per": 10,
+        "ranges": [
+          [
+            0,
+            14,
+            "DEFAULT"
+          ]
+        ],
+        "move_cost": 150,
+        "targeting_cost": 150,
+        "description": "The officer fires their sidearm!"
+      },
+      [
+        "PARROT_AT_DANGER",
+        5
+      ]
+    ],
+    "//9": "Same vest as the baton officer.  The sidearm is what makes them dangerous, so the gun attack is untouched - only the melee and staying power come down.",
+    "//10": "Same band as the baton officer.  The sidearm is the threat, not the footwork."
+  },
+  {
+    "//": "Sprites 104-107.  Standard wandering package, unchanged from the bystander: a clown is an ordinary person in a costume, and bespoke AI would be a joke the engine tells once.  The unsettling part is that they do nothing unusual at all.",
+    "//2": "zombify_into points at our own zombie clown, so a costume that dies stays a costume.",
+    "id": "mon_cv_clown",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "clown"
+    },
+    "description": "Full paint, full costume, shoes and all.  They have not taken any of it off, and given how long it has been, that is beginning to seem like a decision rather than an oversight.",
+    "zombify_into": "mon_cv_zombie_clown",
+    "death_drops": "cv_clown_drops",
+    "//3": "Both routes out of life lead to the same place: zombify_into on death, and a single-member upgrade group over time.  Without the second, an inherited into_group from the bystander turned them into ordinary zombies.  It must be a group rather than `into`, or it collides with the inherited into_group and fails to load - see DESIGN.md 13.4.",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_CLOWN_UPGRADE"
+    }
+  },
+  {
+    "//": "Ordinary bystander statline.  A priest is not a fighter and this one does not pretend to be: aggression and morale are inherited at 0/0, so they take the neutral branch of monster::attitude and flee only once hurt below 60% HP, like anyone else.",
+    "//2": "Sprites 144-145 on the main sheet.",
+    "//3": "The blessing lives in main.lua's FAVOUR table, not here - see the bless branch of do_favour.",
+    "id": "mon_cv_priest",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "priest"
+    },
+    "description": "Dressed for a service that nobody came to.  He has the composure of somebody who has sat with the dying before and is drawing on all of it at once, and he asks after you before you can ask after him.",
+    "speed": 88,
+    "death_drops": "cv_priest_drops",
+    "zombify_into": "mon_cv_zombie_priest",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_PRIEST_UPGRADE"
+    },
+    "//4": "Turns exclusively into its own zombie, through both routes.  Without the second, the into_group inherited from mon_cv_bystander would turn them into an ordinary zombie and the vestments would be lost - the same trap the clown hit."
+  },
+  {
+    "//": "The priest's counterpart, identical mechanically.  Separate id rather than a gendered variant of one monster, because the sprites and the death drops differ.",
+    "//2": "Sprites 146-147 on the main sheet.",
+    "id": "mon_cv_nun",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "nun"
+    },
+    "description": "Habit still immaculate, which takes some doing by now.  She looks at the street the way somebody looks at a job that needs starting, and she has not yet decided that it cannot be done.",
+    "speed": 88,
+    "death_drops": "cv_nun_drops",
+    "zombify_into": "mon_cv_zombie_nun",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_NUN_UPGRADE"
+    },
+    "//4": "Turns exclusively into its own zombie, through both routes.  Without the second, the into_group inherited from mon_cv_bystander would turn them into an ordinary zombie and the vestments would be lost - the same trap the clown hit."
+  },
+  {
+    "//": "Territorial, not hostile - a third behaviour the mod did not have.  Friendly on the street, and friendly right up to the moment you are inside the shop.",
+    "//2": "PLAYER_CLOSE is mon_trigger::HOSTILE_CLOSE, worth +5 anger per planning tick while the player is visible within 5 tiles (src/monmove.cpp:520, 545).  attitude() lets a FRIENDLY-faction monster fall past the MATT_FRIEND early return once effective_anger reaches 10 (src/monster.cpp:1932), and MF_FACTION_MEMORY plus anger >= 10 also skips the MATT_IGNORE guard further down - so roughly two ticks inside his shop and he commits.",
+    "//3": "No `aggression` field on purpose, and setting one would do nothing.  For a FACTION_MEMORY monster attitude() takes effective_anger from get_faction_anger(\"player\") alone; the `anger` member is folded in only under MFA_BY_MOOD, and civilians is FRIENDLY (src/monster.cpp:1818-1834).",
+    "//4": "faction_anger NEVER decays - the engine only ever adds to it, saves it and loads it back.  So he does not cool off on his own, and the protection-money favour in main.lua is the only route back.  That favour is what makes this fair rather than a trap; without it, one careless step is permanent.",
+    "//5": "Ranged, with birdshot, and using vanilla pipe_shotgun rather than a bespoke gun.  It is the weakest real 12-gauge in the game - dispersion 855, durability 6, one shell at a time - and 12ga is required because shot_bird will not chamber in the .410 or the 20ga muzzleloader.  shotgun_s was the alternative and sits at dispersion 210, which would have made a shopkeeper a better shot than the bikers.",
+    "//6": "Sprites 150-153.  Mixed gender in one pool - 153 is a woman - so the description, barks and dialogue are all written without pronouns rather than splitting the archetype into a gendered pair the way doctor/_f and farmer/_f are.",
+    "id": "mon_cv_shopkeeper",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "store owner"
+    },
+    "description": "Still behind the counter, still watching the door, and entirely past being reasoned with about what is and is not theirs.  Thirty years of trading, and the obvious conclusion has been drawn: nobody is coming to enforce anything, ever again.",
+    "hp": 95,
+    "speed": 92,
+    "diff": 4,
+    "dodge": 2,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 4
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "vision_day": 20,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT",
+      "FRIEND_ATTACKED"
+    ],
+    "monster_weapon": "cv_shopkeeper_shotgun_weapon",
+    "death_drops": "cv_shopkeeper_drops",
+    "//7": "shot_bird is 10 pellets of 5 damage at half_angle 5, so the spread is the balance: nasty at point blank, mostly air past a few tiles.  Tuned under mon_cv_biker_shotgun on every other axis too - effective range 7 vs 10, cooldown 25 vs 15, fake_skills 0 vs 1, 8 shells vs 20.",
+    "//8": "He cannot open fire on a stranger.  PLAYER_CLOSE only accrues within 5 tiles, so he has to have been angered at close range before the gun is ever in play; the 7-tile envelope then covers him backing away across his own shop.  Eight shells and he is dry, left clubbing with the barrel - that bounds the encounter.",
+    "//9": "Costs stay at the vanilla 150.  Firing at the player is two-stage - one attempt spends targeting_cost to aim and the next spends move_cost to shoot (src/mattack_actors.h:170-177) - and the biker build already proved that raising costs and shortening range together means they never fire at all.",
+    "starting_ammo": {
+      "shot_bird": 8
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 25,
+        "gun_type": "pipe_shotgun",
+        "ammo_type": "shot_bird",
+        "max_ammo": 2,
+        "fake_skills": [
+          [
+            "gun",
+            0
+          ],
+          [
+            "shotgun",
+            0
+          ]
+        ],
+        "fake_dex": 7,
+        "fake_per": 8,
+        "ranges": [
+          [
+            0,
+            7,
+            "DEFAULT"
+          ]
+        ],
+        "move_cost": 150,
+        "targeting_cost": 150,
+        "description": "The store owner fires a barrel of birdshot!"
+      }
+    ]
+  }
+]

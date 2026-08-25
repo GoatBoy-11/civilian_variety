@@ -1,0 +1,202 @@
+[
+  {
+    "//": "One line of somebody's life, picked at random per copy.  Appending to this file is the cheapest way there is to deepen the mod: no code, no art, no balance implications.",
+    "type": "snippet",
+    "category": "cv_note_personal",
+    "text": [
+      {
+        "id": "cv_note_personal_1",
+        "text": "Handwriting, hurried: \"Took the car.  Went to your mother's.  If you get this, we went to your mother's.\""
+      },
+      {
+        "id": "cv_note_personal_2",
+        "text": "A shopping list.  Bread, milk, batteries, batteries, batteries, batteries."
+      },
+      {
+        "id": "cv_note_personal_3",
+        "text": "\"I am not going to the shelter.  I know what you think about that.  I love you.  Don't come looking.\""
+      },
+      {
+        "id": "cv_note_personal_4",
+        "text": "A note beginning \"By the time you read this\" and stopping after four words."
+      },
+      {
+        "id": "cv_note_personal_5",
+        "text": "Directions to somewhere, in someone else's handwriting, with a small map on the back."
+      },
+      {
+        "id": "cv_note_personal_6",
+        "text": "\"Feed the cat.  I mean it.  Feed the cat.\""
+      },
+      {
+        "id": "cv_note_personal_7",
+        "text": "A phone number, written large, gone over so many times the paper has torn."
+      },
+      {
+        "id": "cv_note_personal_8",
+        "text": "\"Everyone says it will be over by the weekend.  I am writing this down so I can see how stupid it looks.\""
+      },
+      {
+        "id": "cv_note_personal_9",
+        "text": "A child's handwriting: \"dear mum i am fine at nans dont worry\""
+      },
+      {
+        "id": "cv_note_personal_10",
+        "text": "An apology, unaddressed, to somebody the writer clearly expected to see again."
+      },
+      {
+        "id": "cv_note_personal_11",
+        "text": "A page torn from a diary.  The entry is about a bad day at work, three days before the Cataclysm."
+      },
+      {
+        "id": "cv_note_personal_12",
+        "text": "\"If you are reading this you got in.  There is nothing left in here.  Sorry.  Try the house opposite.\""
+      }
+    ]
+  },
+  {
+    "//": "One line of somebody's life, picked at random per copy.  Appending to this file is the cheapest way there is to deepen the mod: no code, no art, no balance implications.",
+    "type": "snippet",
+    "category": "cv_note_work",
+    "text": [
+      {
+        "id": "cv_note_work_1",
+        "text": "A printed rota for the week of the Cataclysm.  Someone has drawn a small cheerful sun next to Friday."
+      },
+      {
+        "id": "cv_note_work_2",
+        "text": "A resignation letter, typed, signed, and never handed in."
+      },
+      {
+        "id": "cv_note_work_3",
+        "text": "A login and password on a sticky note, which is exactly where the training said not to put it."
+      },
+      {
+        "id": "cv_note_work_4",
+        "text": "Minutes of a meeting about quarterly targets.  The last line is \"any other business - none\"."
+      },
+      {
+        "id": "cv_note_work_5",
+        "text": "An expense claim for a taxi, with a receipt still stapled to it."
+      },
+      {
+        "id": "cv_note_work_6",
+        "text": "A memo reminding staff that the emergency exits are not to be used as smoking areas."
+      },
+      {
+        "id": "cv_note_work_7",
+        "text": "A leaving card for someone called Denise, signed by eleven people."
+      },
+      {
+        "id": "cv_note_work_8",
+        "text": "A performance review scheduled for a date that never happened."
+      },
+      {
+        "id": "cv_note_work_9",
+        "text": "A printed email: \"As discussed, please work from home until further notice.  This is precautionary.\""
+      },
+      {
+        "id": "cv_note_work_10",
+        "text": "A desk calendar page.  Every day that week has been crossed off in advance."
+      },
+      {
+        "id": "cv_note_work_11",
+        "text": "A note to a colleague: \"Covered your shift.  You owe me.  Twice now.\""
+      }
+    ]
+  },
+  {
+    "//": "One line of somebody's life, picked at random per copy.  Appending to this file is the cheapest way there is to deepen the mod: no code, no art, no balance implications.",
+    "type": "snippet",
+    "category": "cv_note_medical",
+    "text": [
+      {
+        "id": "cv_note_medical_1",
+        "text": "Triage notes.  The list of names runs down the page and continues on the back."
+      },
+      {
+        "id": "cv_note_medical_2",
+        "text": "A handover sheet for a shift that was never handed over."
+      },
+      {
+        "id": "cv_note_medical_3",
+        "text": "A prescription, written out and never collected."
+      },
+      {
+        "id": "cv_note_medical_4",
+        "text": "Observations taken every fifteen minutes, then every five, then not at all."
+      },
+      {
+        "id": "cv_note_medical_5",
+        "text": "A printed protocol for an infection, with three lines crossed out and \"NO\" written beside them."
+      },
+      {
+        "id": "cv_note_medical_6",
+        "text": "A page of dosages in careful handwriting, the last entry finished by somebody else."
+      },
+      {
+        "id": "cv_note_medical_7",
+        "text": "A ward list.  Most names have a small tick.  Four do not."
+      },
+      {
+        "id": "cv_note_medical_8",
+        "text": "A note clipped to nothing: \"tell the family before they hear it elsewhere\"."
+      },
+      {
+        "id": "cv_note_medical_9",
+        "text": "An order for supplies, marked URGENT, dated the day everything stopped."
+      },
+      {
+        "id": "cv_note_medical_10",
+        "text": "A scrap reading only \"bay 4 - do not open\" in three different pens."
+      }
+    ]
+  },
+  {
+    "//": "One line of somebody's life, picked at random per copy.  Appending to this file is the cheapest way there is to deepen the mod: no code, no art, no balance implications.",
+    "type": "snippet",
+    "category": "cv_photo",
+    "text": [
+      {
+        "id": "cv_photo_1",
+        "text": "Two people on a beach, squinting.  Someone has written a date on the back and then crossed it out."
+      },
+      {
+        "id": "cv_photo_2",
+        "text": "A dog in a garden, mid-leap, slightly out of focus."
+      },
+      {
+        "id": "cv_photo_3",
+        "text": "A wedding photograph, folded down the middle so that only one person is showing."
+      },
+      {
+        "id": "cv_photo_4",
+        "text": "A group of colleagues at a Christmas party, wearing paper hats without enthusiasm."
+      },
+      {
+        "id": "cv_photo_5",
+        "text": "A child on a bicycle with stabilisers, being held upright by an arm out of frame."
+      },
+      {
+        "id": "cv_photo_6",
+        "text": "A house with a sold sign outside it, and two people standing very deliberately in front of the sign."
+      },
+      {
+        "id": "cv_photo_7",
+        "text": "A blurred photograph of a birthday cake.  The candles say 40."
+      },
+      {
+        "id": "cv_photo_8",
+        "text": "A passport photo strip, four frames.  In the last one, they are laughing."
+      },
+      {
+        "id": "cv_photo_9",
+        "text": "An old holiday snapshot of somewhere hot.  On the back: \"we should go back\"."
+      },
+      {
+        "id": "cv_photo_10",
+        "text": "A photograph of a photograph, taken badly, as though the original could not be taken away."
+      }
+    ]
+  }
+]

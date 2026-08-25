@@ -1,0 +1,4770 @@
+[
+  {
+    "//": "Clothing always, a carried item half the time, and cash occasionally.  All referenced groups are vanilla bn.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_common_civilian_drops",
+    "entries": [
+      {
+        "group": "default_zombie_clothes"
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 50
+      },
+      {
+        "distribution": [
+          {
+            "item": "cash_card",
+            "prob": 75,
+            "charges": [
+              0,
+              50000
+            ]
+          },
+          {
+            "collection": [
+              {
+                "item": "money_bundle",
+                "count": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "item": "coin_quarter",
+                "prob": 50,
+                "count": [
+                  1,
+                  10
+                ]
+              }
+            ],
+            "prob": 25
+          }
+        ],
+        "prob": 10
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "group": "cv_otaku_carried",
+        "prob": 3
+      }
+    ]
+  },
+  {
+    "//": "Odds and ends an ordinary person was carrying when it started.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_common_civilian_items",
+    "ammo": 30,
+    "magazine": 100,
+    "groups": [
+      [
+        "default_zombie_items_bags",
+        16
+      ],
+      [
+        "default_zombie_items_pockets",
+        24
+      ]
+    ]
+  },
+  {
+    "//": "Worn kit.  Hard hat is effectively guaranteed; the rest is a plausible spread of site clothing.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_construction_worn",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "hat_hard",
+            "prob": 80
+          },
+          {
+            "item": "hat_hard_hooded",
+            "prob": 20
+          }
+        ],
+        "prob": 90
+      },
+      {
+        "distribution": [
+          {
+            "item": "jeans",
+            "prob": 60
+          },
+          {
+            "item": "pants_cargo",
+            "prob": 40
+          }
+        ]
+      },
+      {
+        "item": "boots_steel",
+        "prob": 70
+      },
+      {
+        "item": "gloves_work",
+        "prob": 60
+      },
+      {
+        "item": "vest",
+        "prob": 40
+      },
+      {
+        "item": "jumpsuit",
+        "prob": 20
+      },
+      {
+        "item": "glasses_safety",
+        "prob": 30
+      },
+      {
+        "item": "mask_dust",
+        "prob": 20
+      },
+      {
+        "item": "ear_plugs",
+        "prob": 15
+      },
+      {
+        "item": "mask_filter",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Hand tools they were carrying.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_construction_tools",
+    "entries": [
+      {
+        "item": "hammer",
+        "prob": 30
+      },
+      {
+        "item": "wrench",
+        "prob": 20
+      },
+      {
+        "item": "screwdriver",
+        "prob": 20
+      },
+      {
+        "item": "crowbar",
+        "prob": 12
+      },
+      {
+        "item": "chisel",
+        "prob": 10
+      },
+      {
+        "item": "toolbox",
+        "prob": 5
+      },
+      {
+        "item": "wearable_light",
+        "prob": 5
+      },
+      {
+        "item": "flashlight",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Offcuts and consumables from the site.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_construction_materials",
+    "entries": [
+      {
+        "item": "nail",
+        "prob": 25,
+        "charges": [
+          5,
+          40
+        ]
+      },
+      {
+        "item": "2x4",
+        "prob": 20,
+        "count": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "duct_tape",
+        "prob": 15,
+        "charges": [
+          10,
+          60
+        ]
+      },
+      {
+        "item": "wire",
+        "prob": 12,
+        "count": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "pipe",
+        "prob": 10,
+        "count": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "rebar",
+        "prob": 8,
+        "count": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "sheet_metal",
+        "prob": 5
+      },
+      {
+        "item": "concrete",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "//": "Full drop set.  The jackhammer is deliberately rare: 4% overall, mostly the pneumatic one.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_construction_worker_drops",
+    "entries": [
+      {
+        "group": "cv_construction_worn"
+      },
+      {
+        "group": "cv_construction_tools",
+        "prob": 70
+      },
+      {
+        "group": "cv_construction_materials",
+        "prob": 55
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 30
+      },
+      {
+        "distribution": [
+          {
+            "item": "thermos",
+            "prob": 50
+          },
+          {
+            "item": "water_clean",
+            "prob": 30
+          },
+          {
+            "item": "sandwich_cheese",
+            "prob": 20
+          }
+        ],
+        "prob": 25
+      },
+      {
+        "distribution": [
+          {
+            "item": "lighter",
+            "prob": 70
+          },
+          {
+            "item": "matches",
+            "prob": 30
+          }
+        ],
+        "prob": 20
+      },
+      {
+        "distribution": [
+          {
+            "item": "jackhammer",
+            "prob": 80
+          },
+          {
+            "item": "elec_jackhammer",
+            "prob": 20
+          }
+        ],
+        "prob": 4
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Shop clothing.  Nothing protective, just what you wear under a car.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_mechanic_worn",
+    "entries": [
+      {
+        "item": "jumpsuit",
+        "prob": 65
+      },
+      {
+        "item": "gloves_work",
+        "prob": 55
+      },
+      {
+        "item": "boots_steel",
+        "prob": 45
+      },
+      {
+        "item": "apron_leather",
+        "prob": 20
+      },
+      {
+        "item": "hat_ball",
+        "prob": 25
+      },
+      {
+        "item": "rag",
+        "prob": 60,
+        "count": [
+          1,
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "//": "What was in their hands or on the belt.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_mechanic_tools",
+    "entries": [
+      {
+        "item": "wrench",
+        "prob": 30
+      },
+      {
+        "item": "screwdriver_set",
+        "prob": 18
+      },
+      {
+        "item": "pliers",
+        "prob": 16
+      },
+      {
+        "item": "hammer",
+        "prob": 12
+      },
+      {
+        "item": "hacksaw",
+        "prob": 10
+      },
+      {
+        "item": "crowbar",
+        "prob": 8
+      },
+      {
+        "item": "toolbox",
+        "prob": 6
+      },
+      {
+        "item": "tool_belt",
+        "prob": 6
+      },
+      {
+        "item": "flashlight",
+        "prob": 8
+      },
+      {
+        "item": "soldering_iron",
+        "prob": 4
+      }
+    ]
+  },
+  {
+    "//": "Shop consumables and salvage.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_mechanic_supplies",
+    "entries": [
+      {
+        "item": "motor_oil",
+        "prob": 25
+      },
+      {
+        "item": "duct_tape",
+        "prob": 20,
+        "charges": [
+          10,
+          60
+        ]
+      },
+      {
+        "item": "scrap",
+        "prob": 20,
+        "count": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "prob": 12,
+        "count": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "battery",
+        "prob": 10
+      },
+      {
+        "item": "funnel",
+        "prob": 8
+      },
+      {
+        "item": "wheel",
+        "prob": 3
+      }
+    ]
+  },
+  {
+    "//": "Full drop set.  Welder and jack are the rare finds, at 5% and 6%.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_mechanic_drops",
+    "entries": [
+      {
+        "group": "cv_mechanic_worn"
+      },
+      {
+        "group": "cv_mechanic_tools",
+        "prob": 75
+      },
+      {
+        "group": "cv_mechanic_supplies",
+        "prob": 60
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 30
+      },
+      {
+        "distribution": [
+          {
+            "item": "jack",
+            "prob": 70
+          },
+          {
+            "item": "jack_makeshift",
+            "prob": 30
+          }
+        ],
+        "prob": 6
+      },
+      {
+        "item": "welder",
+        "prob": 5
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "What they are swinging.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_firefighter_weapon",
+    "entries": [
+      {
+        "item": "fire_ax",
+        "prob": 60
+      },
+      {
+        "item": "halligan",
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "//": "Full turnout kit.  Mostly intact, because it is what kept them alive this long.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_firefighter_worn",
+    "entries": [
+      {
+        "item": "firehelmet",
+        "prob": 85
+      },
+      {
+        "item": "bunker_coat",
+        "prob": 80
+      },
+      {
+        "item": "bunker_pants",
+        "prob": 75
+      },
+      {
+        "item": "boots_bunker",
+        "prob": 70
+      },
+      {
+        "item": "fire_gauntlets",
+        "prob": 55
+      },
+      {
+        "item": "mask_bunker",
+        "prob": 40
+      },
+      {
+        "item": "nomex",
+        "prob": 15
+      }
+    ]
+  },
+  {
+    "//": "Rescue and entry equipment carried on the belt or over the shoulder.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_firefighter_kit",
+    "entries": [
+      {
+        "item": "two_way_radio",
+        "prob": 25
+      },
+      {
+        "item": "heavy_flashlight",
+        "prob": 20
+      },
+      {
+        "item": "rope_30",
+        "prob": 15
+      },
+      {
+        "item": "crowbar",
+        "prob": 12
+      },
+      {
+        "item": "sm_extinguisher",
+        "prob": 10
+      },
+      {
+        "item": "bandages",
+        "prob": 10,
+        "charges": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "1st_aid",
+        "prob": 5
+      },
+      {
+        "item": "oxygen_tank",
+        "prob": 3
+      }
+    ]
+  },
+  {
+    "//": "Full drop set.  A full-size extinguisher is the rare one at 6%.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_firefighter_drops",
+    "entries": [
+      {
+        "group": "cv_firefighter_worn"
+      },
+      {
+        "group": "cv_firefighter_kit",
+        "prob": 80
+      },
+      {
+        "group": "cv_firefighter_kit",
+        "prob": 40
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "extinguisher",
+        "prob": 6
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_medical",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Men's business attire.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_business_worn_m",
+    "entries": [
+      {
+        "item": "suit",
+        "prob": 70
+      },
+      {
+        "item": "dress_shirt",
+        "prob": 80
+      },
+      {
+        "distribution": [
+          {
+            "item": "tie_necktie",
+            "prob": 85
+          },
+          {
+            "item": "tie_bow",
+            "prob": 15
+          }
+        ],
+        "prob": 65
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 75
+      },
+      {
+        "item": "trenchcoat",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "//": "Women's business attire.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_business_worn_f",
+    "entries": [
+      {
+        "item": "blazer",
+        "prob": 75
+      },
+      {
+        "item": "dress_shirt",
+        "prob": 70
+      },
+      {
+        "item": "skirt",
+        "prob": 65
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 75
+      },
+      {
+        "item": "purse",
+        "prob": 55
+      },
+      {
+        "item": "trenchcoat",
+        "prob": 15
+      }
+    ]
+  },
+  {
+    "//": "Status accessories.  The watch tiers are the point: most have something, few have something good.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_business_valuables",
+    "entries": [
+      {
+        "item": "wristwatch",
+        "prob": 30
+      },
+      {
+        "item": "gold_watch",
+        "prob": 10
+      },
+      {
+        "item": "pocketwatch",
+        "prob": 6
+      },
+      {
+        "item": "gold_ring",
+        "prob": 12
+      },
+      {
+        "item": "silver_ring",
+        "prob": 12
+      },
+      {
+        "item": "diamond_ring",
+        "prob": 4
+      },
+      {
+        "item": "gold_small",
+        "prob": 3
+      },
+      {
+        "distribution": [
+          {
+            "item": "fancy_sunglasses",
+            "prob": 40
+          },
+          {
+            "item": "sunglasses",
+            "prob": 60
+          }
+        ],
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "//": "What was in their hands when it started.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_business_carried",
+    "entries": [
+      {
+        "item": "briefcase",
+        "prob": 28
+      },
+      {
+        "item": "smart_phone",
+        "prob": 24
+      },
+      {
+        "item": "cell_phone",
+        "prob": 14
+      },
+      {
+        "item": "laptop",
+        "prob": 10
+      },
+      {
+        "item": "pen",
+        "prob": 10
+      },
+      {
+        "item": "umbrella",
+        "prob": 8
+      },
+      {
+        "item": "cigar",
+        "prob": 4
+      },
+      {
+        "item": "whiskey",
+        "prob": 2
+      }
+    ]
+  },
+  {
+    "//": "Money.  More than an ordinary civilian carries, and occasionally a great deal more.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_business_money",
+    "entries": [
+      {
+        "item": "cash_card",
+        "prob": 60,
+        "charges": [
+          100,
+          250000
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 45,
+        "count": [
+          1,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_businessman_drops",
+    "entries": [
+      {
+        "group": "cv_business_worn_m"
+      },
+      {
+        "group": "cv_business_valuables",
+        "prob": 65
+      },
+      {
+        "group": "cv_business_valuables",
+        "prob": 30
+      },
+      {
+        "group": "cv_business_carried",
+        "prob": 70
+      },
+      {
+        "group": "cv_business_money",
+        "prob": 70
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_businesswoman_drops",
+    "entries": [
+      {
+        "group": "cv_business_worn_f"
+      },
+      {
+        "group": "cv_business_valuables",
+        "prob": 65
+      },
+      {
+        "group": "cv_business_valuables",
+        "prob": 30
+      },
+      {
+        "group": "cv_business_carried",
+        "prob": 70
+      },
+      {
+        "group": "cv_business_money",
+        "prob": 70
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Working clothes, with a jacket over the top because it is cold out.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_sex_worker_worn",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "bikini_top",
+            "prob": 30
+          },
+          {
+            "item": "halter_top",
+            "prob": 30
+          },
+          {
+            "item": "corset",
+            "prob": 20
+          },
+          {
+            "item": "tank_top",
+            "prob": 20
+          }
+        ],
+        "prob": 85
+      },
+      {
+        "distribution": [
+          {
+            "item": "skirt",
+            "prob": 45
+          },
+          {
+            "item": "dress",
+            "prob": 35
+          },
+          {
+            "item": "bikini_bottom",
+            "prob": 20
+          }
+        ],
+        "prob": 80
+      },
+      {
+        "item": "stockings",
+        "prob": 55
+      },
+      {
+        "item": "heels",
+        "prob": 50
+      },
+      {
+        "item": "bra",
+        "prob": 45
+      },
+      {
+        "item": "panties",
+        "prob": 45
+      },
+      {
+        "item": "jacket_leather",
+        "prob": 30
+      },
+      {
+        "item": "purse",
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "//": "Pockets and purse.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_sex_worker_personal",
+    "entries": [
+      {
+        "item": "cig",
+        "prob": 30,
+        "charges": [
+          1,
+          15
+        ]
+      },
+      {
+        "item": "lighter",
+        "prob": 22
+      },
+      {
+        "item": "condom",
+        "prob": 26,
+        "count": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "smart_phone",
+        "prob": 14
+      },
+      {
+        "item": "matches",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Cheap and common at the top, expensive and rare at the bottom, so a hard drug reads as a find rather than a given.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_sex_worker_drugs",
+    "entries": [
+      {
+        "item": "weed",
+        "prob": 26,
+        "charges": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "joint",
+        "prob": 20,
+        "count": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "aspirin",
+        "prob": 16,
+        "charges": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "codeine",
+        "prob": 12,
+        "charges": [
+          1,
+          8
+        ]
+      },
+      {
+        "item": "diazepam",
+        "prob": 9,
+        "charges": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "adderall",
+        "prob": 7,
+        "charges": [
+          1,
+          5
+        ]
+      },
+      {
+        "item": "oxycodone",
+        "prob": 5,
+        "charges": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "poppy_pain",
+        "prob": 3,
+        "charges": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "coke",
+        "prob": 3,
+        "charges": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "meth",
+        "prob": 2,
+        "charges": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "crack",
+        "prob": 2,
+        "charges": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "heroin",
+        "prob": 1,
+        "charges": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Drugs roll twice at moderate odds, so most carry something small and very few carry anything worth much.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_sex_worker_drops",
+    "entries": [
+      {
+        "group": "cv_sex_worker_worn"
+      },
+      {
+        "group": "cv_sex_worker_personal",
+        "prob": 75
+      },
+      {
+        "group": "cv_sex_worker_personal",
+        "prob": 35
+      },
+      {
+        "group": "cv_sex_worker_drugs",
+        "prob": 55
+      },
+      {
+        "group": "cv_sex_worker_drugs",
+        "prob": 20
+      },
+      {
+        "item": "cash_card",
+        "prob": 25,
+        "charges": [
+          50,
+          4000
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 30,
+        "count": [
+          1,
+          3
+        ]
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Men's hospital wardrobe.  BN has no scrubs or surgical mask item; coat_lab and gloves_medical are the real medical apparel.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_doctor_worn_m",
+    "entries": [
+      {
+        "item": "coat_lab",
+        "prob": 85
+      },
+      {
+        "item": "dress_shirt",
+        "prob": 55
+      },
+      {
+        "item": "jeans",
+        "prob": 50
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 50
+      },
+      {
+        "item": "gloves_medical",
+        "prob": 35
+      }
+    ]
+  },
+  {
+    "//": "Nurse's uniform.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_nurse_worn",
+    "entries": [
+      {
+        "item": "dress",
+        "prob": 70
+      },
+      {
+        "item": "coat_lab",
+        "prob": 25
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 55
+      },
+      {
+        "item": "gloves_medical",
+        "prob": 45
+      },
+      {
+        "item": "stockings",
+        "prob": 30
+      }
+    ]
+  },
+  {
+    "//": "Tools of the trade.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_medical_tools",
+    "entries": [
+      {
+        "item": "stethoscope",
+        "prob": 28
+      },
+      {
+        "item": "badge_doctor",
+        "prob": 20
+      },
+      {
+        "item": "thermometer",
+        "prob": 14
+      },
+      {
+        "item": "syringe",
+        "prob": 14
+      },
+      {
+        "item": "pen",
+        "prob": 10
+      },
+      {
+        "item": "scalpel",
+        "prob": 8
+      },
+      {
+        "item": "smart_phone",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Supplies and prescriptions.  Ordinary consumables at the top, controlled drugs at the bottom.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_medical_supplies",
+    "entries": [
+      {
+        "item": "bandages",
+        "prob": 24,
+        "charges": [
+          1,
+          5
+        ]
+      },
+      {
+        "item": "aspirin",
+        "prob": 18,
+        "charges": [
+          2,
+          14
+        ]
+      },
+      {
+        "item": "disinfectant",
+        "prob": 14,
+        "charges": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "vitamins",
+        "prob": 10,
+        "charges": [
+          2,
+          10
+        ]
+      },
+      {
+        "item": "1st_aid",
+        "prob": 8
+      },
+      {
+        "item": "antibiotics",
+        "prob": 7,
+        "charges": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "iodine",
+        "prob": 5,
+        "charges": [
+          1,
+          5
+        ]
+      },
+      {
+        "item": "codeine",
+        "prob": 5,
+        "charges": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "prozac",
+        "prob": 4,
+        "charges": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "diazepam",
+        "prob": 3,
+        "charges": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "oxycodone",
+        "prob": 2,
+        "charges": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "1st_aid_deluxe",
+        "prob": 1
+      }
+    ]
+  },
+  {
+    "//": "Doctors carry more, and are the likelier source of anything controlled.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_doctor_drops_m",
+    "entries": [
+      {
+        "group": "cv_doctor_worn_m"
+      },
+      {
+        "group": "cv_medical_tools",
+        "prob": 80
+      },
+      {
+        "group": "cv_medical_tools",
+        "prob": 35
+      },
+      {
+        "group": "cv_medical_supplies",
+        "prob": 70
+      },
+      {
+        "group": "cv_medical_supplies",
+        "prob": 30
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_medical",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Nurses carry the practical half: dressings and consumables over prescriptions.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_nurse_drops",
+    "entries": [
+      {
+        "group": "cv_nurse_worn"
+      },
+      {
+        "group": "cv_medical_tools",
+        "prob": 60
+      },
+      {
+        "group": "cv_medical_supplies",
+        "prob": 75
+      },
+      {
+        "group": "cv_medical_supplies",
+        "prob": 35
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_medical",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Women's hospital wardrobe.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_doctor_worn_f",
+    "entries": [
+      {
+        "item": "coat_lab",
+        "prob": 85
+      },
+      {
+        "item": "dress_shirt",
+        "prob": 55
+      },
+      {
+        "item": "skirt",
+        "prob": 45
+      },
+      {
+        "item": "jeans",
+        "prob": 25
+      },
+      {
+        "item": "stockings",
+        "prob": 35
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 50
+      },
+      {
+        "item": "gloves_medical",
+        "prob": 35
+      }
+    ]
+  },
+  {
+    "//": "Identical to the men's set apart from the wardrobe group.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_doctor_drops_f",
+    "entries": [
+      {
+        "group": "cv_doctor_worn_f"
+      },
+      {
+        "group": "cv_medical_tools",
+        "prob": 80
+      },
+      {
+        "group": "cv_medical_tools",
+        "prob": 35
+      },
+      {
+        "group": "cv_medical_supplies",
+        "prob": 70
+      },
+      {
+        "group": "cv_medical_supplies",
+        "prob": 30
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_medical",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Men's office wardrobe.  No suit jacket: that is the businessman's tier.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_office_worn_m",
+    "entries": [
+      {
+        "item": "dress_shirt",
+        "prob": 85
+      },
+      {
+        "item": "tie_necktie",
+        "prob": 60
+      },
+      {
+        "item": "jeans",
+        "prob": 50
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 60
+      },
+      {
+        "item": "sweater",
+        "prob": 20
+      },
+      {
+        "item": "blazer",
+        "prob": 15
+      }
+    ]
+  },
+  {
+    "//": "Women's office wardrobe.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_office_worn_f",
+    "entries": [
+      {
+        "item": "dress_shirt",
+        "prob": 80
+      },
+      {
+        "item": "tie_necktie",
+        "prob": 35
+      },
+      {
+        "item": "skirt",
+        "prob": 60
+      },
+      {
+        "item": "jeans",
+        "prob": 25
+      },
+      {
+        "item": "stockings",
+        "prob": 30
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 60
+      },
+      {
+        "item": "blazer",
+        "prob": 25
+      },
+      {
+        "item": "sweater",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "//": "Desk clutter.  Deliberately mundane; the point is that it is worthless and they kept it anyway.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_office_desk",
+    "entries": [
+      {
+        "item": "pen",
+        "prob": 30
+      },
+      {
+        "item": "paper",
+        "prob": 24,
+        "charges": [
+          3,
+          20
+        ]
+      },
+      {
+        "item": "smart_phone",
+        "prob": 18
+      },
+      {
+        "item": "briefcase",
+        "prob": 14
+      },
+      {
+        "item": "stapler",
+        "prob": 12
+      },
+      {
+        "item": "scissors",
+        "prob": 10
+      },
+      {
+        "item": "laptop",
+        "prob": 8
+      },
+      {
+        "item": "mp3",
+        "prob": 6
+      },
+      {
+        "item": "sunglasses",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Whatever was keeping them going.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_office_comforts",
+    "entries": [
+      {
+        "item": "coffee",
+        "prob": 30,
+        "charges": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "ceramic_mug",
+        "prob": 22
+      },
+      {
+        "item": "thermos",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Salaried, not wealthy: a modest card and rarely any cash.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_office_drops_m",
+    "entries": [
+      {
+        "group": "cv_office_worn_m"
+      },
+      {
+        "group": "cv_office_desk",
+        "prob": 80
+      },
+      {
+        "group": "cv_office_desk",
+        "prob": 35
+      },
+      {
+        "group": "cv_office_comforts",
+        "prob": 45
+      },
+      {
+        "item": "cash_card",
+        "prob": 35,
+        "charges": [
+          50,
+          9000
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 12
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 25
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Identical apart from the wardrobe group.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_office_drops_f",
+    "entries": [
+      {
+        "group": "cv_office_worn_f"
+      },
+      {
+        "group": "cv_office_desk",
+        "prob": 80
+      },
+      {
+        "group": "cv_office_desk",
+        "prob": 35
+      },
+      {
+        "group": "cv_office_comforts",
+        "prob": 45
+      },
+      {
+        "item": "cash_card",
+        "prob": 35,
+        "charges": [
+          50,
+          9000
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 12
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 25
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 18
+      }
+    ]
+  },
+  {
+    "//": "Ordinary men's clothes.  Nobody dressed for this.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_fat_worn_m",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "tshirt",
+            "prob": 40
+          },
+          {
+            "item": "polo_shirt",
+            "prob": 25
+          },
+          {
+            "item": "longshirt",
+            "prob": 20
+          },
+          {
+            "item": "tank_top",
+            "prob": 15
+          }
+        ],
+        "prob": 90
+      },
+      {
+        "distribution": [
+          {
+            "item": "jeans",
+            "prob": 55
+          },
+          {
+            "item": "pants",
+            "prob": 30
+          },
+          {
+            "item": "shorts",
+            "prob": 15
+          }
+        ],
+        "prob": 85
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 55
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      },
+      {
+        "distribution": [
+          {
+            "item": "sneakers",
+            "prob": 60
+          },
+          {
+            "item": "boots",
+            "prob": 25
+          },
+          {
+            "item": "slippers",
+            "prob": 15
+          }
+        ],
+        "prob": 70
+      },
+      {
+        "distribution": [
+          {
+            "item": "hoodie",
+            "prob": 40
+          },
+          {
+            "item": "sweatshirt",
+            "prob": 30
+          },
+          {
+            "item": "jacket_light",
+            "prob": 30
+          }
+        ],
+        "prob": 35
+      },
+      {
+        "item": "hat_ball",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "//": "Ordinary women's clothes.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_fat_worn_f",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "tshirt",
+            "prob": 35
+          },
+          {
+            "item": "tank_top",
+            "prob": 25
+          },
+          {
+            "item": "longshirt",
+            "prob": 20
+          },
+          {
+            "item": "sweater",
+            "prob": 20
+          }
+        ],
+        "prob": 90
+      },
+      {
+        "distribution": [
+          {
+            "item": "jeans",
+            "prob": 45
+          },
+          {
+            "item": "leggings",
+            "prob": 25
+          },
+          {
+            "item": "skirt",
+            "prob": 18
+          },
+          {
+            "item": "dress",
+            "prob": 12
+          }
+        ],
+        "prob": 85
+      },
+      {
+        "item": "bra",
+        "prob": 55
+      },
+      {
+        "item": "panties",
+        "prob": 55
+      },
+      {
+        "item": "socks",
+        "prob": 40
+      },
+      {
+        "distribution": [
+          {
+            "item": "sneakers",
+            "prob": 60
+          },
+          {
+            "item": "boots",
+            "prob": 25
+          },
+          {
+            "item": "slippers",
+            "prob": 15
+          }
+        ],
+        "prob": 70
+      },
+      {
+        "distribution": [
+          {
+            "item": "hoodie",
+            "prob": 40
+          },
+          {
+            "item": "sweatshirt",
+            "prob": 30
+          },
+          {
+            "item": "jacket_light",
+            "prob": 30
+          }
+        ],
+        "prob": 35
+      }
+    ]
+  },
+  {
+    "//": "Everyday pockets, nothing occupational.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_fat_drops_m",
+    "entries": [
+      {
+        "group": "cv_fat_worn_m"
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 50
+      },
+      {
+        "item": "cash_card",
+        "prob": 40,
+        "charges": [
+          0,
+          30000
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 15
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "group": "cv_otaku_carried",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Everyday pockets, nothing occupational.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_fat_drops_f",
+    "entries": [
+      {
+        "group": "cv_fat_worn_f"
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 50
+      },
+      {
+        "item": "cash_card",
+        "prob": 40,
+        "charges": [
+          0,
+          30000
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 15
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "group": "cv_otaku_carried",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Comfortable, impractical, and not built for running.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_geek_worn",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "tshirt",
+            "prob": 60
+          },
+          {
+            "item": "hoodie",
+            "prob": 40
+          }
+        ],
+        "prob": 90
+      },
+      {
+        "item": "jeans",
+        "prob": 70
+      },
+      {
+        "item": "sneakers",
+        "prob": 65
+      },
+      {
+        "item": "glasses_eye",
+        "prob": 55
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 45
+      },
+      {
+        "item": "socks",
+        "prob": 40
+      },
+      {
+        "item": "backpack",
+        "prob": 35
+      }
+    ]
+  },
+  {
+    "//": "The bag was heavy for a reason.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_geek_carried",
+    "entries": [
+      {
+        "item": "portable_game",
+        "prob": 26
+      },
+      {
+        "item": "smart_phone",
+        "prob": 22
+      },
+      {
+        "item": "mp3",
+        "prob": 16
+      },
+      {
+        "item": "pen",
+        "prob": 14
+      },
+      {
+        "item": "novel_scifi",
+        "prob": 12
+      },
+      {
+        "item": "novel_fantasy",
+        "prob": 10
+      },
+      {
+        "item": "laptop",
+        "prob": 8
+      },
+      {
+        "item": "manual_computers",
+        "prob": 6
+      },
+      {
+        "item": "sunglasses",
+        "prob": 4
+      }
+    ]
+  },
+  {
+    "//": "Two carried rolls, not three.  A geek is the loot archetype of this mod, but the third roll was marginal and the otaku pool now sits on top of it - worn clothing already accounts for about four of the items on the body.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_geek_drops",
+    "entries": [
+      {
+        "group": "cv_geek_worn"
+      },
+      {
+        "group": "cv_geek_carried",
+        "prob": 85
+      },
+      {
+        "group": "cv_geek_carried",
+        "prob": 55
+      },
+      {
+        "item": "cash_card",
+        "prob": 30,
+        "charges": [
+          0,
+          12000
+        ]
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 18
+      },
+      {
+        "group": "cv_otaku_carried",
+        "prob": 50
+      }
+    ]
+  },
+  {
+    "//": "Whatever was closest to hand.  Wielded, and dropped on death.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_farmer_weapon",
+    "entries": [
+      {
+        "item": "pitchfork",
+        "prob": 22
+      },
+      {
+        "item": "shovel",
+        "prob": 20
+      },
+      {
+        "item": "ax",
+        "prob": 16
+      },
+      {
+        "item": "hoe",
+        "prob": 14
+      },
+      {
+        "item": "hatchet",
+        "prob": 10
+      },
+      {
+        "item": "scythe",
+        "prob": 8
+      },
+      {
+        "item": "sickle",
+        "prob": 6
+      },
+      {
+        "item": "machete",
+        "prob": 4
+      }
+    ]
+  },
+  {
+    "//": "Farm clothing.  The outer layer is identical for both; only the basics differ.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_farmer_worn_m",
+    "entries": [
+      {
+        "item": "tshirt",
+        "prob": 70
+      },
+      {
+        "item": "jeans",
+        "prob": 80
+      },
+      {
+        "item": "jacket_jean",
+        "prob": 35
+      },
+      {
+        "distribution": [
+          {
+            "item": "boots",
+            "prob": 60
+          },
+          {
+            "item": "boots_rubber",
+            "prob": 40
+          }
+        ],
+        "prob": 75
+      },
+      {
+        "distribution": [
+          {
+            "item": "straw_hat",
+            "prob": 55
+          },
+          {
+            "item": "hat_boonie",
+            "prob": 25
+          },
+          {
+            "item": "hat_cotton",
+            "prob": 20
+          }
+        ],
+        "prob": 60
+      },
+      {
+        "item": "gloves_work",
+        "prob": 50
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 50
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      }
+    ]
+  },
+  {
+    "//": "Same farm layer, different basics.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_farmer_worn_f",
+    "entries": [
+      {
+        "item": "tshirt",
+        "prob": 70
+      },
+      {
+        "item": "jeans",
+        "prob": 80
+      },
+      {
+        "item": "jacket_jean",
+        "prob": 35
+      },
+      {
+        "distribution": [
+          {
+            "item": "boots",
+            "prob": 60
+          },
+          {
+            "item": "boots_rubber",
+            "prob": 40
+          }
+        ],
+        "prob": 75
+      },
+      {
+        "distribution": [
+          {
+            "item": "straw_hat",
+            "prob": 55
+          },
+          {
+            "item": "hat_boonie",
+            "prob": 25
+          },
+          {
+            "item": "hat_cotton",
+            "prob": 20
+          }
+        ],
+        "prob": 60
+      },
+      {
+        "item": "gloves_work",
+        "prob": 50
+      },
+      {
+        "item": "bra",
+        "prob": 50
+      },
+      {
+        "item": "panties",
+        "prob": 50
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      }
+    ]
+  },
+  {
+    "//": "Odds and ends off the yard.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_farmer_carried",
+    "entries": [
+      {
+        "item": "rope_30",
+        "prob": 18
+      },
+      {
+        "item": "duct_tape",
+        "prob": 16,
+        "charges": [
+          10,
+          50
+        ]
+      },
+      {
+        "item": "bucket",
+        "prob": 14
+      },
+      {
+        "item": "matches",
+        "prob": 12
+      },
+      {
+        "item": "lighter",
+        "prob": 12
+      },
+      {
+        "item": "water_clean",
+        "prob": 10
+      },
+      {
+        "item": "jerrycan",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Farmers are cash-poor and tool-rich.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_farmer_drops_m",
+    "entries": [
+      {
+        "group": "cv_farmer_worn_m"
+      },
+      {
+        "group": "cv_farmer_carried",
+        "prob": 70
+      },
+      {
+        "group": "cv_farmer_carried",
+        "prob": 30
+      },
+      {
+        "item": "money_bundle",
+        "prob": 15
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 25
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Farmers are cash-poor and tool-rich.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_farmer_drops_f",
+    "entries": [
+      {
+        "group": "cv_farmer_worn_f"
+      },
+      {
+        "group": "cv_farmer_carried",
+        "prob": 70
+      },
+      {
+        "group": "cv_farmer_carried",
+        "prob": 30
+      },
+      {
+        "item": "money_bundle",
+        "prob": 15
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 25
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Wielded, and the same group the gun can drop from.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_biker_pistol_weapon",
+    "entries": [
+      {
+        "item": "cv_biker_pistol_gun",
+        "prob": 100
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_biker_shotgun_weapon",
+    "entries": [
+      {
+        "item": "cv_biker_shotgun_gun",
+        "prob": 100
+      }
+    ]
+  },
+  {
+    "//": "Road leathers.  Men's cut.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_biker_worn_m",
+    "entries": [
+      {
+        "item": "jacket_leather",
+        "prob": 80
+      },
+      {
+        "item": "tshirt",
+        "prob": 65
+      },
+      {
+        "item": "jeans",
+        "prob": 80
+      },
+      {
+        "item": "boots",
+        "prob": 70
+      },
+      {
+        "item": "gloves_leather",
+        "prob": 45
+      },
+      {
+        "item": "bandana",
+        "prob": 30
+      },
+      {
+        "item": "sunglasses",
+        "prob": 25
+      },
+      {
+        "item": "helmet_motor",
+        "prob": 15
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 45
+      },
+      {
+        "item": "socks",
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "//": "Same leathers, different basics.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_biker_worn_f",
+    "entries": [
+      {
+        "item": "jacket_leather",
+        "prob": 80
+      },
+      {
+        "item": "tank_top",
+        "prob": 60
+      },
+      {
+        "item": "jeans",
+        "prob": 80
+      },
+      {
+        "item": "boots",
+        "prob": 70
+      },
+      {
+        "item": "gloves_leather",
+        "prob": 45
+      },
+      {
+        "item": "bandana",
+        "prob": 30
+      },
+      {
+        "item": "sunglasses",
+        "prob": 25
+      },
+      {
+        "item": "helmet_motor",
+        "prob": 15
+      },
+      {
+        "item": "bra",
+        "prob": 50
+      },
+      {
+        "item": "panties",
+        "prob": 50
+      },
+      {
+        "item": "socks",
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "//": "Taken off other people.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_biker_takings",
+    "entries": [
+      {
+        "item": "money_bundle",
+        "prob": 20,
+        "count": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "cash_card",
+        "prob": 18,
+        "charges": [
+          0,
+          20000
+        ]
+      },
+      {
+        "item": "cig",
+        "prob": 16,
+        "charges": [
+          1,
+          10
+        ]
+      },
+      {
+        "item": "lighter",
+        "prob": 14
+      },
+      {
+        "item": "knuckle_brass",
+        "prob": 10
+      },
+      {
+        "item": "wristwatch",
+        "prob": 8
+      },
+      {
+        "item": "weed",
+        "prob": 8,
+        "charges": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "whiskey",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Gun drops at 40% so bandit-farming never becomes an armoury; ammo at 50%, small and always low tier (9mm, not 9mmfmj).",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_biker_pistol_drops_m",
+    "entries": [
+      {
+        "group": "cv_biker_worn_m"
+      },
+      {
+        "group": "cv_biker_pistol_weapon",
+        "prob": 40
+      },
+      {
+        "item": "9mm",
+        "prob": 50,
+        "charges": [
+          2,
+          8
+        ]
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 70
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 30
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Gun drops at 40% so bandit-farming never becomes an armoury; ammo at 50%, small and always low tier (9mm, not 9mmfmj).",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_biker_pistol_drops_f",
+    "entries": [
+      {
+        "group": "cv_biker_worn_f"
+      },
+      {
+        "group": "cv_biker_pistol_weapon",
+        "prob": 40
+      },
+      {
+        "item": "9mm",
+        "prob": 50,
+        "charges": [
+          2,
+          8
+        ]
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 70
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 30
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Birdshot only, and not much of it.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_biker_shotgun_drops",
+    "entries": [
+      {
+        "group": "cv_biker_worn_m"
+      },
+      {
+        "group": "cv_biker_shotgun_weapon",
+        "prob": 40
+      },
+      {
+        "item": "shot_bird",
+        "prob": 50,
+        "charges": [
+          2,
+          6
+        ]
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 70
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 30
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Scavenged and battered.  Nothing from the combat-knife tier; kitchen drawers, pockets and improvised blades, most of them already damaged.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_biker_knife_weapon",
+    "entries": [
+      {
+        "item": "knife_butcher",
+        "prob": 16,
+        "damage": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "knife_hunting",
+        "prob": 14,
+        "damage": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "switchblade",
+        "prob": 13,
+        "damage": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "knife_folding",
+        "prob": 12,
+        "damage": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "knife_steak",
+        "prob": 11,
+        "damage": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "pockknife",
+        "prob": 10,
+        "damage": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "knife_meat_cleaver",
+        "prob": 8,
+        "damage": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "makeshift_knife",
+        "prob": 8,
+        "damage": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "glass_shiv",
+        "prob": 5
+      },
+      {
+        "item": "primitive_knife",
+        "prob": 3
+      }
+    ]
+  },
+  {
+    "//": "The blade drops more readily than a gun would -- a battered kitchen knife is no windfall, so there is no economy to protect.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_biker_knife_drops",
+    "entries": [
+      {
+        "group": "cv_biker_worn_m"
+      },
+      {
+        "group": "cv_biker_knife_weapon",
+        "prob": 65
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 70
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 30
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_biker_rifle_weapon",
+    "entries": [
+      {
+        "item": "cv_biker_rifle_gun",
+        "prob": 100
+      }
+    ]
+  },
+  {
+    "//": "Same 40% gun / 50% ammo split as the other armed variants; .22 is the lowest tier there is.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_biker_rifle_drops",
+    "entries": [
+      {
+        "group": "cv_biker_worn_m"
+      },
+      {
+        "group": "cv_biker_rifle_weapon",
+        "prob": 40
+      },
+      {
+        "item": "22_lr",
+        "prob": 50,
+        "charges": [
+          3,
+          10
+        ]
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 70
+      },
+      {
+        "group": "cv_biker_takings",
+        "prob": 30
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Melee only.  cop_weapons is deliberately NOT used - it carries firearms.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_police_weapon",
+    "entries": [
+      {
+        "item": "baton",
+        "prob": 100,
+        "damage": [
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_swat_weapon",
+    "entries": [
+      {
+        "item": "baton",
+        "prob": 100,
+        "damage": [
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Vanilla's own cop kit, minus the guns.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_police_drops",
+    "entries": [
+      {
+        "group": "cop_gear",
+        "prob": 70,
+        "damage": [
+          0,
+          2
+        ]
+      },
+      {
+        "group": "cop_torso",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_pants",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_shoes",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_gloves",
+        "prob": 30,
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_helmet",
+        "prob": 20,
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "badge_deputy",
+        "prob": 25
+      },
+      {
+        "item": "police_belt",
+        "prob": 30,
+        "damage": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "two_way_radio",
+        "prob": 20
+      },
+      {
+        "item": "flashlight",
+        "prob": 20
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Vanilla's own SWAT kit.  The riot shield is the prize, and it arrives battered.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_swat_drops",
+    "entries": [
+      {
+        "group": "swat_zombie_gear",
+        "prob": 100,
+        "damage": [
+          0,
+          2
+        ]
+      },
+      {
+        "group": "swat_torso",
+        "damage": [
+          0,
+          4
+        ]
+      },
+      {
+        "group": "swat_pants",
+        "damage": [
+          0,
+          4
+        ]
+      },
+      {
+        "group": "swat_shoes",
+        "damage": [
+          0,
+          4
+        ]
+      },
+      {
+        "group": "swat_gloves",
+        "damage": [
+          0,
+          4
+        ]
+      },
+      {
+        "group": "swat_helmet",
+        "damage": [
+          0,
+          4
+        ]
+      },
+      {
+        "item": "shield_riot",
+        "prob": 35,
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "badge_swat",
+        "prob": 30
+      },
+      {
+        "item": "two_way_radio",
+        "prob": 25
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 15
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_cop_pistol_weapon",
+    "entries": [
+      {
+        "item": "cv_cop_glock22",
+        "prob": 100,
+        "charges": [
+          0,
+          15
+        ],
+        "damage": [
+          0,
+          4
+        ],
+        "dirt": [
+          0,
+          7050
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Vanilla's cop kit plus the sidearm at 40% - same restraint as the bikers, so clearing a police station is worth doing without becoming an armoury.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_cop_pistol_drops",
+    "entries": [
+      {
+        "group": "cop_gear",
+        "prob": 70,
+        "damage": [
+          0,
+          2
+        ]
+      },
+      {
+        "group": "cop_torso",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_pants",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_shoes",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_gloves",
+        "prob": 30,
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cop_helmet",
+        "prob": 20,
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cv_cop_pistol_weapon",
+        "prob": 40
+      },
+      {
+        "item": "40fmj",
+        "prob": 55,
+        "charges": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "badge_deputy",
+        "prob": 25
+      },
+      {
+        "item": "police_belt",
+        "prob": 30,
+        "damage": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "two_way_radio",
+        "prob": 20
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "The full outfit.  Still on, still complete.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_clown_worn",
+    "entries": [
+      {
+        "item": "clown_suit",
+        "prob": 85
+      },
+      {
+        "item": "clown_wig",
+        "prob": 70
+      },
+      {
+        "item": "clown_nose",
+        "prob": 65
+      },
+      {
+        "item": "clownshoes",
+        "prob": 60
+      },
+      {
+        "item": "socks",
+        "prob": 35
+      }
+    ]
+  },
+  {
+    "//": "Props and the odds and ends of a working day.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_clown_props",
+    "entries": [
+      {
+        "item": "balloon",
+        "prob": 28,
+        "count": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "horn_bicycle",
+        "prob": 20
+      },
+      {
+        "item": "bottle_plastic",
+        "prob": 16
+      },
+      {
+        "item": "pie_meat",
+        "prob": 12
+      },
+      {
+        "item": "cig",
+        "prob": 10,
+        "charges": [
+          1,
+          8
+        ]
+      },
+      {
+        "item": "lighter",
+        "prob": 8
+      },
+      {
+        "item": "smart_phone",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Living clown: intact costume, props rolled twice, a little cash from the shift.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_clown_drops",
+    "entries": [
+      {
+        "group": "cv_clown_worn"
+      },
+      {
+        "group": "cv_clown_props",
+        "prob": 75
+      },
+      {
+        "group": "cv_clown_props",
+        "prob": 35
+      },
+      {
+        "item": "money_bundle",
+        "prob": 20
+      },
+      {
+        "item": "cash_card",
+        "prob": 25,
+        "charges": [
+          0,
+          8000
+        ]
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Same costume, worse condition, and it has stopped carrying anything useful.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_clown_drops",
+    "entries": [
+      {
+        "group": "cv_clown_worn",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cv_clown_props",
+        "prob": 40
+      },
+      {
+        "item": "money_bundle",
+        "prob": 10
+      }
+    ]
+  },
+  {
+    "//": "Favour pools.  These are item_groups rather than bare item ids so that liquids can declare a container-item - handing over water_clean alone puts a puddle on the floor.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_favour_medical",
+    "entries": [
+      {
+        "item": "aspirin",
+        "prob": 30,
+        "charges": [
+          4,
+          12
+        ]
+      },
+      {
+        "item": "bandages",
+        "prob": 30,
+        "charges": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "disinfectant",
+        "prob": 25,
+        "charges": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "codeine",
+        "prob": 15,
+        "charges": [
+          2,
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_favour_tools",
+    "entries": [
+      {
+        "item": "screwdriver",
+        "prob": 25
+      },
+      {
+        "item": "hammer",
+        "prob": 22
+      },
+      {
+        "item": "wrench",
+        "prob": 20
+      },
+      {
+        "item": "pliers",
+        "prob": 18
+      },
+      {
+        "item": "duct_tape",
+        "prob": 15,
+        "charges": [
+          20,
+          60
+        ]
+      }
+    ]
+  },
+  {
+    "//": "A bottle with water in it.  Mirrors vanilla misc.json:250.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_favour_water",
+    "entries": [
+      {
+        "item": "water_clean",
+        "prob": 70,
+        "charges": 2,
+        "container-item": "bottle_plastic"
+      },
+      {
+        "item": "water_clean",
+        "prob": 30,
+        "charges": [
+          2,
+          3
+        ],
+        "container-item": "bottle_twoliter"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_favour_food",
+    "entries": [
+      {
+        "item": "sandwich_cheese",
+        "prob": 28
+      },
+      {
+        "item": "can_beans",
+        "prob": 26
+      },
+      {
+        "item": "jerky",
+        "prob": 24
+      },
+      {
+        "item": "chocolate",
+        "prob": 22
+      }
+    ]
+  },
+  {
+    "//": "The one thing worth walking over for.  Somebody who had a chemistry bench or a soldering station at home, and was carrying a piece of it when it happened.",
+    "//2": "id_science is deliberately the rarest entry: it opens lab doors, so it is a real find rather than flavour.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_nerd_science",
+    "entries": [
+      {
+        "item": "test_tube",
+        "prob": 14,
+        "count": [
+          1,
+          3
+        ]
+      },
+      {
+        "item": "flask_glass",
+        "prob": 12
+      },
+      {
+        "item": "chem_hydrogen_peroxide",
+        "prob": 11,
+        "charges": [
+          10,
+          60
+        ]
+      },
+      {
+        "item": "soldering_iron",
+        "prob": 10,
+        "charges": [
+          0,
+          40
+        ]
+      },
+      {
+        "item": "manual_electronics",
+        "prob": 9
+      },
+      {
+        "item": "chem_saltpetre",
+        "prob": 9,
+        "charges": [
+          20,
+          80
+        ]
+      },
+      {
+        "item": "textbook_chemistry",
+        "prob": 8
+      },
+      {
+        "item": "hotplate",
+        "prob": 7,
+        "charges": [
+          0,
+          100
+        ]
+      },
+      {
+        "item": "chem_muriatic_acid",
+        "prob": 6,
+        "charges": [
+          10,
+          40
+        ]
+      },
+      {
+        "item": "chemistry_set",
+        "prob": 5
+      },
+      {
+        "item": "electrolysis_kit",
+        "prob": 4
+      },
+      {
+        "item": "chem_sulphuric_acid",
+        "prob": 4,
+        "charges": [
+          10,
+          40
+        ]
+      },
+      {
+        "item": "microscope",
+        "prob": 3
+      },
+      {
+        "item": "id_science",
+        "prob": 2
+      }
+    ]
+  },
+  {
+    "//": "The same wardrobe and the same carried clutter as the living geek, in worse condition and rolled fewer times - some of it went on the way.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_nerd_drops",
+    "entries": [
+      {
+        "group": "cv_geek_worn",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cv_geek_carried",
+        "prob": 70
+      },
+      {
+        "group": "cv_geek_carried",
+        "prob": 35
+      },
+      {
+        "item": "cash_card",
+        "prob": 15,
+        "charges": [
+          0,
+          12000
+        ]
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 8
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 10
+      },
+      {
+        "group": "cv_nerd_science",
+        "prob": 15
+      },
+      {
+        "group": "cv_otaku_carried",
+        "prob": 50
+      }
+    ]
+  },
+  {
+    "//": "The collection, as one pool.  Everything that references it does so by group, so rebalancing happens here once rather than in five separate drop tables.",
+    "//2": "Body pillows are deliberately the rarest entries by a wide margin - carrying one is a whole-bag decision, and finding one on a corpse should be a surprise.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_otaku_carried",
+    "entries": [
+      {
+        "item": "cv_manga_shonen",
+        "prob": 200
+      },
+      {
+        "item": "cv_manga_shojo",
+        "prob": 160
+      },
+      {
+        "item": "cv_manga_slice",
+        "prob": 150
+      },
+      {
+        "item": "cv_mag_shonen_weekly",
+        "prob": 140
+      },
+      {
+        "item": "cv_comic_hero",
+        "prob": 130
+      },
+      {
+        "item": "cv_mag_alien",
+        "prob": 110
+      },
+      {
+        "item": "cv_manga_adult",
+        "prob": 90
+      },
+      {
+        "item": "cv_figure_wolfgirl",
+        "prob": 70
+      },
+      {
+        "item": "cv_figure_mecha",
+        "prob": 60
+      },
+      {
+        "item": "cv_figure_boxed",
+        "prob": 45
+      },
+      {
+        "item": "cv_doll_mariner",
+        "prob": 35
+      },
+      {
+        "item": "cv_pillow_anime",
+        "prob": 6
+      },
+      {
+        "item": "cv_pillow_singer",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "General fiction shelves.  Roughly 1.5% each.  Vanilla weights sum to 405.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "novels",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_manga_shonen",
+        "prob": 8
+      },
+      {
+        "item": "cv_manga_shojo",
+        "prob": 8
+      },
+      {
+        "item": "cv_manga_slice",
+        "prob": 8
+      },
+      {
+        "item": "cv_comic_hero",
+        "prob": 6
+      },
+      {
+        "item": "cv_manga_adult",
+        "prob": 4
+      }
+    ]
+  },
+  {
+    "//": "A household bookcase.  Percentages, so 5-6% each.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "SUS_fiction_bookcase",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "cv_manga_shonen",
+        "prob": 6
+      },
+      {
+        "item": "cv_manga_shojo",
+        "prob": 6
+      },
+      {
+        "item": "cv_manga_slice",
+        "prob": 5
+      },
+      {
+        "item": "cv_comic_hero",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "//": "Children's shelves - no adult manga here, deliberately.  Roughly 5% each.  Vanilla weights sum to 124.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "kids_books",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_manga_shonen",
+        "prob": 8
+      },
+      {
+        "item": "cv_manga_shojo",
+        "prob": 6
+      },
+      {
+        "item": "cv_comic_hero",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Magazine racks.  Roughly 1.5% each.  Vanilla weights sum to 956.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "magazines",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_mag_alien",
+        "prob": 14
+      },
+      {
+        "item": "cv_mag_shonen_weekly",
+        "prob": 14
+      }
+    ]
+  },
+  {
+    "//": "Where toys already live, so the figures get their best odds here - 3-4% each.  Vanilla weights sum to 892.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "toy_box",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_figure_wolfgirl",
+        "prob": 35
+      },
+      {
+        "item": "cv_figure_mecha",
+        "prob": 35
+      },
+      {
+        "item": "cv_figure_boxed",
+        "prob": 25
+      },
+      {
+        "item": "cv_doll_mariner",
+        "prob": 30
+      }
+    ]
+  },
+  {
+    "//": "A shop that would actually have stocked these.  Vanilla declares no subtype, which the loader reads as \"old\" and so as a DISTRIBUTION - weights are relative to a vanilla total of 1109.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "toy_store",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_figure_wolfgirl",
+        "prob": 30
+      },
+      {
+        "item": "cv_figure_mecha",
+        "prob": 30
+      },
+      {
+        "item": "cv_figure_boxed",
+        "prob": 22
+      },
+      {
+        "item": "cv_doll_mariner",
+        "prob": 26
+      },
+      {
+        "item": "cv_manga_shonen",
+        "prob": 16
+      }
+    ]
+  },
+  {
+    "//": "Somebody's display cabinet - the one place a boxed figure truly belongs.  Vanilla declares no subtype, which the loader reads as \"old\" and so as a DISTRIBUTION - weights are relative to a vanilla total of 1622.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "home_display_case",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_figure_boxed",
+        "prob": 30
+      },
+      {
+        "item": "cv_figure_mecha",
+        "prob": 24
+      },
+      {
+        "item": "cv_figure_wolfgirl",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "//": "The pillow slot.  Roughly 1.9% each, so a bed very occasionally has one of these instead.  Vanilla weights sum to 108.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "bed",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_pillow_anime",
+        "prob": 2
+      },
+      {
+        "item": "cv_pillow_singer",
+        "prob": 2
+      }
+    ]
+  },
+  {
+    "//": "Bedrooms.  An enormous group, so even 14 is well under half a percent.  Vanilla weights sum to 3921.",
+    "//2": "Redeclaring a vanilla group appends to it; the subtype must match vanilla's or the loader throws.",
+    "type": "item_group",
+    "id": "bedroom",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_manga_adult",
+        "prob": 14
+      },
+      {
+        "item": "cv_manga_shojo",
+        "prob": 10
+      },
+      {
+        "item": "cv_figure_wolfgirl",
+        "prob": 8
+      },
+      {
+        "item": "cv_pillow_anime",
+        "prob": 3
+      },
+      {
+        "item": "cv_pillow_singer",
+        "prob": 3
+      }
+    ]
+  },
+  {
+    "//": "Dressed for an ordinary day some time ago.  Everything here is vanilla bn.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_elderly_worn_m",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "dress_shirt",
+            "prob": 30
+          },
+          {
+            "item": "polo_shirt",
+            "prob": 25
+          },
+          {
+            "item": "sweater",
+            "prob": 25
+          },
+          {
+            "item": "longshirt",
+            "prob": 20
+          }
+        ],
+        "prob": 92
+      },
+      {
+        "distribution": [
+          {
+            "item": "pants",
+            "prob": 45
+          },
+          {
+            "item": "pants_checkered",
+            "prob": 25
+          },
+          {
+            "item": "jeans",
+            "prob": 30
+          }
+        ],
+        "prob": 88
+      },
+      {
+        "item": "vest",
+        "prob": 22
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 55
+      },
+      {
+        "distribution": [
+          {
+            "item": "socks_wool",
+            "prob": 55
+          },
+          {
+            "item": "socks",
+            "prob": 45
+          }
+        ],
+        "prob": 60
+      },
+      {
+        "distribution": [
+          {
+            "item": "dress_shoes",
+            "prob": 40
+          },
+          {
+            "item": "slippers",
+            "prob": 35
+          },
+          {
+            "item": "sneakers",
+            "prob": 25
+          }
+        ],
+        "prob": 72
+      },
+      {
+        "distribution": [
+          {
+            "item": "house_coat",
+            "prob": 30
+          },
+          {
+            "item": "jacket_light",
+            "prob": 30
+          },
+          {
+            "item": "coat_winter",
+            "prob": 22
+          },
+          {
+            "item": "trenchcoat",
+            "prob": 18
+          }
+        ],
+        "prob": 45
+      },
+      {
+        "distribution": [
+          {
+            "item": "hat_newsboy",
+            "prob": 55
+          },
+          {
+            "item": "beret",
+            "prob": 25
+          },
+          {
+            "item": "straw_hat",
+            "prob": 20
+          }
+        ],
+        "prob": 30
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 45
+      },
+      {
+        "distribution": [
+          {
+            "item": "wristwatch",
+            "prob": 60
+          },
+          {
+            "item": "pocketwatch",
+            "prob": 25
+          },
+          {
+            "item": "gold_watch",
+            "prob": 15
+          }
+        ],
+        "prob": 35
+      }
+    ]
+  },
+  {
+    "//": "Dressed for an ordinary day some time ago.  Everything here is vanilla bn.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_elderly_worn_f",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "sweater",
+            "prob": 35
+          },
+          {
+            "item": "longshirt",
+            "prob": 25
+          },
+          {
+            "item": "dress_shirt",
+            "prob": 20
+          },
+          {
+            "item": "tshirt",
+            "prob": 20
+          }
+        ],
+        "prob": 92
+      },
+      {
+        "distribution": [
+          {
+            "item": "skirt",
+            "prob": 35
+          },
+          {
+            "item": "dress",
+            "prob": 25
+          },
+          {
+            "item": "pants",
+            "prob": 25
+          },
+          {
+            "item": "leggings",
+            "prob": 15
+          }
+        ],
+        "prob": 88
+      },
+      {
+        "item": "bra",
+        "prob": 50
+      },
+      {
+        "item": "panties",
+        "prob": 55
+      },
+      {
+        "distribution": [
+          {
+            "item": "socks_wool",
+            "prob": 60
+          },
+          {
+            "item": "socks",
+            "prob": 40
+          }
+        ],
+        "prob": 60
+      },
+      {
+        "distribution": [
+          {
+            "item": "slippers",
+            "prob": 40
+          },
+          {
+            "item": "dress_shoes",
+            "prob": 35
+          },
+          {
+            "item": "sneakers",
+            "prob": 25
+          }
+        ],
+        "prob": 72
+      },
+      {
+        "distribution": [
+          {
+            "item": "house_coat",
+            "prob": 35
+          },
+          {
+            "item": "jacket_light",
+            "prob": 28
+          },
+          {
+            "item": "coat_winter",
+            "prob": 22
+          },
+          {
+            "item": "coat_rain",
+            "prob": 15
+          }
+        ],
+        "prob": 45
+      },
+      {
+        "item": "scarf",
+        "prob": 25
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 45
+      },
+      {
+        "distribution": [
+          {
+            "item": "pearl_collar",
+            "prob": 40
+          },
+          {
+            "item": "copper_bracelet",
+            "prob": 35
+          },
+          {
+            "item": "diamond_ring",
+            "prob": 25
+          }
+        ],
+        "prob": 20
+      },
+      {
+        "item": "gloves_wool",
+        "prob": 15
+      }
+    ]
+  },
+  {
+    "//": "A pillbox's worth of ordinary long-term prescriptions.  Small quantities: this is what somebody had on them, not a pharmacy shelf.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_elderly_meds",
+    "entries": [
+      {
+        "item": "aspirin",
+        "prob": 30,
+        "charges": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "vitamins",
+        "prob": 22,
+        "charges": [
+          2,
+          15
+        ]
+      },
+      {
+        "item": "calcium_tablet",
+        "prob": 18,
+        "charges": [
+          2,
+          15
+        ]
+      },
+      {
+        "item": "pills_sleep",
+        "prob": 14,
+        "charges": [
+          1,
+          8
+        ]
+      },
+      {
+        "item": "inhaler",
+        "prob": 10,
+        "charges": [
+          2,
+          30
+        ]
+      },
+      {
+        "item": "codeine",
+        "prob": 8,
+        "charges": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "weak_antibiotic",
+        "prob": 6,
+        "charges": [
+          1,
+          5
+        ]
+      },
+      {
+        "item": "prozac",
+        "prob": 5,
+        "charges": [
+          1,
+          8
+        ]
+      },
+      {
+        "item": "tramadol",
+        "prob": 4,
+        "charges": [
+          1,
+          5
+        ]
+      },
+      {
+        "item": "diazepam",
+        "prob": 3,
+        "charges": [
+          1,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Ordinary pockets, a walking stick, and whatever was in the pillbox.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_elderly_drops_m",
+    "entries": [
+      {
+        "group": "cv_elderly_worn_m"
+      },
+      {
+        "item": "cane",
+        "prob": 70
+      },
+      {
+        "group": "cv_elderly_meds",
+        "prob": 55
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 40
+      },
+      {
+        "item": "cash_card",
+        "prob": 30,
+        "charges": [
+          0,
+          20000
+        ]
+      },
+      {
+        "distribution": [
+          {
+            "item": "money_bundle",
+            "prob": 55
+          },
+          {
+            "item": "coin_quarter",
+            "prob": 45,
+            "count": [
+              2,
+              15
+            ]
+          }
+        ],
+        "prob": 30
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 15
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 18
+      },
+      {
+        "item": "cv_photo",
+        "prob": 20
+      },
+      {
+        "item": "photo_album",
+        "prob": 6
+      },
+      {
+        "group": "cv_otaku_carried",
+        "prob": 2
+      },
+      {
+        "item": "flask_hip",
+        "prob": 6
+      },
+      {
+        "item": "deck_of_cards",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "//": "Ordinary pockets, a walking stick, and whatever was in the pillbox.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_elderly_drops_f",
+    "entries": [
+      {
+        "group": "cv_elderly_worn_f"
+      },
+      {
+        "item": "cane",
+        "prob": 70
+      },
+      {
+        "group": "cv_elderly_meds",
+        "prob": 55
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 40
+      },
+      {
+        "item": "cash_card",
+        "prob": 30,
+        "charges": [
+          0,
+          20000
+        ]
+      },
+      {
+        "distribution": [
+          {
+            "item": "money_bundle",
+            "prob": 55
+          },
+          {
+            "item": "coin_quarter",
+            "prob": 45,
+            "count": [
+              2,
+              15
+            ]
+          }
+        ],
+        "prob": 30
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 15
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 18
+      },
+      {
+        "item": "cv_photo",
+        "prob": 20
+      },
+      {
+        "item": "photo_album",
+        "prob": 6
+      },
+      {
+        "group": "cv_otaku_carried",
+        "prob": 2
+      },
+      {
+        "item": "purse",
+        "prob": 22
+      },
+      {
+        "item": "knitting_needles",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Clothing, the symbol round their neck, and whatever was in their pockets.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_priest_drops",
+    "entries": [
+      {
+        "group": "cv_clergy_worn_priest"
+      },
+      {
+        "item": "holy_symbol",
+        "prob": 65
+      },
+      {
+        "group": "cv_clergy_pockets"
+      }
+    ]
+  },
+  {
+    "//": "Clothing, the symbol round their neck, and whatever was in their pockets.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_nun_drops",
+    "entries": [
+      {
+        "group": "cv_clergy_worn_nun"
+      },
+      {
+        "item": "holy_symbol",
+        "prob": 65
+      },
+      {
+        "group": "cv_clergy_pockets"
+      }
+    ]
+  },
+  {
+    "//": "Vestments and ordinary clothes underneath.  cassock and robe are both vanilla bn.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_clergy_worn_priest",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "cassock",
+            "prob": 55
+          },
+          {
+            "item": "robe",
+            "prob": 25
+          },
+          {
+            "item": "dress_shirt",
+            "prob": 20
+          }
+        ],
+        "prob": 92
+      },
+      {
+        "item": "pants",
+        "prob": 70
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 50
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 65
+      },
+      {
+        "item": "jacket_light",
+        "prob": 20
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 25
+      }
+    ]
+  },
+  {
+    "//": "No nun's habit item exists in vanilla bn, so a robe stands in for it.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_clergy_worn_nun",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "robe",
+            "prob": 70
+          },
+          {
+            "item": "cassock",
+            "prob": 30
+          }
+        ],
+        "prob": 94
+      },
+      {
+        "item": "dress",
+        "prob": 35
+      },
+      {
+        "item": "bra",
+        "prob": 45
+      },
+      {
+        "item": "panties",
+        "prob": 50
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 60
+      },
+      {
+        "item": "scarf",
+        "prob": 20
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 25
+      }
+    ]
+  },
+  {
+    "//": "Loose carried odds and ends.  holy_symbol is deliberately NOT in here - it is rolled separately by each drop table, so the living and the dead can carry it at different rates without double-dipping.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_clergy_pockets",
+    "entries": [
+      {
+        "item": "candle",
+        "prob": 30,
+        "count": [
+          1,
+          3
+        ]
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 35
+      },
+      {
+        "item": "cash_card",
+        "prob": 20,
+        "charges": [
+          0,
+          15000
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 12
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 20
+      },
+      {
+        "item": "cv_photo",
+        "prob": 14
+      }
+    ]
+  },
+  {
+    "//": "The same wardrobe as the living version, in worse condition, and mostly empty pockets - `damage: [1, 4]` is the same treatment the zombie clown and zombie nerd get.",
+    "//2": "The symbol survives better than the pockets do: it is round the neck rather than in a pocket, so it drops at 55% against the living 65%, while the pockets fall from certain to 40%.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_priest_drops",
+    "entries": [
+      {
+        "group": "cv_clergy_worn_priest",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "holy_symbol",
+        "prob": 55
+      },
+      {
+        "group": "cv_clergy_pockets",
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "//": "The same wardrobe as the living version, in worse condition, and mostly empty pockets - `damage: [1, 4]` is the same treatment the zombie clown and zombie nerd get.",
+    "//2": "The symbol survives better than the pockets do: it is round the neck rather than in a pocket, so it drops at 55% against the living 65%, while the pockets fall from certain to 40%.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_nun_drops",
+    "entries": [
+      {
+        "group": "cv_clergy_worn_nun",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "holy_symbol",
+        "prob": 55
+      },
+      {
+        "group": "cv_clergy_pockets",
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "//": "Whatever was kept under the counter.  All melee - see the monster's //5.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_shopkeeper_weapon",
+    "entries": [
+      {
+        "item": "bat",
+        "prob": 30
+      },
+      {
+        "item": "bat_metal",
+        "prob": 25
+      },
+      {
+        "item": "crowbar",
+        "prob": 20
+      },
+      {
+        "item": "golf_club",
+        "prob": 15
+      },
+      {
+        "item": "pipe",
+        "prob": 10
+      }
+    ]
+  },
+  {
+    "//": "Shop clothes, the keys, the float, and a little of the stock.  The cash is the point of him: he is the one civilian in the mod who is worth robbing.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_shopkeeper_drops",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "polo_shirt",
+            "prob": 35
+          },
+          {
+            "item": "dress_shirt",
+            "prob": 30
+          },
+          {
+            "item": "longshirt",
+            "prob": 20
+          },
+          {
+            "item": "sweater",
+            "prob": 15
+          }
+        ],
+        "prob": 92
+      },
+      {
+        "item": "pants",
+        "prob": 80
+      },
+      {
+        "item": "vest",
+        "prob": 25
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 50
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 60
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 30
+      },
+      {
+        "item": "wristwatch",
+        "prob": 25
+      },
+      {
+        "item": "money_bundle",
+        "prob": 70,
+        "count": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "coin_quarter",
+        "prob": 45,
+        "count": [
+          5,
+          30
+        ]
+      },
+      {
+        "item": "cash_card",
+        "prob": 50,
+        "charges": [
+          0,
+          60000
+        ]
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 40
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 18
+      },
+      {
+        "item": "cv_photo",
+        "prob": 10
+      },
+      {
+        "group": "cv_shopkeeper_weapon",
+        "prob": 35
+      },
+      {
+        "item": "shot_bird",
+        "prob": 45,
+        "charges": [
+          1,
+          5
+        ]
+      }
+    ],
+    "//2": "The shotgun itself arrives via monster_weapon.  cv_shopkeeper_weapon is the old under-the-counter melee pool, kept as a drop: the thing he did not reach for.  Spare shells are deliberately few - he was not stocked for a siege."
+  },
+  {
+    "//": "What he is actually holding - vanilla pipe_shotgun, no bespoke item.  monster_weapon is the wielded slot, so this replaces the bat pool; the bats moved into his drop table as the thing he did not reach for.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_shopkeeper_shotgun_weapon",
+    "entries": [
+      {
+        "item": "pipe_shotgun",
+        "prob": 100
+      }
+    ]
+  }
+]

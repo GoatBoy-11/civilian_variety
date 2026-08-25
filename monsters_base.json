@@ -1,0 +1,42 @@
+[
+  {
+    "//": "Shared statline for every civilian in this mod.  Abstract: never spawned directly.",
+    "//2": "Deliberately no looks_like.  Children inherit it from copy-from (src/monstergenerator.cpp:786-789), so pointing it at a child here makes that child reference itself.  Archetypes without their own sprite fall back to the default glyph instead, which is honest rather than misleading.",
+    "abstract": "mon_cv_base",
+    "type": "MONSTER",
+    "name": { "str": "civilian" },
+    "description": "If you see this, it's a bug.",
+    "default_faction": "civilians",
+    "bodytype": "human",
+    "species": [ "HUMAN" ],
+    "material": [ "hflesh" ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 75,
+    "speed": 90,
+    "symbol": "@",
+    "color": "white",
+    "diff": 2,
+    "vision_day": 10,
+    "vision_night": 3,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
+    "dodge": 1,
+    "harvest": "human",
+    "zombify_into": "mon_zombie",
+    "path_settings": { "max_dist": 30, "allow_open_doors": true, "avoid_traps": true, "avoid_sharp": true },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "WARM",
+      "HUMAN",
+      "CAN_OPEN_DOORS",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "GUILT",
+      "FACTION_MEMORY"
+    ]
+  }
+]

@@ -1,0 +1,271 @@
+[
+  {
+    "//": "Shared statline for the biker gang.  Abstract: never spawned directly.",
+    "//2": "Fairness still comes from accuracy and fragility rather than timidity.  Morale 55 means it takes real damage to break them, and FRIEND_ATTACKED is no longer a fear trigger - a friend merely being hit does not rattle them, only their own wounds or an actual death.  process_trigger subtracts morale on a fear trigger (src/monster.cpp:2107-2109); negative morale returns MATT_FLEE (src/monster.cpp:1951).",
+    "abstract": "mon_cv_bandit_base",
+    "type": "MONSTER",
+    "name": {
+      "str": "biker bandit"
+    },
+    "description": "If you see this, it's a bug.",
+    "default_faction": "cv_bandit",
+    "bodytype": "human",
+    "species": [
+      "HUMAN"
+    ],
+    "material": [
+      "hflesh"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 70,
+    "speed": 92,
+    "symbol": "@",
+    "color": "light_red",
+    "diff": 5,
+    "aggression": 50,
+    "morale": 55,
+    "vision_day": 30,
+    "vision_night": 4,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 3
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 3,
+    "armor_cut": 3,
+    "harvest": "human",
+    "zombify_into": "mon_zombie",
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED"
+    ],
+    "path_settings": {
+      "max_dist": 20,
+      "allow_open_doors": true,
+      "avoid_traps": true,
+      "avoid_sharp": true
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "WARM",
+      "HUMAN",
+      "CAN_OPEN_DOORS",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "FACTION_MEMORY"
+    ],
+    "//3": "HIT_AND_RUN deliberately absent.  It applies effect_run for 4 turns after EVERY melee attack (src/monster.cpp:2355), so bikers closed, swung once, fled four turns, and repeated - reading as though they never attacked at all.  It also broke the ranged ones: fleeing resets the two-stage targeting cycle, so they could never finish aiming.  Raider flavour is not worth a monster that cannot commit to a fight.",
+    "//4": "Deliberately squishy for a hostile human.  What makes bikers dangerous is that they shoot and they arrive in twos and threes, not that they soak hits.  A player with a crowbar should beat one; a player with a crowbar and no cover should not beat three.",
+    "//5": "Every biker sits below the player base speed of 100 (src/creature.cpp:188), so a fight is always one you can walk away from.  The knife biker is the quickest of them at 95 and still slower than you."
+  },
+  {
+    "//": "Handgun sheet sprites 0-2 (male).  Range 8: vanilla's weakest gunman reaches 35, so retreating from these actually works.",
+    "id": "mon_cv_biker_pistol",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bandit_base",
+    "name": {
+      "str": "biker bandit"
+    },
+    "description": "Leathers, road grime, and the unhurried confidence of somebody who worked out early that the rules had stopped applying.  They are holding the pistol like it settles the argument, and they are mostly interested in what you are carrying.",
+    "starting_ammo": {
+      "9mm": 40
+    },
+    "monster_weapon": "cv_biker_pistol_weapon",
+    "death_drops": "cv_biker_pistol_drops_m",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 12,
+        "gun_type": "cv_biker_pistol_gun",
+        "ammo_type": "9mm",
+        "max_ammo": 12,
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "pistol",
+            1
+          ]
+        ],
+        "fake_dex": 8,
+        "fake_per": 9,
+        "ranges": [
+          [
+            0,
+            14,
+            "DEFAULT"
+          ]
+        ],
+        "move_cost": 150,
+        "targeting_cost": 150,
+        "description": "The biker bandit snaps off a wild shot!"
+      },
+      [
+        "PARROT_AT_DANGER",
+        4
+      ]
+    ],
+    "//3": "Firing at the player is two-stage by default: require_targeting_player is true, so one attempt spends targeting_cost merely to aim and the next one shoots, spending move_cost (src/mattack_actors.h:170-177, gun_actor::try_target).  Costs are kept at the vanilla 150 and the envelope wide enough that the cycle completes before they close to melee - doubling the costs and shortening the range together meant they never fired at all.  Fairness lives in accuracy and fragility instead: fake_skills 0, wrecked dispersion, low hp, and fear_triggers.",
+    "vision_day": 40
+  },
+  {
+    "//": "Handgun sheet sprites 3-5 (female).  Identical but for the wardrobe.",
+    "id": "mon_cv_biker_pistol_f",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_biker_pistol",
+    "name": {
+      "str": "biker bandit"
+    },
+    "death_drops": "cv_biker_pistol_drops_f"
+  },
+  {
+    "//": "Shotgun sheet, all six sprites (male).  Rarest of the three.  Loaded with birdshot rather than buckshot: plausible for a scavenged bandit and genuinely weak, so the damage reduction reads as characterisation rather than an arbitrary nerf.  Range 6 and a 20-turn cooldown keep it a threat you can close on or walk away from.",
+    "id": "mon_cv_biker_shotgun",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bandit_base",
+    "name": {
+      "str": "biker bandit"
+    },
+    "description": "Leathers gone shiny at the elbows, a sawn-off held low against the hip.  They watch the road rather than you, the way somebody does when they are used to other people deciding not to be a problem.",
+    "hp": 80,
+    "starting_ammo": {
+      "shot_bird": 20
+    },
+    "monster_weapon": "cv_biker_shotgun_weapon",
+    "death_drops": "cv_biker_shotgun_drops",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 15,
+        "gun_type": "cv_biker_shotgun_gun",
+        "ammo_type": "shot_bird",
+        "max_ammo": 6,
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "shotgun",
+            1
+          ]
+        ],
+        "fake_dex": 8,
+        "fake_per": 9,
+        "ranges": [
+          [
+            0,
+            10,
+            "DEFAULT"
+          ]
+        ],
+        "move_cost": 150,
+        "targeting_cost": 150,
+        "description": "The biker bandit looses a spray of birdshot!"
+      },
+      [
+        "PARROT_AT_DANGER",
+        4
+      ]
+    ],
+    "//3": "Firing at the player is two-stage by default: require_targeting_player is true, so one attempt spends targeting_cost merely to aim and the next one shoots, spending move_cost (src/mattack_actors.h:170-177, gun_actor::try_target).  Costs are kept at the vanilla 150 and the envelope wide enough that the cycle completes before they close to melee - doubling the costs and shortening the range together meant they never fired at all.  Fairness lives in accuracy and fragility instead: fake_skills 0, wrecked dispersion, low hp, and fear_triggers.",
+    "vision_day": 40
+  },
+  {
+    "//": "Main sheet sprites 96-100 (male).  Melee variant: no gun attack at all, so the whole ranged fairness stack is irrelevant and they are balanced the ordinary way -- they have to reach you.  Slightly tougher than their armed friends to compensate for closing the distance under fire.",
+    "//2": "NOTE: these live on the 32x32 main sheet while the gun variants are 32x48, so knife bikers render shorter than the rest of the gang.  Move them to a 32x48 sheet if that ever looks wrong.",
+    "id": "mon_cv_biker_knife",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bandit_base",
+    "name": {
+      "str": "biker bandit"
+    },
+    "description": "Bandana, road leathers, and a blade held low and reversed in the grip of somebody who has used it before.  No gun, which seems to have made them keener rather than more cautious.",
+    "hp": 85,
+    "speed": 95,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "dodge": 3,
+    "monster_weapon": "cv_biker_knife_weapon",
+    "death_drops": "cv_biker_knife_drops",
+    "special_attacks": [
+      [
+        "PARROT_AT_DANGER",
+        4
+      ]
+    ]
+  },
+  {
+    "//": "Shares the shotgun spritesheet, so a rifle biker and a shotgun biker look identical until one of them fires.  Accepted deliberately; dedicated art may come later.",
+    "//2": "Longer reach than the other two (12 vs 8 and 6) but the weakest round in the game and the worst dispersion of the three, so range buys harassment rather than lethality.",
+    "id": "mon_cv_biker_rifle",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bandit_base",
+    "name": {
+      "str": "biker bandit"
+    },
+    "description": "Leathers and a length of plumbing that has been persuaded into the shape of a rifle.  They hang back further than the others, which suggests they know exactly how good it is.",
+    "starting_ammo": {
+      "22_lr": 30
+    },
+    "monster_weapon": "cv_biker_rifle_weapon",
+    "death_drops": "cv_biker_rifle_drops",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 14,
+        "gun_type": "cv_biker_rifle_gun",
+        "ammo_type": "22_lr",
+        "max_ammo": 8,
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "fake_dex": 8,
+        "fake_per": 9,
+        "ranges": [
+          [
+            0,
+            18,
+            "DEFAULT"
+          ]
+        ],
+        "move_cost": 150,
+        "targeting_cost": 150,
+        "description": "The biker bandit cracks off a .22 round!"
+      },
+      [
+        "PARROT_AT_DANGER",
+        4
+      ]
+    ],
+    "//3": "Firing at the player is two-stage by default: require_targeting_player is true, so one attempt spends targeting_cost merely to aim and the next one shoots, spending move_cost (src/mattack_actors.h:170-177, gun_actor::try_target).  Costs are kept at the vanilla 150 and the envelope wide enough that the cycle completes before they close to melee - doubling the costs and shortening the range together meant they never fired at all.  Fairness lives in accuracy and fragility instead: fake_skills 0, wrecked dispersion, low hp, and fear_triggers.",
+    "vision_day": 40
+  }
+]

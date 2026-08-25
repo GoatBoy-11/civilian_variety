@@ -1,0 +1,7 @@
+# Python bytecode from tools/
+__pycache__/
+*.pyc
+
+# Internal design notes and the sprite-index checker: kept locally, not shipped.
+DESIGN.md
+tools/
