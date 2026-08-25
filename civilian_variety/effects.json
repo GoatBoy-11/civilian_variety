@@ -1,0 +1,11 @@
+[
+  {
+    "//": "Invisible marker recording that this particular individual has already helped the player once.",
+    "//2": "Attached to the monster rather than tracked in mod storage, so it is per-individual, survives saving, and cannot drift the way stored coordinates would.  Permanent by design: a second favour means finding a different person.",
+    "type": "effect_type",
+    "id": "effect_cv_helped",
+    "name": [ "Already helped" ],
+    "desc": [ "This person has already given you what they had.  If you see this on yourself, it is a bug." ],
+    "permanent": true
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "//": "Personal effects.  Worthless, unusable, and the whole point of the mod: the description is drawn at random from a snippet category, so each copy is a different person's life.",
+    "//2": "TRADER_AVOID keeps them out of trade stock.  SNIPPET_NEEDS_LITERACY matches vanilla - an illiterate character cannot read them.  looks_like is a render-time fallback, so these show up correctly even in a tileset that has never heard of this mod.",
+    "type": "GENERIC",
+    "id": "cv_note_personal",
+    "category": "other",
+    "name": {
+      "str": "handwritten note"
+    },
+    "description": "A piece of paper, folded and unfolded a number of times.",
+    "looks_like": "survnote",
+    "symbol": ",",
+    "color": "white",
+    "snippet_category": "cv_note_personal",
+    "material": [
+      "paper"
+    ],
+    "weight": "3 g",
+    "volume": "5 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "flags": [
+      "TRADER_AVOID",
+      "SNIPPET_NEEDS_LITERACY"
+    ]
+  },
+  {
+    "//": "Personal effects.  Worthless, unusable, and the whole point of the mod: the description is drawn at random from a snippet category, so each copy is a different person's life.",
+    "//2": "TRADER_AVOID keeps them out of trade stock.  SNIPPET_NEEDS_LITERACY matches vanilla - an illiterate character cannot read them.  looks_like is a render-time fallback, so these show up correctly even in a tileset that has never heard of this mod.",
+    "type": "GENERIC",
+    "id": "cv_note_work",
+    "category": "other",
+    "name": {
+      "str": "workplace note"
+    },
+    "description": "A printed page from somewhere that used to have printers.",
+    "looks_like": "flyer",
+    "symbol": ",",
+    "color": "light_gray",
+    "snippet_category": "cv_note_work",
+    "material": [
+      "paper"
+    ],
+    "weight": "3 g",
+    "volume": "5 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "flags": [
+      "TRADER_AVOID",
+      "SNIPPET_NEEDS_LITERACY"
+    ]
+  },
+  {
+    "//": "Personal effects.  Worthless, unusable, and the whole point of the mod: the description is drawn at random from a snippet category, so each copy is a different person's life.",
+    "//2": "TRADER_AVOID keeps them out of trade stock.  SNIPPET_NEEDS_LITERACY matches vanilla - an illiterate character cannot read them.  looks_like is a render-time fallback, so these show up correctly even in a tileset that has never heard of this mod.",
+    "type": "GENERIC",
+    "id": "cv_note_medical",
+    "category": "other",
+    "name": {
+      "str": "clinical note"
+    },
+    "description": "A page of notes in the shorthand of somebody who wrote a great many of them.",
+    "looks_like": "paper",
+    "symbol": ",",
+    "color": "light_blue",
+    "snippet_category": "cv_note_medical",
+    "material": [
+      "paper"
+    ],
+    "weight": "3 g",
+    "volume": "5 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "flags": [
+      "TRADER_AVOID",
+      "SNIPPET_NEEDS_LITERACY"
+    ]
+  },
+  {
+    "//": "Personal effects.  Worthless, unusable, and the whole point of the mod: the description is drawn at random from a snippet category, so each copy is a different person's life.",
+    "//2": "TRADER_AVOID keeps them out of trade stock.  SNIPPET_NEEDS_LITERACY matches vanilla - an illiterate character cannot read them.  looks_like is a render-time fallback, so these show up correctly even in a tileset that has never heard of this mod.",
+    "type": "GENERIC",
+    "id": "cv_photo",
+    "category": "other",
+    "name": {
+      "str": "photograph"
+    },
+    "description": "A photographic print, creased from being carried.",
+    "looks_like": "photo_album",
+    "symbol": ",",
+    "color": "light_cyan",
+    "snippet_category": "cv_photo",
+    "material": [
+      "paper"
+    ],
+    "weight": "3 g",
+    "volume": "5 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "flags": [
+      "TRADER_AVOID",
+      "SNIPPET_NEEDS_LITERACY"
+    ]
+  }
+]

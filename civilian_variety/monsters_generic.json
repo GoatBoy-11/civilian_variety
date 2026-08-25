@@ -1,0 +1,128 @@
+[
+  {
+    "//": "aggression 0 + morale 0 lands in the neutral branch of monster::attitude (src/monster.cpp:1951-1958): no automatic flight, and flees only once damaged below 60% HP.  Distinct from the Civilians mod's panicked person (always flees) and petrified person (never moves).",
+    "id": "mon_cv_bystander",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_base",
+    "name": {
+      "str": "bystander"
+    },
+    "description": "Just another person caught up in all of this.  They drift from one place to the next without much sense of where they are going, as though still expecting to arrive somewhere that matters.  Whatever plan they once had ran out a while ago.",
+    "aggression": 0,
+    "morale": 0,
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "PARROT_AT_DANGER",
+        5
+      ]
+    ],
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_BYSTANDER_UPGRADE"
+    },
+    "death_drops": "cv_common_civilian_drops"
+  },
+  {
+    "//": "Sprites 115-122.  Modelled on the bundled mod's mon_civilian_panic, which is where the shape of this archetype comes from: deeply negative morale so monster::attitude returns MATT_FLEE unconditionally (src/monster.cpp:1951), and a PARROT_AT_DANGER special attack that makes them shout whenever anything threatening is near.",
+    "//2": "The noise is the mechanic, not decoration.  Monster speech goes through sounds::sound, which propagates across the map and draws zombies - so a panicking civilian genuinely calls the horde down on themselves.  Their speech entries are pitched at volume 70-90 against the ordinary bystander's 30.",
+    "//3": "Faster and frailer than a calm bystander: speed 115 vs 90, hp 65 vs 75.  Running flat out is the only thing they are still good at.",
+    "//4": "death_drops and upgrades are inherited from mon_cv_bystander deliberately - they carry exactly what an ordinary bystander carries, and turn the same way.",
+    "id": "mon_cv_bystander_panicked",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "panicked bystander"
+    },
+    "description": "Wide-eyed, out of breath, and moving in whichever direction they were last frightened away from.  They are making a great deal of noise, and show no sign of understanding why that is the worst thing they could be doing.",
+    "aggression": -50,
+    "morale": -50,
+    "hp": 65,
+    "speed": 92,
+    "dodge": 2,
+    "vision_day": 10,
+    "special_attacks": [
+      [
+        "PARROT_AT_DANGER",
+        3
+      ]
+    ],
+    "extend": {
+      "flags": [
+        "STUMBLES"
+      ]
+    },
+    "//5": "STUMBLES is what makes them dart.  Without it the movement loop breaks on the first viable candidate square and the monster walks a straight line; with it the loop keeps going and keeps randomly switching target squares (src/monmove.cpp:1401), so each step is a weighted-random pick among all viable options.  Frantic direction changes, not raw pace.",
+    "//6": "Speed 92 against the player base of 100 (src/creature.cpp:188).  They move erratically but cannot outrun you - the darting is behaviour, not velocity."
+  },
+  {
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "speed": 62,
+    "hp": 48,
+    "dodge": 0,
+    "diff": 1,
+    "vision_day": 8,
+    "melee_skill": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 2
+      }
+    ],
+    "//": "Sprites 123-125.",
+    "//2": "Asked for a lower armor rate, and there is none left to remove: mon_cv_base sets no armor fields, so every armor value arrives at finalisation as -1 and is clamped to 0 (src/monstergenerator.cpp:426-440).  A civilian in this mod already takes damage unmitigated, and negative values are not honoured.  The frailty is carried by hp 48 against the bystander's 75, dodge 0 against 1, and a melee attack reduced to 1d1 bash 2 from 1d2 cut 3.",
+    "//3": "aggression and morale are inherited from mon_cv_bystander at 0/0, so they take the neutral branch of monster::attitude and flee only once hurt below 60% HP - like an ordinary bystander, and unlike the panicked one.  At speed 62 fleeing does not save them, which is the point.",
+    "//4": "Turns exclusively into a decayed zombie, with a small chance of an acidic one.  The two routes are not symmetrical: zombify_into is a single mtype_id (src/mtype.h:416) and has no group form, so a corpse you killed and left always revives decayed.  The 3% acidic outcome rides on the timed upgrade, which does take a weighted group.",
+    "id": "mon_cv_elderly",
+    "name": {
+      "str": "elderly man"
+    },
+    "description": "An old man, moving at the only pace he has.  He is dressed for an ordinary day and leaning on a stick, and he has clearly been walking for far longer than he should have had to.  He does not look like he is going to make it, and he does not appear to have decided that yet.",
+    "death_drops": "cv_elderly_drops_m",
+    "zombify_into": "mon_cv_zombie_rot",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_ELDERLY_UPGRADE"
+    },
+    "//5": "It points at mon_cv_zombie_rot, not vanilla mon_zombie_rot, so that the decayed zombie an elderly leaves behind carries the mod's own devourer chance rather than vanilla's certainty."
+  },
+  {
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "speed": 62,
+    "hp": 48,
+    "dodge": 0,
+    "diff": 1,
+    "vision_day": 8,
+    "melee_skill": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 2
+      }
+    ],
+    "//": "Sprites 126-127.",
+    "//2": "Asked for a lower armor rate, and there is none left to remove: mon_cv_base sets no armor fields, so every armor value arrives at finalisation as -1 and is clamped to 0 (src/monstergenerator.cpp:426-440).  A civilian in this mod already takes damage unmitigated, and negative values are not honoured.  The frailty is carried by hp 48 against the bystander's 75, dodge 0 against 1, and a melee attack reduced to 1d1 bash 2 from 1d2 cut 3.",
+    "id": "mon_cv_elderly_f",
+    "name": {
+      "str": "elderly woman"
+    },
+    "description": "An old woman with white hair and a careful, deliberate walk, one hand out for a wall that is not always there.  Whatever she was in the middle of when it started, she is still dressed for it.",
+    "death_drops": "cv_elderly_drops_f",
+    "zombify_into": "mon_cv_zombie_rot",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_ELDERLY_UPGRADE"
+    },
+    "//4": "Turns exclusively into a decayed zombie, with a small chance of an acidic one.  The two routes are not symmetrical: zombify_into is a single mtype_id (src/mtype.h:416) and has no group form, so a corpse you killed and left always revives decayed.  The 3% acidic outcome rides on the timed upgrade, which does take a weighted group.",
+    "//5": "It points at mon_cv_zombie_rot, not vanilla mon_zombie_rot, so that the decayed zombie an elderly leaves behind carries the mod's own devourer chance rather than vanilla's certainty."
+  }
+]

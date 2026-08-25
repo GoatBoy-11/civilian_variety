@@ -1,0 +1,53 @@
+[
+  {
+    "//": "Deliberately poor copies, following the bundled mod's civilian_cop_glock22 pattern. Dispersion is inflated far past the real weapon so bikers miss often, and durability is low so a looted one is a stopgap rather than a prize.",
+    "id": "cv_biker_pistol_gun",
+    "copy-from": "glock_19",
+    "looks_like": "glock_19",
+    "type": "GUN",
+    "name": {
+      "str_sp": "biker's worn pistol"
+    },
+    "description": "A battered handgun carried by biker bandits.  The barrel has seen better decades.",
+    "dispersion": 2400,
+    "durability": 4
+  },
+  {
+    "id": "cv_biker_shotgun_gun",
+    "copy-from": "shotgun_s",
+    "looks_like": "shotgun_s",
+    "type": "GUN",
+    "name": {
+      "str_sp": "biker's sawn-off"
+    },
+    "description": "A single-barrel shotgun cut down past all good sense.  Loud, short-ranged and unkind to the shoulder.",
+    "dispersion": 2200,
+    "durability": 4
+  },
+  {
+    "//": "pipe_rifle is copy-from rifle_home_made and chambers .22 - about as weak as firearms get, which is the point.  Dispersion inflated further on top.",
+    "id": "cv_biker_rifle_gun",
+    "copy-from": "pipe_rifle",
+    "looks_like": "pipe_rifle",
+    "type": "GUN",
+    "name": {
+      "str_sp": "biker's pipe rifle"
+    },
+    "description": "A length of pipe, a crude stock and a firing pin.  It throws a .22 round in roughly the intended direction.",
+    "dispersion": 2900,
+    "durability": 4
+  },
+  {
+    "//": "Mirrors the Civilians mod's civilian_cop_glock22 (copy-from glock_22, dispersion 2400, durability 5) without referencing it - section 2.1 forbids depending on any id that mod owns, so the equivalent is rebuilt here.",
+    "id": "cv_cop_glock22",
+    "copy-from": "glock_22",
+    "looks_like": "glock_22",
+    "type": "GUN",
+    "name": {
+      "str_sp": "officer's Glock 22"
+    },
+    "description": "A police sidearm, carried by an officer still trying to do the job.  Deliberately less accurate than the real thing.",
+    "dispersion": 2400,
+    "durability": 5
+  }
+]

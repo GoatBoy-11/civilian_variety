@@ -1,0 +1,8 @@
+[
+  {
+    "//": "Own type on purpose - add_morale merges same-type entries, so reusing morale_feeling_good would have a blessing overwrite the doctor's treatment bonus.",
+    "id": "morale_cv_blessed",
+    "type": "morale_type",
+    "text": "Blessed"
+  }
+]

@@ -1,0 +1,871 @@
+[
+  {
+    "//": "Channel 1 - street presence.  Extends vanilla GROUP_ZOMBIE; monstergroups auto-extend (src/mongroup.cpp:385-390), so this appends and coexists with the Civilians mod.  Never set \"override\".",
+    "//2": "freq is per-mille of a freq_total of 1000 that extending does NOT enlarge, so it is zero-sum against vanilla zombies.  Mod cap is 80; this uses 70.",
+    "//3": "ends 72 is in hours (src/mongroup.cpp:409), scaled by the MONSTER_UPGRADE_FACTOR option.",
+    "type": "monstergroup",
+    "name": "GROUP_ZOMBIE",
+    "default": "mon_zombie",
+    "monsters": [
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 30,
+        "cost_multiplier": 1,
+        "pack_size": [
+          1,
+          3
+        ],
+        "ends": 72
+      },
+      {
+        "monster": "mon_cv_bystander_fat",
+        "freq": 6,
+        "cost_multiplier": 1,
+        "pack_size": [
+          1,
+          2
+        ],
+        "ends": 72
+      },
+      {
+        "monster": "mon_cv_bystander_fat_f",
+        "freq": 6,
+        "cost_multiplier": 1,
+        "pack_size": [
+          1,
+          2
+        ],
+        "ends": 72
+      },
+      {
+        "monster": "mon_cv_swat",
+        "freq": 6,
+        "cost_multiplier": 1,
+        "pack_size": [
+          1,
+          2
+        ],
+        "ends": 72
+      },
+      {
+        "monster": "mon_cv_cop_pistol",
+        "freq": 8,
+        "cost_multiplier": 0,
+        "ends": 72
+      },
+      {
+        "monster": "mon_cv_zombie_clown",
+        "freq": 4,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_nerd",
+        "freq": 4,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_priest",
+        "freq": 3,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_nun",
+        "freq": 3,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "What a bystander becomes after roughly a day.  Overwhelmingly zombies; survivor outcomes arrive in a later phase.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_BYSTANDER_UPGRADE",
+    "default": "mon_zombie",
+    "monsters": [
+      {
+        "monster": "mon_zombie",
+        "freq": 400,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_fat",
+        "freq": 300,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_tough",
+        "freq": 150,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_crawler",
+        "freq": 100,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_brainless",
+        "freq": 50,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Themed pool for construction sites and open sewers.  Ordinary people are still the majority; workers are the flavour on top.  Our group, so these weights cost nothing against the zombie budget.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_CONSTRUCTION",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_construction_worker",
+        "freq": 600,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 400,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Themed pool for repair shops and dealerships.  Mechanic-weighted while the per-location count is pinned at 1, so a garage usually has its mechanic; ease back toward 55/45 when the count rises again.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_GARAGE",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_mechanic",
+        "freq": 700,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 300,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Fire stations.  Weighted toward crew, with the occasional civilian who came looking for help.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_FIRE_STATION",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_firefighter",
+        "freq": 750,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 250,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Offices, banks, golf courses and mansions.  Male/female weights follow the sprite counts (3 male, 2 female) so neither looks repetitive.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_BUSINESS",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_businessman",
+        "freq": 450,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_businesswoman",
+        "freq": 300,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 250,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Bars, motels and hotels.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_NIGHTLIFE",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_sex_worker",
+        "freq": 500,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 500,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Hospitals, doctors' offices and pharmacies.  Plenty of ordinary people too: patients and the families who brought them in.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_HOSPITAL",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_doctor",
+        "freq": 190,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_doctor_f",
+        "freq": 190,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_nurse",
+        "freq": 220,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 400,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Workplaces: offices, banks and post offices.  Clerks dominate; the wealthy tier is a minority here and holds the mansions and golf courses instead.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_OFFICE",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_office_worker",
+        "freq": 281,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_office_worker_f",
+        "freq": 280,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 234,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_businessman",
+        "freq": 84,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_police",
+        "freq": 65,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_businesswoman",
+        "freq": 56,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Fat bystanders turn into fat zombies and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_FAT_UPGRADE",
+    "default": "mon_zombie_fat",
+    "monsters": [
+      {
+        "monster": "mon_zombie_fat",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Libraries, bookshops, game and electronics shops, arcades, museums.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_GEEK",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_geek",
+        "freq": 504,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 413,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_nerd",
+        "freq": 83,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Farms, barns and orchards.  Weights follow the sprite counts (4 male, 2 female).",
+    "type": "monstergroup",
+    "name": "GROUP_CV_FARM",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_farmer",
+        "freq": 400,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_farmer_f",
+        "freq": 200,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 400,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Roadside gangs.  Frequency by type: knife and pistol equal and most common, then rifle, with shotgun rarest.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_BIKER",
+    "default": "mon_cv_biker_pistol",
+    "monsters": [
+      {
+        "monster": "mon_cv_biker_knife",
+        "freq": 300,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_biker_pistol",
+        "freq": 160,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_biker_pistol_f",
+        "freq": 140,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_biker_rifle",
+        "freq": 250,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_biker_shotgun",
+        "freq": 150,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Generic bystanders only.  This is the pool thinned when the Civilians mod is loaded - it is the one that competes with theirs for the same furniture.  Relative weights are the same as they were inside the old combined GROUP_CV_INDOOR.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_INDOOR_GENERIC",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 622,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_panicked",
+        "freq": 92,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat",
+        "freq": 74,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat_f",
+        "freq": 74,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 69,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 69,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Occupational and other special archetypes turning up away from their own workplace.  Never scaled: the Civilians mod has no equivalent, so there is nothing to double up with.  Every new profession takes a slice here, per the standing rule.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_INDOOR_SPECIAL",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_firefighter",
+        "freq": 155,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_police",
+        "freq": 104,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_geek",
+        "freq": 100,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_mechanic",
+        "freq": 80,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_construction_worker",
+        "freq": 80,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_businessman",
+        "freq": 72,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_office_worker",
+        "freq": 60,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_office_worker_f",
+        "freq": 60,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_businesswoman",
+        "freq": 48,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_nurse",
+        "freq": 48,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_sex_worker",
+        "freq": 40,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_doctor",
+        "freq": 36,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_doctor_f",
+        "freq": 36,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_farmer",
+        "freq": 32,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_clown",
+        "freq": 29,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_farmer_f",
+        "freq": 20,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Police stations.  Officers dominate, with the occasional SWAT member and the civilians who came here looking for help.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_POLICE",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_police",
+        "freq": 422,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_cop_pistol",
+        "freq": 296,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 197,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_swat",
+        "freq": 85,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Malls: mostly shoppers, plus mall security and the crowd a games shop and food court would have had.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_MALL",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 509,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_police",
+        "freq": 136,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_geek",
+        "freq": 109,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_office_worker",
+        "freq": 55,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_office_worker_f",
+        "freq": 55,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_clown",
+        "freq": 55,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_sex_worker",
+        "freq": 45,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_clown",
+        "freq": 36,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Luna parks and pizza parlours - the places a working clown actually turns up.  Carries both the living and the turned, plus ordinary people who were there for the day out.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_CLOWN",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_clown",
+        "freq": 300,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_clown",
+        "freq": 220,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 320,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_geek",
+        "freq": 90,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_sex_worker",
+        "freq": 70,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Clowns turn into clowns and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_CLOWN_UPGRADE",
+    "default": "mon_cv_zombie_clown",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_clown",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Geeks turn into zombie nerds and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_NERD_UPGRADE",
+    "default": "mon_cv_zombie_nerd",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_nerd",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "The elderly turn into decayed zombies, and once in a while into acidic ones.  mon_zombie_rot is the frailest of the classic zombies - hp 55, speed 70 - which keeps the archetype's whole point intact on the other side of death.",
+    "//2": "30 per mille is the acidic share.  Deliberately small: mon_zombie_acidic is a diff 5 monster with a ranged acid attack, so it is a genuinely nastier thing to meet than anything else a civilian in this mod turns into, and it should read as bad luck.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_ELDERLY_UPGRADE",
+    "default": "mon_cv_zombie_rot",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_rot",
+        "freq": 970,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_acidic",
+        "freq": 30,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Firefighters turn into firefighter zombies and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_FIREFIGHTER_UPGRADE",
+    "default": "mon_zombie_fireman",
+    "monsters": [
+      {
+        "monster": "mon_zombie_fireman",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "What a decayed elderly zombie does after about three weeks.  250 per mille is the devourer share; the rest stay decayed and roll again at the next interval, so the chance compounds slowly rather than being a one-off gate: roughly 25% by three weeks, 44% by six, 58% by nine.",
+    "//2": "Listing mon_cv_zombie_rot inside its own upgrade group is safe.  monster::try_upgrade (src/monster.cpp:624-666) loops while upgrade_time <= current_day and adds next_upgrade_time() after each poly, so a self-upgrade advances the clock and the loop terminates.  It cannot spin.",
+    "//3": "mon_devourer is diff 8, hp 112, speed 60 - far and away the worst thing anything in this mod becomes.  Slow enough to walk away from, which is what makes it fair.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_ROT_UPGRADE",
+    "default": "mon_cv_zombie_rot",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_rot",
+        "freq": 750,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_devourer",
+        "freq": 250,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Quiet places an older person would actually be: churches, parks, cemeteries and community gardens.  Elderly-heavy but not exclusively elderly - a venue where every single person is the same archetype reads as a set piece rather than a place.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_ELDERLY",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 259,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 259,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 215,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat",
+        "freq": 65,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat_f",
+        "freq": 65,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_priest",
+        "freq": 52,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_nun",
+        "freq": 34,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_priest",
+        "freq": 28,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_nun",
+        "freq": 23,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Public libraries specifically.  Split roughly evenly between the elderly and the geek, because both are true and taking the venue away from either would be wrong.  house_library is a private study and stays with the geek pool.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_LIBRARY",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 260,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 260,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_geek",
+        "freq": 260,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 220,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Churches specifically.  Split out from GROUP_CV_ELDERLY so that clergy appear where clergy would be, and parks and cemeteries stay ordinary.",
+    "//2": "Still elderly-leaning underneath: a church congregation and a park bench draw from much the same people.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_CHURCH",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 217,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_priest",
+        "freq": 167,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 158,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 158,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_nun",
+        "freq": 133,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_priest",
+        "freq": 92,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_nun",
+        "freq": 75,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Priests turn into zombie priests and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_PRIEST_UPGRADE",
+    "default": "mon_cv_zombie_priest",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_priest",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Nuns turn into zombie nuns and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_NUN_UPGRADE",
+    "default": "mon_cv_zombie_nun",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_nun",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Shops holding something worth guarding: pawn shops, jewellers, antique dealers, gun and hunting shops, off-licences.  Mostly ordinary customers - the owner is the small chance, not the default, so walking into a pawn shop is usually uneventful.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_SHOP",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_shopkeeper",
+        "freq": 220,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 430,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat",
+        "freq": 90,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat_f",
+        "freq": 90,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 60,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 60,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_panicked",
+        "freq": 50,
+        "cost_multiplier": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "//": "Sprites 108-111.  copy-from mon_zombie inherits species [ZOMBIE, HUMAN], the zombie faction, zombie harvest and the GROUP_ZOMBIE_UPGRADE path - so it behaves as a plain zombie in every respect the player can feel.",
+    "//2": "Slightly faster and tougher than the baseline: speed 80 vs 70, hp 95 vs 80.  It wears the same costume the living version does, which is the whole point of it.",
+    "//3": "upgrades is deliberately untouched.  Setting `into` here would collide with the inherited `into_group` and fail to load - see DESIGN.md 13.4.",
+    "id": "mon_cv_zombie_clown",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie clown"
+    },
+    "description": "The paint has held up better than the face beneath it.  Torn motley, one shoe gone, and a gait that is somehow still a little too bouncy.",
+    "hp": 95,
+    "speed": 80,
+    "death_drops": "cv_zombie_clown_drops"
+  },
+  {
+    "//": "Sprites 112-114.  copy-from mon_zombie inherits species [ZOMBIE, HUMAN], the zombie faction, zombie harvest and the GROUP_ZOMBIE_UPGRADE path, so it plays as a plain zombie in every way the player can feel.",
+    "//2": "Slower and weaker than the baseline: speed 62 vs 70, hp 68 vs 80.  The mirror of the zombie clown, which is faster and tougher.  It was not a physical person alive, and death has not improved that.",
+    "//3": "upgrades is deliberately untouched.  Setting `into` here would collide with the inherited `into_group` and fail to load - see DESIGN.md 13.4.",
+    "id": "mon_cv_zombie_nerd",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie nerd"
+    },
+    "description": "Glasses still on, somehow, though one lens has gone.  The bag is still over the shoulder and still far too heavy, and it has not occurred to them to put it down.",
+    "hp": 68,
+    "speed": 62,
+    "death_drops": "cv_zombie_nerd_drops"
+  },
+  {
+    "//": "Deliberately identical to vanilla mon_zombie_rot in name, description and stats.  It exists only to own a different upgrade path, and the player should never be able to tell one from the other.",
+    "//2": "Vanilla's decayed zombie has `upgrades: { half_life: 23, into: mon_devourer }` - a bare `into`, so every decayed zombie becomes a devourer sooner or later.  This one rolls a weighted group instead, which is what makes the devourer a chance rather than a certainty.  Vanilla is left untouched.",
+    "//3": "No sprite entry: looks_like is inherited from copy-from, so it draws as a decayed zombie with no art needed.",
+    "id": "mon_cv_zombie_rot",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot",
+    "name": {
+      "str": "decayed zombie"
+    },
+    "upgrades": {
+      "half_life": 21,
+      "into": "mon_null",
+      "into_group": "GROUP_CV_ROT_UPGRADE"
+    },
+    "//4": "`into: mon_null` is not decoration - it clears the `into: mon_devourer` inherited from mon_zombie_rot.  An absent key does not clear an inherited one (src/monstergenerator.cpp:1038), and having both set is a hard load error (src/monstergenerator.cpp:1655)."
+  },
+  {
+    "//": "Sprite 148.  copy-from mon_zombie inherits species [ZOMBIE, HUMAN], the zombie faction, zombie harvest and the GROUP_ZOMBIE_UPGRADE path, so it plays as a plain zombie in every way the player can feel.",
+    "//2": "Marginally sturdier and slower than the baseline: hp 84 vs 80, speed 68 vs 70.  A heavy cassock is not armour, but it is something.",
+    "//3": "upgrades is deliberately untouched.  Setting `into` here would collide with the inherited `into_group` and fail to load - see DESIGN.md 13.4.",
+    "id": "mon_cv_zombie_priest",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie priest"
+    },
+    "description": "The collar is still white, which is the worst part of it.  Whatever it was doing when it turned, it was doing it facing the door.",
+    "hp": 84,
+    "speed": 68,
+    "death_drops": "cv_zombie_priest_drops"
+  },
+  {
+    "//": "Sprite 149.  copy-from mon_zombie inherits species [ZOMBIE, HUMAN], the zombie faction, zombie harvest and the GROUP_ZOMBIE_UPGRADE path, so it plays as a plain zombie in every way the player can feel.",
+    "//2": "hp 74, speed 72 - slightly frailer and slightly quicker than the priest, the same small split the living pair do not have.",
+    "//3": "upgrades is deliberately untouched.  Setting `into` here would collide with the inherited `into_group` and fail to load - see DESIGN.md 13.4.",
+    "id": "mon_cv_zombie_nun",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie nun"
+    },
+    "description": "The habit has held together better than the woman in it.  It moves with its hands still folded in front of it, until it doesn't.",
+    "hp": 74,
+    "speed": 72,
+    "death_drops": "cv_zombie_nun_drops"
+  }
+]

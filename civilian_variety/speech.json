@@ -1,0 +1,944 @@
+[
+  {
+    "//": "Wandering, not panicking.  Muttered and disoriented rather than screamed.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "someone muttering to themselves.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "a hoarse voice asking if anyone is out there.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "someone repeating a name over and over.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "a quiet, unanswered question.",
+    "volume": 25
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "someone asking which way the highway is.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "a flat voice saying they just need to get home.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "shallow, unsteady breathing.",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander",
+      "mon_cv_construction_worker",
+      "mon_cv_mechanic",
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "someone insisting that help is coming.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_construction_worker"
+    ],
+    "sound": "someone shouting for the site foreman.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_construction_worker"
+    ],
+    "sound": "a voice insisting the site has to be cleared.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mechanic"
+    ],
+    "sound": "someone saying the car on the lift still is not done.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mechanic"
+    ],
+    "sound": "a voice asking whose keys these are.",
+    "volume": 40
+  },
+  {
+    "//": "Search calls.  They are still working the building.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_firefighter"
+    ],
+    "sound": "someone shouting to ask if anybody is inside.",
+    "volume": 70
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_firefighter"
+    ],
+    "sound": "a muffled voice calling out through a mask.",
+    "volume": 60
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_firefighter"
+    ],
+    "sound": "someone counting off rooms out loud.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_firefighter"
+    ],
+    "sound": "a shout of \"anyone who can hear me, make a noise!\"",
+    "volume": 75
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_firefighter"
+    ],
+    "sound": "a hoarse voice telling someone to stay low.",
+    "volume": 55
+  },
+  {
+    "//": "Still trading.  Played straight, which is what makes it funny.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "someone asking whether the markets have reopened.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "a confident voice calling this a temporary correction.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "someone trying, again, to get a call through to their broker.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "a voice loudly appraising the building you are standing in.",
+    "volume": 55
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "someone asking if you are buying or selling.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "a brisk voice rescheduling something for next quarter.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "someone insisting that real estate always recovers.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_businessman",
+      "mon_cv_businesswoman"
+    ],
+    "sound": "a voice observing that the competition has been thinned out considerably.",
+    "volume": 45
+  },
+  {
+    "//": "Still working, or still looking.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_sex_worker"
+    ],
+    "sound": "someone quoting a price to nobody in particular.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_sex_worker"
+    ],
+    "sound": "a bored voice asking if you are looking for company.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_sex_worker"
+    ],
+    "sound": "someone asking around for anything to take the edge off.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_sex_worker"
+    ],
+    "sound": "a voice complaining that business has been slow lately.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_sex_worker"
+    ],
+    "sound": "someone insisting they are still owed for last night.",
+    "volume": 50
+  },
+  {
+    "//": "Still triaging.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_doctor",
+      "mon_cv_doctor_f"
+    ],
+    "sound": "someone asking who is next.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_doctor",
+      "mon_cv_doctor_f"
+    ],
+    "sound": "a tired voice calling for a chart that no longer exists.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_doctor",
+      "mon_cv_doctor_f"
+    ],
+    "sound": "someone listing symptoms out loud, to nobody.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nurse"
+    ],
+    "sound": "someone telling a patient they will be seen shortly.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nurse"
+    ],
+    "sound": "a steady voice asking somebody to please sit back down.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nurse"
+    ],
+    "sound": "someone counting supplies under their breath.",
+    "volume": 35
+  },
+  {
+    "//": "Still on the clock.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_office_worker",
+      "mon_cv_office_worker_f"
+    ],
+    "sound": "someone asking whether anyone has heard from head office.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_office_worker",
+      "mon_cv_office_worker_f"
+    ],
+    "sound": "a voice saying they were only covering for someone.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_office_worker",
+      "mon_cv_office_worker_f"
+    ],
+    "sound": "someone insisting the fire drill route was not this way.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_office_worker",
+      "mon_cv_office_worker_f"
+    ],
+    "sound": "a tired voice mentioning a deadline.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "heavy, labouring breathing.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_fat",
+      "mon_cv_bystander_fat_f"
+    ],
+    "sound": "someone asking you to wait, please, just wait.",
+    "volume": 50
+  },
+  {
+    "//": "Panicked and over-informed.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_geek"
+    ],
+    "sound": "someone explaining, very fast, what they think is happening.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_geek"
+    ],
+    "sound": "a shaky voice saying this is nothing like the films.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_geek"
+    ],
+    "sound": "a yelp, followed by running footsteps.",
+    "volume": 55
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_farmer",
+      "mon_cv_farmer_f"
+    ],
+    "sound": "a flat voice telling something to get off their land.",
+    "volume": 55
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_farmer",
+      "mon_cv_farmer_f"
+    ],
+    "sound": "someone counting the herd out loud.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_farmer",
+      "mon_cv_farmer_f"
+    ],
+    "sound": "a shout and the sound of something heavy being swung.",
+    "volume": 60
+  },
+  {
+    "//": "They bark before engaging, so you hear them first.  They want your things, not a firefight.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_biker_pistol",
+      "mon_cv_biker_pistol_f",
+      "mon_cv_biker_shotgun",
+      "mon_cv_biker_knife",
+      "mon_cv_biker_rifle"
+    ],
+    "sound": "someone telling you to put the bag down and keep walking.",
+    "volume": 60
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_biker_pistol",
+      "mon_cv_biker_pistol_f",
+      "mon_cv_biker_shotgun",
+      "mon_cv_biker_knife",
+      "mon_cv_biker_rifle"
+    ],
+    "sound": "a voice asking what you've got on you.",
+    "volume": 55
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_biker_pistol",
+      "mon_cv_biker_pistol_f",
+      "mon_cv_biker_shotgun",
+      "mon_cv_biker_knife",
+      "mon_cv_biker_rifle"
+    ],
+    "sound": "a whistle, and someone calling the others over.",
+    "volume": 65
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_biker_pistol",
+      "mon_cv_biker_pistol_f",
+      "mon_cv_biker_shotgun",
+      "mon_cv_biker_knife",
+      "mon_cv_biker_rifle"
+    ],
+    "sound": "someone saying this stretch of road is theirs now.",
+    "volume": 60
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_biker_pistol",
+      "mon_cv_biker_pistol_f",
+      "mon_cv_biker_shotgun",
+      "mon_cv_biker_knife",
+      "mon_cv_biker_rifle"
+    ],
+    "sound": "an engine revved for no reason at all.",
+    "volume": 70
+  },
+  {
+    "//": "Working the street, still using the words.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_police",
+      "mon_cv_swat",
+      "mon_cv_cop_pistol"
+    ],
+    "sound": "someone shouting for people to get behind them.",
+    "volume": 65
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_police",
+      "mon_cv_swat",
+      "mon_cv_cop_pistol"
+    ],
+    "sound": "a voice calling a street name into a dead radio.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_police",
+      "mon_cv_swat",
+      "mon_cv_cop_pistol"
+    ],
+    "sound": "someone telling a crowd that hasn't been there for days to stay calm.",
+    "volume": 60
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_swat"
+    ],
+    "sound": "a curt order to move up.",
+    "volume": 55
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_cop_pistol"
+    ],
+    "sound": "a shouted warning, then a gunshot.",
+    "volume": 75
+  },
+  {
+    "//": "Still in character, which is the unsettling part.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_clown"
+    ],
+    "sound": "a squeaky horn, honked twice.",
+    "volume": 60
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_clown"
+    ],
+    "sound": "someone asking, brightly, whether you are enjoying the show.",
+    "volume": 50
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_clown"
+    ],
+    "sound": "a laugh that goes on slightly too long.",
+    "volume": 55
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_clown"
+    ],
+    "sound": "a balloon being squeaked into some shape or other.",
+    "volume": 40
+  },
+  {
+    "//": "Loud on purpose.  Monster speech propagates as world sound and draws the horde, so these volumes are why panicked bystanders do not last: an ordinary bystander mutters at 30, these carry at 70-90.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "a scream, close and completely uncontrolled.",
+    "volume": 90
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "someone shouting for help, over and over, without pausing to listen.",
+    "volume": 85
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "somebody sobbing and running at the same time.",
+    "volume": 70
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "a voice cracking as it shouts the same name again and again.",
+    "volume": 80
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "someone screaming at a shut door to open.",
+    "volume": 85
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "a burst of hysterical laughter that turns into shouting.",
+    "volume": 75
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "someone yelling that they can see it, that everyone can see it.",
+    "volume": 80
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_bystander_panicked"
+    ],
+    "sound": "a person begging, loudly, for somebody to wait.",
+    "volume": 75
+  },
+  {
+    "//": "Pitched low on purpose.  Monster speech carries as world sound, so volume is how far the horde hears it: the panicked bystander shouts at 70-90, these sit at 20-40.  The elderly do not draw zombies to themselves - they simply cannot leave once the zombies arrive.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "a long, wet cough that goes on too long.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "an old man asking whether the buses are running.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "someone saying a wife's name, conversationally, to nobody.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "a voice complaining that nobody tells him anything.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "slow, dragging footsteps and the tap of a stick.",
+    "volume": 25
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "someone stopping to catch his breath, and taking a while about it.",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "an old man telling somebody they should not have to see this.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly"
+    ],
+    "sound": "a voice asking, politely, for a hand up.",
+    "volume": 30
+  },
+  {
+    "//": "Pitched low on purpose.  Monster speech carries as world sound, so volume is how far the horde hears it: the panicked bystander shouts at 70-90, these sit at 20-40.  The elderly do not draw zombies to themselves - they simply cannot leave once the zombies arrive.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "an old woman apologising to nobody for being in the way.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "someone calling a grandchild's name down an empty street.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "a voice saying she only came out for the one thing.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "quiet, patient breathing, and the scuff of slippers.",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "an old woman asking whether the ambulance is coming.",
+    "volume": 38
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "someone saying she has not got her tablets with her.",
+    "volume": 32
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "a voice telling you to go on ahead, dear, and not to wait.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_elderly_f"
+    ],
+    "sound": "someone counting doorways out loud, and losing the count.",
+    "volume": 25
+  },
+  {
+    "//": "Deliberately quiet - volume is how far sounds::sound carries and therefore how much horde a civilian pulls onto themselves.  Clergy call out to the living rather than shouting for help, so these sit at 20-42 against the panicked bystander's 70-90.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_priest"
+    ],
+    "sound": "a man's voice, low and steady, reciting something from memory.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_priest"
+    ],
+    "sound": "someone saying that the doors are open to anybody who needs them.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_priest"
+    ],
+    "sound": "a voice asking whether anyone out there is hurt.",
+    "volume": 42
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_priest"
+    ],
+    "sound": "somebody praying, without hurrying it.",
+    "volume": 25
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_priest"
+    ],
+    "sound": "a man telling someone it is all right to be frightened.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_priest"
+    ],
+    "sound": "the sound of a hymn started and not finished.",
+    "volume": 30
+  },
+  {
+    "//": "Deliberately quiet - volume is how far sounds::sound carries and therefore how much horde a civilian pulls onto themselves.  Clergy call out to the living rather than shouting for help, so these sit at 20-42 against the panicked bystander's 70-90.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nun"
+    ],
+    "sound": "a woman's voice counting something under her breath.",
+    "volume": 22
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nun"
+    ],
+    "sound": "someone offering water to anybody who wants it.",
+    "volume": 38
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nun"
+    ],
+    "sound": "a quiet voice saying the same three words over and over.",
+    "volume": 25
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nun"
+    ],
+    "sound": "somebody being told, firmly, to sit down and breathe.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nun"
+    ],
+    "sound": "a woman asking if anyone has seen the others.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_nun"
+    ],
+    "sound": "the small sound of beads moving through fingers.",
+    "volume": 20
+  },
+  {
+    "//": "Warnings, not conversation.  With no anger decay in the engine, these barks are the player's only cue that standing here is about to become permanent - see the monster's //4.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "a flat voice telling somebody that's close enough.",
+    "volume": 45
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "someone asking, not pleasantly, whether you're buying.",
+    "volume": 42
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "a voice saying they can see you perfectly well from where they are standing.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "somebody counting under their breath and not losing their place.",
+    "volume": 25
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "somebody saying they have had four of you in here already this week.",
+    "volume": 44
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "the very deliberate sound of something heavy being picked up.",
+    "volume": 38
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "a voice saying the shop is shut and has been since Tuesday.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_shopkeeper"
+    ],
+    "sound": "someone telling you to keep your hands where they are.",
+    "volume": 46
+  }
+]

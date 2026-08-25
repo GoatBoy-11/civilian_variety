@@ -1,0 +1,477 @@
+[
+  {
+    "//": "The label shown in the Use menu.  A use_action - Lua or otherwise - must be described here or item_factory warns that the action is undescribed.",
+    "type": "item_action",
+    "id": "CV_DOLL_CHAT",
+    "name": {
+      "str": "Press the brooch"
+    }
+  },
+  {
+    "type": "item_action",
+    "id": "CV_PILLOW_HUG",
+    "name": {
+      "str": "Embrace it"
+    }
+  },
+  {
+    "//": "Sprites 129-143.  A shelf's worth of things somebody loved and nobody needed.  None of the books teach a skill - they are the `fun` variety only - and none of these are craftable, though every one disassembles into something sensible.",
+    "//2": "Titles live in each item's inline snippet_category, so one item id yields a different volume every time (the pattern vanilla uses for novel_scifi).  Item NAMES stay generic; the joke is in the description.",
+    "type": "BOOK",
+    "id": "cv_manga_adult",
+    "category": "books",
+    "symbol": "?",
+    "material": [
+      "paper"
+    ],
+    "price": "16 USD",
+    "price_postapoc": "1 USD",
+    "intelligence": 0,
+    "color": "pink",
+    "name": {
+      "str_sp": "adult manga"
+    },
+    "weight": "310 g",
+    "volume": "600 ml",
+    "fun": 4,
+    "time": "15 m",
+    "chapters": 3,
+    "description": "A manga in a plastic wrapper, with an age rating on the spine and a cover that is doing very little to be discreet about any of it.",
+    "snippet_category": [
+      {
+        "id": "cv_manga_adult_1",
+        "text": "Volume 4 of \"Midnight Overtime\".  Two colleagues are trapped in an office after hours by a storm.  The storm is not, on any reading, necessary to the plot."
+      },
+      {
+        "id": "cv_manga_adult_2",
+        "text": "\"My Landlady Is Extremely Understanding\", volume 2.  The rent is never once discussed."
+      },
+      {
+        "id": "cv_manga_adult_3",
+        "text": "\"Hot Springs Weekend, Please Understand\".  The bath scene runs for forty pages.  There is a two-page argument about towels."
+      },
+      {
+        "id": "cv_manga_adult_4",
+        "text": "An untitled doujinshi, photocopied and stapled.  The artist has written a long and rather sincere apology on the inside back cover."
+      }
+    ]
+  },
+  {
+    "type": "BOOK",
+    "category": "books",
+    "symbol": "?",
+    "material": [
+      "paper"
+    ],
+    "price": "11 USD",
+    "price_postapoc": "60 cent",
+    "intelligence": 0,
+    "id": "cv_manga_slice",
+    "name": {
+      "str_sp": "slice of life manga"
+    },
+    "color": "green",
+    "weight": "290 g",
+    "volume": "600 ml",
+    "fun": 3,
+    "time": "12 m",
+    "chapters": 3,
+    "description": "A gentle-looking manga about ordinary life, apparently, if you ignore most of the cover.",
+    "snippet_category": [
+      {
+        "id": "cv_manga_slice_1",
+        "text": "\"Cold Days in Reizoko Village\", volume 1.  A young woman inherits a house in a mountain village where every other resident is a talking refrigerator.  Nobody in the story finds this remarkable, including her."
+      },
+      {
+        "id": "cv_manga_slice_2",
+        "text": "\"Cold Days in Reizoko Village\", volume 3.  The village holds its annual festival.  A refrigerator wins the pickle competition and gives a short, moving speech."
+      },
+      {
+        "id": "cv_manga_slice_3",
+        "text": "\"Cold Days in Reizoko Village\", volume 6.  The protagonist finally asks how any of this works.  The chapter ends without her getting an answer, and she seems content with that."
+      },
+      {
+        "id": "cv_manga_slice_4",
+        "text": "\"Cold Days in Reizoko Village\", volume 9.  An old chest freezer at the edge of the village stops running.  The whole volume is the funeral."
+      }
+    ]
+  },
+  {
+    "type": "BOOK",
+    "category": "books",
+    "symbol": "?",
+    "material": [
+      "paper"
+    ],
+    "price": "11 USD",
+    "price_postapoc": "60 cent",
+    "intelligence": 0,
+    "id": "cv_manga_shojo",
+    "name": {
+      "str_sp": "shojo manga"
+    },
+    "color": "magenta",
+    "weight": "280 g",
+    "volume": "600 ml",
+    "fun": 3,
+    "time": "12 m",
+    "chapters": 3,
+    "description": "A manga aimed squarely at teenage girls, printed on cheap paper with a very expensive-looking cover.",
+    "snippet_category": [
+      {
+        "id": "cv_manga_shojo_1",
+        "text": "\"Please Notice Me, Senpai!\", volume 2.  A transfer student and the aloof captain of the archery club.  It takes eleven volumes for either of them to say anything directly."
+      },
+      {
+        "id": "cv_manga_shojo_2",
+        "text": "\"The Prince of Class 2-B\", volume 5.  Three boys, one girl, and a school festival that somehow resolves nothing."
+      },
+      {
+        "id": "cv_manga_shojo_3",
+        "text": "\"Cherry Blossoms and Second Thoughts\", volume 1.  Two childhood friends realise, over some four hundred pages, that they are childhood friends."
+      },
+      {
+        "id": "cv_manga_shojo_4",
+        "text": "\"My Heart Is a Vending Machine\", volume 7.  A romance conducted almost entirely through notes left in a shoe locker."
+      }
+    ]
+  },
+  {
+    "type": "BOOK",
+    "category": "books",
+    "symbol": "?",
+    "material": [
+      "paper"
+    ],
+    "price": "11 USD",
+    "price_postapoc": "60 cent",
+    "intelligence": 0,
+    "id": "cv_manga_shonen",
+    "name": {
+      "str_sp": "shonen manga"
+    },
+    "color": "red",
+    "weight": "300 g",
+    "volume": "600 ml",
+    "fun": 4,
+    "time": "12 m",
+    "chapters": 3,
+    "description": "An action manga, judging by the cover, on which a great many things are exploding at once.",
+    "snippet_category": [
+      {
+        "id": "cv_manga_shonen_1",
+        "text": "\"Grand Fist Voyage\", volume 12.  A boy in a straw hat, with a tail he refuses to explain, sails to the ends of the world to find the strongest man alive and then punch him respectfully."
+      },
+      {
+        "id": "cv_manga_shonen_2",
+        "text": "\"Grand Fist Voyage\", volume 27.  Four consecutive chapters are one punch.  It is, admittedly, a very good punch."
+      },
+      {
+        "id": "cv_manga_shonen_3",
+        "text": "\"Grand Fist Voyage\", volume 40.  A villain explains his tragic backstory for ninety pages and is then defeated by the power of having friends."
+      },
+      {
+        "id": "cv_manga_shonen_4",
+        "text": "\"Grand Fist Voyage\", volume 58.  The hero's dead father returns, stronger than ever, and immediately leaves again to train."
+      }
+    ]
+  },
+  {
+    "type": "BOOK",
+    "category": "books",
+    "symbol": "?",
+    "material": [
+      "paper"
+    ],
+    "price": "11 USD",
+    "price_postapoc": "60 cent",
+    "intelligence": 0,
+    "id": "cv_mag_alien",
+    "name": {
+      "str": "alien sightings magazine"
+    },
+    "color": "light_blue",
+    "weight": "180 g",
+    "volume": "500 ml",
+    "fun": 3,
+    "time": "10 m",
+    "chapters": 2,
+    "description": "A monthly magazine about unexplained sightings, printed on paper barely better than newsprint.",
+    "snippet_category": [
+      {
+        "id": "cv_mag_alien_1",
+        "text": "\"SKYWATCH MONTHLY\", March issue.  The cover story is a blurred photograph taken over a forest in Vermont: something pale and fluted, with too many limbs folded against it.  Three experts disagree about the lens."
+      },
+      {
+        "id": "cv_mag_alien_2",
+        "text": "\"SKYWATCH MONTHLY\", June issue.  A logger describes a buzzing he felt rather than heard, and a shape he insists was more like a crab made of paper.  The editors have added a reconstruction that looks nothing like his description."
+      },
+      {
+        "id": "cv_mag_alien_3",
+        "text": "\"SKYWATCH MONTHLY\", September issue.  Twelve pages of grainy photographs from one county, all of them out of focus in the same specific way.  The author calls this proof."
+      },
+      {
+        "id": "cv_mag_alien_4",
+        "text": "\"SKYWATCH MONTHLY\", the last issue printed.  The editorial complains that mainstream science will not engage.  The letters page is full of people who saw the same thing in different states, in the same week."
+      }
+    ]
+  },
+  {
+    "type": "BOOK",
+    "category": "books",
+    "symbol": "?",
+    "material": [
+      "paper"
+    ],
+    "price": "12 USD",
+    "price_postapoc": "75 cent",
+    "intelligence": 0,
+    "id": "cv_comic_hero",
+    "name": {
+      "str": "superhero comic book"
+    },
+    "color": "blue",
+    "weight": "90 g",
+    "volume": "300 ml",
+    "fun": 3,
+    "time": "8 m",
+    "chapters": 1,
+    "description": "A thin American comic in a plastic sleeve with a cardboard backing board, kept far more carefully than it was ever read.",
+    "snippet_category": [
+      {
+        "id": "cv_comic_hero_1",
+        "text": "\"CAPTAIN MERIDIAN\" #148.  The Captain fights his own clone, loses, and wins the rematch by talking.  A corner of the cover has been bent and carefully flattened again."
+      },
+      {
+        "id": "cv_comic_hero_2",
+        "text": "\"THE IRON VERDICT\" #3.  A billionaire builds a suit of armour to fight crime and spends most of the issue in a board meeting."
+      },
+      {
+        "id": "cv_comic_hero_3",
+        "text": "\"NIGHT WARDEN\" #211, the death issue.  A black cover with a single white logo.  The letters page in the following issue was, apparently, incandescent."
+      },
+      {
+        "id": "cv_comic_hero_4",
+        "text": "\"SPECTRA & THE SIX\" #1, still bagged.  A team-up nobody asked for, priced on the sleeve at considerably more than it says on the cover."
+      }
+    ]
+  },
+  {
+    "type": "BOOK",
+    "category": "books",
+    "symbol": "?",
+    "material": [
+      "paper"
+    ],
+    "price": "11 USD",
+    "price_postapoc": "80 cent",
+    "intelligence": 0,
+    "id": "cv_mag_shonen_weekly",
+    "name": {
+      "str": "weekly manga anthology",
+      "str_pl": "weekly manga anthologies"
+    },
+    "color": "yellow",
+    "weight": "620 g",
+    "volume": "1200 ml",
+    "fun": 3,
+    "time": "20 m",
+    "chapters": 5,
+    "description": "A phone-book-thick weekly anthology printed on coloured pulp, meant to be read once and thrown away.  This one was not thrown away.",
+    "snippet_category": [
+      {
+        "id": "cv_mag_shonen_weekly_1",
+        "text": "\"WEEKLY SHONEN VAULT\", issue 31.  Nineteen serials, four of which will be remembered.  The paper is pink, green and grey by turns, apparently at random."
+      },
+      {
+        "id": "cv_mag_shonen_weekly_2",
+        "text": "\"WEEKLY SHONEN VAULT\", issue 44.  A reader survey card is still bound into the middle.  Somebody has filled it in and never posted it."
+      },
+      {
+        "id": "cv_mag_shonen_weekly_3",
+        "text": "\"WEEKLY SHONEN VAULT\", the second issue of the year.  The lead serial has been cancelled mid-arc; the final chapter resolves eleven plot threads in sixteen pages and thanks the reader for their support."
+      },
+      {
+        "id": "cv_mag_shonen_weekly_4",
+        "text": "\"WEEKLY SHONEN VAULT\", the Cataclysm issue.  It went on sale the week everything stopped.  The back cover advertises a film released next spring."
+      }
+    ]
+  },
+  {
+    "//": "Never opened, and worth nothing to anybody now.  Taking one apart is the only use it has left, which is most of the joke.",
+    "type": "GENERIC",
+    "id": "cv_figure_boxed",
+    "category": "other",
+    "symbol": "*",
+    "color": "magenta",
+    "name": {
+      "str": "boxed collectible figure"
+    },
+    "description": "A collectible figure sealed in its original window box.  The cardboard has been kept out of the sun, the corners are still sharp, and it has never once been opened.  Somebody was saving it.",
+    "material": [
+      "plastic"
+    ],
+    "weight": "480 g",
+    "volume": "1500 ml",
+    "price": "60 USD",
+    "price_postapoc": "3 USD",
+    "to_hit": -2,
+    "snippet_category": [
+      {
+        "id": "cv_figure_boxed_1",
+        "text": "The window shows a scowling swordsman in a red coat.  A sticker on the box reads FIRST PRODUCTION RUN."
+      },
+      {
+        "id": "cv_figure_boxed_2",
+        "text": "A pilot in a flight suit, posed mid-salute.  The box art promises three interchangeable faces, all of them visible through the window."
+      },
+      {
+        "id": "cv_figure_boxed_3",
+        "text": "A magical girl with an absurdly long staff.  A price sticker from a shop in another state is still on the corner."
+      },
+      {
+        "id": "cv_figure_boxed_4",
+        "text": "Something with far too many swords.  There is a convention-exclusive foil stamp in the corner of the box."
+      }
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "cv_figure_wolfgirl",
+    "category": "other",
+    "symbol": "*",
+    "color": "brown",
+    "name": {
+      "str": "wolf girl figure"
+    },
+    "description": "A painted plastic figure of a young woman with wolf ears and a tail, from a video game that sold extremely well.  She is posed mid-turn, looking back over one shoulder.  The paintwork on the eyes is genuinely very good.",
+    "material": [
+      "plastic"
+    ],
+    "weight": "260 g",
+    "volume": "700 ml",
+    "price": "80 USD",
+    "price_postapoc": "2 USD",
+    "to_hit": -2
+  },
+  {
+    "type": "GENERIC",
+    "id": "cv_figure_mecha",
+    "category": "other",
+    "symbol": "*",
+    "color": "light_blue",
+    "name": {
+      "str": "model robot figure"
+    },
+    "description": "A model kit of a white and blue humanoid war machine, assembled with some care and only slightly wrong at the left shoulder.  The panel lines have been inked in by hand.  There are still sprue marks on one ankle.",
+    "material": [
+      "plastic"
+    ],
+    "weight": "340 g",
+    "volume": "900 ml",
+    "price": "72 USD",
+    "price_postapoc": "2 USD",
+    "to_hit": -2,
+    "snippet_category": [
+      {
+        "id": "cv_figure_mecha_1",
+        "text": "The instruction booklet is folded inside the base.  It is for the 1/144 scale kit of the prototype unit from \"Mobile Fortress GUNDOLF\"."
+      },
+      {
+        "id": "cv_figure_mecha_2",
+        "text": "A hand-written note taped to the base reads: do NOT let Kevin touch this."
+      },
+      {
+        "id": "cv_figure_mecha_3",
+        "text": "One of the beam rifles has been repaired with a visible bead of glue.  Whoever did it clearly minded a great deal."
+      }
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "category": "scrap_fabric",
+    "symbol": ",",
+    "material": [
+      "cotton"
+    ],
+    "price": "54 USD",
+    "price_postapoc": "4 USD",
+    "qualities": [
+      [
+        "SLEEP_AID",
+        3
+      ]
+    ],
+    "weight": "1400 g",
+    "volume": "4 L",
+    "to_hit": -3,
+    "//": "Ground sprite 137, wielded overlay 138.  A wielded sprite needs its own tileset entry named overlay_wielded_<item_id>, which is the engine's convention.",
+    "id": "cv_pillow_singer",
+    "color": "cyan",
+    "name": {
+      "str": "printed body pillow"
+    },
+    "description": "A full-length body pillow with a character printed down its whole length: a girl with waist-long turquoise hair in twin tails, mid-song.  She was never a real singer - her voice was assembled out of samples - and she sold out arenas regardless.  The cover has been washed carefully and often.",
+    "use_action": "CV_PILLOW_HUG"
+  },
+  {
+    "type": "GENERIC",
+    "category": "scrap_fabric",
+    "symbol": ",",
+    "material": [
+      "cotton"
+    ],
+    "price": "54 USD",
+    "price_postapoc": "4 USD",
+    "qualities": [
+      [
+        "SLEEP_AID",
+        3
+      ]
+    ],
+    "weight": "1400 g",
+    "volume": "4 L",
+    "to_hit": -3,
+    "//": "Ground sprite 141, wielded overlay 142.",
+    "id": "cv_pillow_anime",
+    "color": "magenta",
+    "name": {
+      "str": "printed body pillow"
+    },
+    "description": "A full-length body pillow printed with a long-haired anime character in a pose the show she comes from never once put her in.  The fabric is soft, was expensive, and has faded along one side from a window.",
+    "use_action": "CV_PILLOW_HUG"
+  },
+  {
+    "//": "Sprite 143.  Modelled on vanilla talking_doll: a TOOL that spends a battery charge per press.  It uses a Lua use_action rather than the built-in DOLLCHAT because DOLLCHAT emits exactly one line per press (src/iuse.cpp:5510), and this should get through a whole exchange.",
+    "type": "TOOL",
+    "id": "cv_doll_mariner",
+    "category": "other",
+    "name": {
+      "str": "magical girl doll"
+    },
+    "description": "A talking doll of a blonde magical girl in a sailor uniform, from an animated series that ran for years and was, briefly, the most popular thing in the world.  Press the brooch and she still says her lines.  The batteries come out, if you would rather she did not.",
+    "material": [
+      "plastic"
+    ],
+    "weight": "900 g",
+    "volume": "750 ml",
+    "price": "47 USD",
+    "price_postapoc": "2 USD",
+    "to_hit": -1,
+    "symbol": "|",
+    "color": "yellow",
+    "ammo": "battery",
+    "charges_per_use": 1,
+    "use_action": "CV_DOLL_CHAT",
+    "magazines": [
+      [
+        "battery",
+        [
+          "light_minus_disposable_cell",
+          "light_battery_cell"
+        ]
+      ]
+    ],
+    "magazine_well": "250 ml"
+  }
+]

@@ -1,0 +1,301 @@
+[
+  {
+    "result": "cv_manga_adult",
+    "type": "uncraft",
+    "time": "3 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          25
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "//": "None of these are craftable - you cannot assemble a collector's figure out of scrap - but every one comes apart into something sensible."
+  },
+  {
+    "result": "cv_manga_slice",
+    "type": "uncraft",
+    "time": "3 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          24
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_manga_shojo",
+    "type": "uncraft",
+    "time": "3 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          23
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_manga_shonen",
+    "type": "uncraft",
+    "time": "3 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          25
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_mag_alien",
+    "type": "uncraft",
+    "time": "2 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          15
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_comic_hero",
+    "type": "uncraft",
+    "time": "1 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          8
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_mag_shonen_weekly",
+    "type": "uncraft",
+    "time": "6 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "paper",
+          50
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_figure_boxed",
+    "type": "uncraft",
+    "time": "2 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "plastic_chunk",
+          3
+        ]
+      ],
+      [
+        [
+          "paper",
+          6
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_figure_wolfgirl",
+    "type": "uncraft",
+    "time": "2 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "plastic_chunk",
+          2
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_figure_mecha",
+    "type": "uncraft",
+    "time": "2 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "plastic_chunk",
+          3
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_pillow_singer",
+    "type": "uncraft",
+    "time": "5 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "rag",
+          12
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_pillow_anime",
+    "type": "uncraft",
+    "time": "5 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "rag",
+          12
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  },
+  {
+    "result": "cv_doll_mariner",
+    "type": "uncraft",
+    "time": "4 m",
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "plastic_chunk",
+          3
+        ]
+      ],
+      [
+        [
+          "scrap",
+          1
+        ]
+      ]
+    ],
+    "flags": [
+      "BLIND_EASY"
+    ]
+  }
+]

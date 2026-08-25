@@ -1,0 +1,42 @@
+[
+  {
+    "//": "Redeclaration is safe: monfactions::load_monster_faction uses get_or_add_faction, so this merges with the Civilians mod's identical faction when both are loaded, and stands alone when it is not.",
+    "type": "MONSTER_FACTION",
+    "name": "civilians",
+    "base_faction": "human",
+    "friendly": [
+      "civilians",
+      "player"
+    ],
+    "hate": [
+      "zombie",
+      "nether",
+      "zombie_aquatic",
+      "blob",
+      "leech_plant",
+      "jabberwock",
+      "insect"
+    ],
+    "neutral": [
+      "bot"
+    ]
+  },
+  {
+    "//": "Hostility must be DECLARED.  resolve_attitude_map walks up base_faction and, finding no relation, returns MFA_FRIENDLY (src/monfaction.cpp:149-152) - the default is friendly, not hostile.  Omitting player made bikers passive toward the player while still fighting zombies, which were explicitly hated.",
+    "type": "MONSTER_FACTION",
+    "name": "cv_bandit",
+    "base_faction": "human",
+    "friendly": [
+      "cv_bandit"
+    ],
+    "hate": [
+      "player",
+      "human",
+      "civilians",
+      "zombie",
+      "nether",
+      "zombie_aquatic",
+      "blob"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+# This repository is rooted at the game's `mods/` directory, so that GitHub shows
+# a `civilian_variety` folder which drops straight into any install without being
+# renamed or unpacked twice.
+#
+# Everything at this level is therefore ignored by default and re-admitted
+# explicitly. That way installing an unrelated third-party mod into this folder
+# never shows up in `git status`, and the game's own
+# `put-your-third-party-mods-here.txt` stays out of the repo.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/civilian_variety/
+
+# Inside the mod: working notes and the sprite-index checker are development
+# tools, not part of what players download.
+/civilian_variety/DESIGN.md
+/civilian_variety/tools/
+
+# Python bytecode
+__pycache__/
+*.pyc
