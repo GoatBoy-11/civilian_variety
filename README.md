@@ -26,10 +26,14 @@ The only hard dependency is `bn` itself.
 
 ## Installing
 
-1. Download this repository (green **Code** button → **Download ZIP**, or clone).
-2. Drop the `civilian_variety` folder into your game's `mods/` directory, so you
-   end up with `mods/civilian_variety/modinfo.json`.
+1. Download this repository — green **Code** button → **Download ZIP**, or clone.
+2. Inside it you will find a **`civilian_variety`** folder. Drop *that folder* into
+   your game's `mods/` directory, so you end up with
+   `mods/civilian_variety/modinfo.json`.
 3. Enable **Civilian Variety** in the mod list when creating a world.
+
+The mod is deliberately kept in its own folder here so the thing you copy is
+already the right shape — nothing to rename, nothing to unpack twice.
 
 ---
 
