@@ -4766,5 +4766,371 @@
         "prob": 100
       }
     ]
+  },
+  {
+    "//": "Untouched pockets - the peaceful deaths and the ones nothing human has reached.  This is where the keepsake snippets finally land on somebody the player did not kill.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_body_effects_full",
+    "entries": [
+      {
+        "item": "cv_photo",
+        "prob": 30
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 30
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 10
+      },
+      {
+        "item": "cv_note_medical",
+        "prob": 8
+      },
+      {
+        "item": "money_bundle",
+        "prob": 25
+      },
+      {
+        "item": "cash_card",
+        "prob": 30,
+        "charges": [
+          0,
+          25000
+        ]
+      },
+      {
+        "item": "coin_quarter",
+        "prob": 30,
+        "count": [
+          1,
+          12
+        ]
+      },
+      {
+        "item": "lighter",
+        "prob": 20
+      },
+      {
+        "item": "matches",
+        "prob": 12
+      },
+      {
+        "item": "wristwatch",
+        "prob": 12
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 10
+      },
+      {
+        "item": "holy_symbol",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "//": "Picked over - somebody got here first, took the obvious things and missed the rest.  The cash is largely gone; paper is not worth stealing, so the keepsakes survive.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_body_effects_picked",
+    "entries": [
+      {
+        "item": "cv_photo",
+        "prob": 18
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 18
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 6
+      },
+      {
+        "item": "coin_quarter",
+        "prob": 15,
+        "count": [
+          1,
+          5
+        ]
+      },
+      {
+        "item": "lighter",
+        "prob": 8
+      },
+      {
+        "item": "glasses_reading",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "Emptied.  Deliberately thin rather than literally empty: an occasional overlooked scrap says more about how carefully they were searched than nothing at all would.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_body_effects_empty",
+    "entries": [
+      {
+        "item": "cv_photo",
+        "prob": 5
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "//": "Died of something invisible, and nobody has been near them since - so the fullest pockets in the mod.",
+    "//2": "contents-group places the personal effects INSIDE the body; the clothes go beside it, as vanilla's everyday_corpse does - they were worn rather than carried.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_corpse_plain",
+    "entries": [
+      {
+        "item": "cv_body_plain",
+        "contents-group": "cv_body_effects_full"
+      },
+      {
+        "group": "cv_common_civilian_drops",
+        "prob": 85,
+        "damage": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Killed, then picked over.",
+    "//2": "contents-group places the personal effects INSIDE the body; the clothes go beside it, as vanilla's everyday_corpse does - they were worn rather than carried.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_corpse_bloodied",
+    "entries": [
+      {
+        "item": "cv_body_bloodied",
+        "contents-group": "cv_body_effects_picked"
+      },
+      {
+        "group": "cv_common_civilian_drops",
+        "prob": 85,
+        "damage": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Killed, then picked over.",
+    "//2": "contents-group places the personal effects INSIDE the body; the clothes go beside it, as vanilla's everyday_corpse does - they were worn rather than carried.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_corpse_bloodied_alt",
+    "entries": [
+      {
+        "item": "cv_body_bloodied_alt",
+        "contents-group": "cv_body_effects_picked"
+      },
+      {
+        "group": "cv_common_civilian_drops",
+        "prob": 85,
+        "damage": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "//": "The grim joke of the set: the pockets are intact because whatever ate them had no use for a wallet.  Clothing is wrecked, so it is rolled with heavy damage.",
+    "//2": "contents-group places the personal effects INSIDE the body; the clothes go beside it, as vanilla's everyday_corpse does - they were worn rather than carried.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_corpse_eaten",
+    "entries": [
+      {
+        "item": "cv_body_eaten",
+        "contents-group": "cv_body_effects_full"
+      },
+      {
+        "group": "cv_common_civilian_drops",
+        "prob": 85,
+        "damage": [
+          2,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "//": "Heavily damaged clothing.",
+    "//2": "contents-group places the personal effects INSIDE the body; the clothes go beside it, as vanilla's everyday_corpse does - they were worn rather than carried.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_corpse_halved",
+    "entries": [
+      {
+        "item": "cv_body_halved",
+        "contents-group": "cv_body_effects_picked"
+      },
+      {
+        "group": "cv_common_civilian_drops",
+        "prob": 85,
+        "damage": [
+          2,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "//": "No clothing entry at all, and near-empty pockets.  The absence is the point: a body with nothing on it says somebody was here first and was thorough.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_corpse_stripped",
+    "entries": [
+      {
+        "item": "cv_body_stripped",
+        "contents-group": "cv_body_effects_empty"
+      }
+    ]
+  },
+  {
+    "//": "Every body, as one pool.  Weighted towards the ordinary ones: the halved and the eaten should stay uncommon or they stop landing.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_corpses",
+    "entries": [
+      {
+        "group": "cv_corpse_plain",
+        "prob": 30
+      },
+      {
+        "group": "cv_corpse_bloodied",
+        "prob": 22
+      },
+      {
+        "group": "cv_corpse_bloodied_alt",
+        "prob": 22
+      },
+      {
+        "group": "cv_corpse_stripped",
+        "prob": 12
+      },
+      {
+        "group": "cv_corpse_eaten",
+        "prob": 10
+      },
+      {
+        "group": "cv_corpse_halved",
+        "prob": 4
+      }
+    ]
+  },
+  {
+    "//": "Appends to vanilla's standalone corpse pool - used by residential lawns among others.  Vanilla weights sum to 300, so 12 apiece is about 4% each.",
+    "//2": "subtype MUST be distribution: vanilla declares no subtype, which loads as `old` and therefore distribution.  A mismatch is a hard load error - see DESIGN.md 13.12.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "corpses",
+    "entries": [
+      {
+        "group": "cv_corpse_plain",
+        "prob": 12
+      },
+      {
+        "group": "cv_corpse_bloodied",
+        "prob": 12
+      },
+      {
+        "group": "cv_corpse_bloodied_alt",
+        "prob": 12
+      },
+      {
+        "group": "cv_corpse_stripped",
+        "prob": 12
+      },
+      {
+        "group": "cv_corpse_eaten",
+        "prob": 12
+      },
+      {
+        "group": "cv_corpse_halved",
+        "prob": 12
+      }
+    ]
+  },
+  {
+    "//": "Appends to vanilla's corpse_male.  Bare bodies with pockets only: this group is used from inside collections that add their own clothing, so our clothed variants would dress the same corpse twice.",
+    "//2": "cv_body_stripped is deliberately excluded here - it would arrive wearing a full outfit, which is exactly the opposite of what it means.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "corpse_male",
+    "entries": [
+      {
+        "item": "cv_body_plain",
+        "prob": 25,
+        "contents-group": "cv_body_effects_full"
+      },
+      {
+        "item": "cv_body_bloodied",
+        "prob": 20,
+        "contents-group": "cv_body_effects_picked"
+      },
+      {
+        "item": "cv_body_bloodied_alt",
+        "prob": 20,
+        "contents-group": "cv_body_effects_picked"
+      },
+      {
+        "item": "cv_body_eaten",
+        "prob": 10,
+        "contents-group": "cv_body_effects_full"
+      },
+      {
+        "item": "cv_body_halved",
+        "prob": 4,
+        "contents-group": "cv_body_effects_picked"
+      }
+    ]
+  },
+  {
+    "//": "Appends to vanilla's corpse_female.  Bare bodies with pockets only: this group is used from inside collections that add their own clothing, so our clothed variants would dress the same corpse twice.",
+    "//2": "cv_body_stripped is deliberately excluded here - it would arrive wearing a full outfit, which is exactly the opposite of what it means.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "corpse_female",
+    "entries": [
+      {
+        "item": "cv_body_plain",
+        "prob": 25,
+        "contents-group": "cv_body_effects_full"
+      },
+      {
+        "item": "cv_body_bloodied",
+        "prob": 20,
+        "contents-group": "cv_body_effects_picked"
+      },
+      {
+        "item": "cv_body_bloodied_alt",
+        "prob": 20,
+        "contents-group": "cv_body_effects_picked"
+      },
+      {
+        "item": "cv_body_eaten",
+        "prob": 10,
+        "contents-group": "cv_body_effects_full"
+      },
+      {
+        "item": "cv_body_halved",
+        "prob": 4,
+        "contents-group": "cv_body_effects_picked"
+      }
+    ]
   }
 ]

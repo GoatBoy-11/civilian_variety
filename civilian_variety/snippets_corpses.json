@@ -1,0 +1,188 @@
+[
+  {
+    "//": "One category per body type.  The item declares snippet_category, so each find reads differently from the last without needing six times the items.",
+    "type": "snippet",
+    "category": "cv_body_stripped_desc",
+    "text": [
+      {
+        "id": "cv_body_stripped_desc_1",
+        "text": "Bare, unmarked, and someone has been through the pockets since."
+      },
+      {
+        "id": "cv_body_stripped_desc_2",
+        "text": "No clothes, no wounds, no explanation.  Somebody undressed them, and it was not them."
+      },
+      {
+        "id": "cv_body_stripped_desc_3",
+        "text": "Stripped to the skin.  Whoever did it was unhurried and thorough."
+      },
+      {
+        "id": "cv_body_stripped_desc_4",
+        "text": "There is a pale band on one finger where a ring used to be."
+      },
+      {
+        "id": "cv_body_stripped_desc_5",
+        "text": "They died of nothing you can see, and were robbed of everything you can't."
+      },
+      {
+        "id": "cv_body_stripped_desc_6",
+        "text": "Laid out almost tidily.  That is somehow the worst part of it."
+      }
+    ]
+  },
+  {
+    "//": "One category per body type.  The item declares snippet_category, so each find reads differently from the last without needing six times the items.",
+    "type": "snippet",
+    "category": "cv_body_plain_desc",
+    "text": [
+      {
+        "id": "cv_body_plain_desc_1",
+        "text": "Fully dressed, no mark on them at all.  Their heart, most likely, and quickly."
+      },
+      {
+        "id": "cv_body_plain_desc_2",
+        "text": "Sitting where they sat down.  Nothing here attacked anybody."
+      },
+      {
+        "id": "cv_body_plain_desc_3",
+        "text": "No wound, no blood, no struggle.  Whatever it was came from inside."
+      },
+      {
+        "id": "cv_body_plain_desc_4",
+        "text": "One shoe is off and set neatly beside the other.  They had time for that much."
+      },
+      {
+        "id": "cv_body_plain_desc_5",
+        "text": "They look like they are about to get up, and they have looked like that for days."
+      },
+      {
+        "id": "cv_body_plain_desc_6",
+        "text": "Nobody has touched them.  Nobody has been here to."
+      }
+    ]
+  },
+  {
+    "//": "One category per body type.  The item declares snippet_category, so each find reads differently from the last without needing six times the items.",
+    "type": "snippet",
+    "category": "cv_body_bloodied_desc",
+    "text": [
+      {
+        "id": "cv_body_bloodied_desc_1",
+        "text": "Clothes soaked through and gone stiff.  It was fast, at least."
+      },
+      {
+        "id": "cv_body_bloodied_desc_2",
+        "text": "Something opened them up and did not stay to finish the job."
+      },
+      {
+        "id": "cv_body_bloodied_desc_3",
+        "text": "The blood has dried in a wide arc.  They were moving when it happened."
+      },
+      {
+        "id": "cv_body_bloodied_desc_4",
+        "text": "Their hands are the worst of it.  They tried to stop it with their hands."
+      },
+      {
+        "id": "cv_body_bloodied_desc_5",
+        "text": "Dragged a short way, then not dragged any further."
+      },
+      {
+        "id": "cv_body_bloodied_desc_6",
+        "text": "Whoever came through afterwards took what was easy and left the rest."
+      }
+    ]
+  },
+  {
+    "//": "One category per body type.  The item declares snippet_category, so each find reads differently from the last without needing six times the items.",
+    "type": "snippet",
+    "category": "cv_body_bloodied_alt_desc",
+    "text": [
+      {
+        "id": "cv_body_bloodied_alt_desc_1",
+        "text": "Face down in a pool gone tacky at the edges."
+      },
+      {
+        "id": "cv_body_bloodied_alt_desc_2",
+        "text": "They got a few steps further than whoever they were with."
+      },
+      {
+        "id": "cv_body_bloodied_alt_desc_3",
+        "text": "Curled around an injury they were holding shut."
+      },
+      {
+        "id": "cv_body_bloodied_alt_desc_4",
+        "text": "A long smear leads to them and stops."
+      },
+      {
+        "id": "cv_body_bloodied_alt_desc_5",
+        "text": "Killed reaching for a door that is still shut."
+      },
+      {
+        "id": "cv_body_bloodied_alt_desc_6",
+        "text": "Somebody closed their eyes.  Somebody who then left."
+      }
+    ]
+  },
+  {
+    "//": "One category per body type.  The item declares snippet_category, so each find reads differently from the last without needing six times the items.",
+    "type": "snippet",
+    "category": "cv_body_eaten_desc",
+    "text": [
+      {
+        "id": "cv_body_eaten_desc_1",
+        "text": "Most of one side is gone.  Whatever was feeding stopped before it finished."
+      },
+      {
+        "id": "cv_body_eaten_desc_2",
+        "text": "Fed on and abandoned.  The question is what interrupted it."
+      },
+      {
+        "id": "cv_body_eaten_desc_3",
+        "text": "Ribs opened outward.  Nothing careful did this."
+      },
+      {
+        "id": "cv_body_eaten_desc_4",
+        "text": "Their coat is intact where the rest of them is not."
+      },
+      {
+        "id": "cv_body_eaten_desc_5",
+        "text": "The pockets have not been touched.  Nothing that eats people has any use for a wallet."
+      },
+      {
+        "id": "cv_body_eaten_desc_6",
+        "text": "Enough is left to be sure it was a person, and not enough for much else."
+      }
+    ]
+  },
+  {
+    "//": "One category per body type.  The item declares snippet_category, so each find reads differently from the last without needing six times the items.",
+    "type": "snippet",
+    "category": "cv_body_halved_desc",
+    "text": [
+      {
+        "id": "cv_body_halved_desc_1",
+        "text": "Cut through cleanly at the waist by something that did not slow down."
+      },
+      {
+        "id": "cv_body_halved_desc_2",
+        "text": "Two halves, and not especially close together."
+      },
+      {
+        "id": "cv_body_halved_desc_3",
+        "text": "The cut is far too clean for teeth."
+      },
+      {
+        "id": "cv_body_halved_desc_4",
+        "text": "Something with an edge came through here at speed, and kept going."
+      },
+      {
+        "id": "cv_body_halved_desc_5",
+        "text": "The top half is still holding a set of keys."
+      },
+      {
+        "id": "cv_body_halved_desc_6",
+        "text": "Whatever did this was not hunting.  It was simply passing through."
+      }
+    ]
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "//": "A container, not vanilla's GENERIC corpse: `contains` gives it the container slot that is_container() reads (src/item.cpp:7765), which is what lets an item group put personal effects INSIDE it via contents-group.",
+    "//2": "No CORPSE flag on purpose.  That flag sets is_corpse() with a null monster type (src/item.cpp:297) and puts the item on the butchering path.  These are things you search, not things you carve.",
+    "//3": "1 L holds papers, a wallet, a ring - and not much else.  Enough for what somebody had in their pockets, far too little to serve as a free rucksack.",
+    "id": "cv_body_stripped",
+    "type": "CONTAINER",
+    "category": "other",
+    "name": {
+      "str": "stripped body"
+    },
+    "description": "Bare, unmarked and arranged by nobody.  Whatever happened here, it was not violent, and somebody has been through the pockets since.",
+    "weight": "81500 g",
+    "volume": "62500 ml",
+    "contains": "1 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "light_gray",
+    "snippet_category": "cv_body_stripped_desc",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "//": "A container, not vanilla's GENERIC corpse: `contains` gives it the container slot that is_container() reads (src/item.cpp:7765), which is what lets an item group put personal effects INSIDE it via contents-group.",
+    "//2": "No CORPSE flag on purpose.  That flag sets is_corpse() with a null monster type (src/item.cpp:297) and puts the item on the butchering path.  These are things you search, not things you carve.",
+    "//3": "1 L holds papers, a wallet, a ring - and not much else.  Enough for what somebody had in their pockets, far too little to serve as a free rucksack.",
+    "id": "cv_body_plain",
+    "type": "CONTAINER",
+    "category": "other",
+    "name": {
+      "str": "dead body"
+    },
+    "description": "Fully dressed, no wound anywhere on them, no blood.  Whatever stopped them did it from the inside, and it did it quickly.",
+    "weight": "81500 g",
+    "volume": "62500 ml",
+    "contains": "1 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "brown",
+    "snippet_category": "cv_body_plain_desc",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "//": "A container, not vanilla's GENERIC corpse: `contains` gives it the container slot that is_container() reads (src/item.cpp:7765), which is what lets an item group put personal effects INSIDE it via contents-group.",
+    "//2": "No CORPSE flag on purpose.  That flag sets is_corpse() with a null monster type (src/item.cpp:297) and puts the item on the butchering path.  These are things you search, not things you carve.",
+    "//3": "1 L holds papers, a wallet, a ring - and not much else.  Enough for what somebody had in their pockets, far too little to serve as a free rucksack.",
+    "id": "cv_body_bloodied",
+    "type": "CONTAINER",
+    "category": "other",
+    "name": {
+      "str": "bloodied body"
+    },
+    "description": "Clothes soaked through and stiffening.  It did not take long, which is the kindest thing that can be said about it.",
+    "weight": "81500 g",
+    "volume": "62500 ml",
+    "contains": "1 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "red",
+    "snippet_category": "cv_body_bloodied_desc",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "//": "A container, not vanilla's GENERIC corpse: `contains` gives it the container slot that is_container() reads (src/item.cpp:7765), which is what lets an item group put personal effects INSIDE it via contents-group.",
+    "//2": "No CORPSE flag on purpose.  That flag sets is_corpse() with a null monster type (src/item.cpp:297) and puts the item on the butchering path.  These are things you search, not things you carve.",
+    "//3": "1 L holds papers, a wallet, a ring - and not much else.  Enough for what somebody had in their pockets, far too little to serve as a free rucksack.",
+    "id": "cv_body_bloodied_alt",
+    "type": "CONTAINER",
+    "category": "other",
+    "name": {
+      "str": "bloodied body"
+    },
+    "description": "Face down in a pool gone tacky at the edges.  They got a few steps further than whoever they were with.",
+    "weight": "81500 g",
+    "volume": "62500 ml",
+    "contains": "1 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "red",
+    "snippet_category": "cv_body_bloodied_alt_desc",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "//": "A container, not vanilla's GENERIC corpse: `contains` gives it the container slot that is_container() reads (src/item.cpp:7765), which is what lets an item group put personal effects INSIDE it via contents-group.",
+    "//2": "No CORPSE flag on purpose.  That flag sets is_corpse() with a null monster type (src/item.cpp:297) and puts the item on the butchering path.  These are things you search, not things you carve.",
+    "//3": "1 L holds papers, a wallet, a ring - and not much else.  Enough for what somebody had in their pockets, far too little to serve as a free rucksack.",
+    "id": "cv_body_eaten",
+    "type": "CONTAINER",
+    "category": "other",
+    "name": {
+      "str": "partly eaten body"
+    },
+    "description": "Most of one side is gone.  Whatever was feeding stopped before it finished, which raises the question of what interrupted it.",
+    "weight": "62000 g",
+    "volume": "62500 ml",
+    "contains": "1 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "pink",
+    "snippet_category": "cv_body_eaten_desc",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "//": "A container, not vanilla's GENERIC corpse: `contains` gives it the container slot that is_container() reads (src/item.cpp:7765), which is what lets an item group put personal effects INSIDE it via contents-group.",
+    "//2": "No CORPSE flag on purpose.  That flag sets is_corpse() with a null monster type (src/item.cpp:297) and puts the item on the butchering path.  These are things you search, not things you carve.",
+    "//3": "1 L holds papers, a wallet, a ring - and not much else.  Enough for what somebody had in their pockets, far too little to serve as a free rucksack.",
+    "id": "cv_body_halved",
+    "type": "CONTAINER",
+    "category": "other",
+    "name": {
+      "str": "severed body"
+    },
+    "description": "Cut through cleanly at the waist by something that did not slow down to do it.  The two halves are not especially close together.",
+    "weight": "44000 g",
+    "volume": "62500 ml",
+    "contains": "1 L",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "dark_gray",
+    "snippet_category": "cv_body_halved_desc",
+    "flags": [
+      "TRADER_AVOID",
+      "NO_SALVAGE"
+    ]
+  }
+]

@@ -811,6 +811,36 @@
               }
             ],
             "rotates": false
+          },
+          {
+            "id": "cv_body_stripped",
+            "fg": 154,
+            "rotates": false
+          },
+          {
+            "id": "cv_body_plain",
+            "fg": 155,
+            "rotates": false
+          },
+          {
+            "id": "cv_body_bloodied",
+            "fg": 156,
+            "rotates": false
+          },
+          {
+            "id": "cv_body_bloodied_alt",
+            "fg": 157,
+            "rotates": false
+          },
+          {
+            "id": "cv_body_eaten",
+            "fg": 158,
+            "rotates": false
+          },
+          {
+            "id": "cv_body_halved",
+            "fg": 159,
+            "rotates": false
           }
         ],
         "sprite_width": 32,
