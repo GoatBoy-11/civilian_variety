@@ -841,6 +841,72 @@
             "id": "cv_body_halved",
             "fg": 159,
             "rotates": false
+          },
+          {
+            "id": "mon_cv_retail",
+            "fg": [
+              {
+                "weight": 1,
+                "sprite": 160
+              },
+              {
+                "weight": 1,
+                "sprite": 161
+              },
+              {
+                "weight": 1,
+                "sprite": 162
+              },
+              {
+                "weight": 1,
+                "sprite": 163
+              }
+            ],
+            "rotates": false
+          },
+          {
+            "id": "mon_cv_retail_f",
+            "fg": [
+              {
+                "weight": 1,
+                "sprite": 164
+              },
+              {
+                "weight": 1,
+                "sprite": 165
+              },
+              {
+                "weight": 1,
+                "sprite": 166
+              },
+              {
+                "weight": 1,
+                "sprite": 167
+              }
+            ],
+            "rotates": false
+          },
+          {
+            "id": "mon_cv_zombie_retail",
+            "fg": [
+              {
+                "weight": 1,
+                "sprite": 168
+              },
+              {
+                "weight": 1,
+                "sprite": 169
+              },
+              {
+                "weight": 1,
+                "sprite": 170
+              },
+              {
+                "weight": 1,
+                "sprite": 171
+              }
+            ],
+            "rotates": false
           }
         ],
         "sprite_width": 32,

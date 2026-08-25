@@ -5132,5 +5132,269 @@
         "contents-group": "cv_body_effects_picked"
       }
     ]
+  },
+  {
+    "//": "The uniform.  BN has no cotton apron or name-tag item, so `vest` carries the look.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_retail_worn_m",
+    "entries": [
+      {
+        "item": "vest",
+        "prob": 85
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      },
+      {
+        "distribution": [
+          {
+            "item": "sneakers",
+            "prob": 70
+          },
+          {
+            "item": "boots",
+            "prob": 30
+          }
+        ],
+        "prob": 75
+      },
+      {
+        "distribution": [
+          {
+            "item": "polo_shirt",
+            "prob": 55
+          },
+          {
+            "item": "dress_shirt",
+            "prob": 25
+          },
+          {
+            "item": "longshirt",
+            "prob": 20
+          }
+        ],
+        "prob": 90
+      },
+      {
+        "distribution": [
+          {
+            "item": "pants",
+            "prob": 60
+          },
+          {
+            "item": "jeans",
+            "prob": 40
+          }
+        ],
+        "prob": 88
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 50
+      }
+    ]
+  },
+  {
+    "//": "As the men, with the skirt option a uniform shop would actually issue.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_retail_worn_f",
+    "entries": [
+      {
+        "item": "vest",
+        "prob": 85
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      },
+      {
+        "distribution": [
+          {
+            "item": "sneakers",
+            "prob": 70
+          },
+          {
+            "item": "boots",
+            "prob": 30
+          }
+        ],
+        "prob": 75
+      },
+      {
+        "distribution": [
+          {
+            "item": "polo_shirt",
+            "prob": 50
+          },
+          {
+            "item": "dress_shirt",
+            "prob": 25
+          },
+          {
+            "item": "longshirt",
+            "prob": 25
+          }
+        ],
+        "prob": 90
+      },
+      {
+        "distribution": [
+          {
+            "item": "pants",
+            "prob": 45
+          },
+          {
+            "item": "jeans",
+            "prob": 30
+          },
+          {
+            "item": "skirt",
+            "prob": 25
+          }
+        ],
+        "prob": 88
+      },
+      {
+        "item": "bra",
+        "prob": 50
+      },
+      {
+        "item": "panties",
+        "prob": 55
+      }
+    ]
+  },
+  {
+    "//": "What was in the vest.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_retail_carried",
+    "entries": [
+      {
+        "item": "knife_folding",
+        "prob": 40
+      },
+      {
+        "item": "pockknife",
+        "prob": 20
+      },
+      {
+        "item": "pen",
+        "prob": 35
+      },
+      {
+        "item": "smart_phone",
+        "prob": 25
+      },
+      {
+        "item": "two_way_radio",
+        "prob": 15
+      },
+      {
+        "item": "flashlight",
+        "prob": 12
+      },
+      {
+        "item": "wristwatch",
+        "prob": 15
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 35
+      },
+      {
+        "item": "coin_quarter",
+        "prob": 40,
+        "count": [
+          2,
+          20
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 18
+      },
+      {
+        "item": "cash_card",
+        "prob": 25,
+        "charges": [
+          0,
+          20000
+        ]
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Uniform plus pockets.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_retail_drops",
+    "entries": [
+      {
+        "group": "cv_retail_worn_m"
+      },
+      {
+        "group": "cv_retail_carried"
+      }
+    ]
+  },
+  {
+    "//": "Uniform plus pockets.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_retail_drops_f",
+    "entries": [
+      {
+        "group": "cv_retail_worn_f"
+      },
+      {
+        "group": "cv_retail_carried"
+      }
+    ]
+  },
+  {
+    "//": "Same uniform, worse condition, and most of the pockets gone - the same `damage: [1, 4]` treatment the zombie clown and zombie nerd get.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_retail_drops",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "group": "cv_retail_worn_m",
+            "damage": [
+              1,
+              4
+            ]
+          },
+          {
+            "group": "cv_retail_worn_f",
+            "damage": [
+              1,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "group": "cv_retail_carried",
+        "prob": 45
+      }
+    ]
   }
 ]

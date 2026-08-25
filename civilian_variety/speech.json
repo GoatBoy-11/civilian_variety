@@ -940,5 +940,78 @@
     ],
     "sound": "someone telling you to keep your hands where they are.",
     "volume": 46
+  },
+  {
+    "//": "Not frightened, not friendly - still on shift.  The joke and the horror are the same thing: nobody has told them they can stop.  Volume 25-38, low enough not to call the street in.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "somebody asking, flatly, whether you found everything you were looking for.",
+    "volume": 35
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "a voice saying the tills are down and have been for a while.",
+    "volume": 38
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "someone reciting a price from memory to nobody.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "a voice explaining that the delivery never came.",
+    "volume": 34
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "somebody saying their shift ended on Tuesday.",
+    "volume": 32
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "the sound of a shelf being straightened, over and over.",
+    "volume": 25
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "a voice asking if you need a bag.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_retail",
+      "mon_cv_retail_f"
+    ],
+    "sound": "someone saying the manager has the keys, and the manager has gone.",
+    "volume": 36
   }
 ]

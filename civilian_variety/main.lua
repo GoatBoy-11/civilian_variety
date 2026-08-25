@@ -177,6 +177,24 @@ local DEFAULT_CONFIG = {
     { match = "2fmotel", group = "GROUP_CV_NIGHTLIFE" },
     { match = "hotel_tower", group = "GROUP_CV_NIGHTLIFE" },
 
+    -- Shops with staff in them.  All eleven were unclaimed before this.
+    -- Interior mode throughout: TARGET_FURNITURE is chairs, beds, sofas, stools,
+    -- lockers and wardrobes, and a shop floor has few of those, so even the
+    -- 19-tile megastore stays sparse rather than filling with employees.
+    -- Deliberately kept off the food venues (s_restaurant*, s_teashop): waiting
+    -- tables is its own archetype, not this one.
+    { match = "s_grocery", group = "GROUP_CV_RETAIL" },
+    { match = "s_clothes", group = "GROUP_CV_RETAIL" },
+    { match = "s_hardware", group = "GROUP_CV_RETAIL" },
+    { match = "dollarstore", group = "GROUP_CV_RETAIL" },
+    { match = "megastore", group = "GROUP_CV_RETAIL" },
+    { match = "s_butcher", group = "GROUP_CV_RETAIL" },
+    { match = "s_thrift", group = "GROUP_CV_RETAIL" },
+    { match = "s_sports", group = "GROUP_CV_RETAIL" },
+    { match = "s_petstore", group = "GROUP_CV_RETAIL" },
+    { match = "s_gardening", group = "GROUP_CV_RETAIL" },
+    { match = "s_bike_shop", group = "GROUP_CV_RETAIL" },
+
     -- Shops with something behind the counter worth guarding.  All six were
     -- unclaimed before this.  Interior mode: every one of them is a small
     -- furniture-rich room, which is also why the owner reaches you so fast.
@@ -607,6 +625,24 @@ TALK["mon_cv_farmer"] = {
   "\"You can stand there or you can pick something up.\"",
 }
 TALK["mon_cv_farmer_f"] = TALK["mon_cv_farmer"]
+
+-- The retail worker is the mod's one joke that is also its bleakest line: they
+-- are still on shift, because nobody with the authority to end the shift has
+-- come back.  Written without pronouns - the sprite pool is half men, half women
+-- under two ids that share this list.
+TALK["mon_cv_retail"] = {
+  "\"We're open.  I don't know why we're open, but we're open.\"",
+  "\"Card only.  The card machine doesn't work either.  I'm aware.\"",
+  "\"Everything on aisle four went first.  Everything.  In about an hour.\"",
+  "\"I can't authorise that.  Only the manager can, and he isn't here.\"",
+  "You are asked, entirely automatically, whether you have a loyalty card.",
+  "\"Six people asked me where the bottled water was.  Then nobody asked anything.\"",
+  "\"I keep tidying the shelves.  It's that or think about it.\"",
+  "\"They told us to stay until close.  Nobody's said when close is.\"",
+  "They straighten something on the shelf beside you without appearing to notice doing it.",
+  "\"If you're taking that, just take it.  I genuinely do not care any more.\"",
+}
+TALK["mon_cv_retail_f"] = TALK["mon_cv_retail"]
 
 -- Every line is a warning wearing a sentence.  They are not frightened of you and
 -- not making conversation; they are telling you where the line is while there is

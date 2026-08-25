@@ -542,14 +542,14 @@
     "death_drops": "cv_shopkeeper_drops",
     "//7": "shot_bird is 10 pellets of 5 damage at half_angle 5, so the spread is the balance: nasty at point blank, mostly air past a few tiles.  Tuned under mon_cv_biker_shotgun on every other axis too - effective range 7 vs 10, cooldown 25 vs 15, fake_skills 0 vs 1, 8 shells vs 20.",
     "//8": "He cannot open fire on a stranger.  PLAYER_CLOSE only accrues within 5 tiles, so he has to have been angered at close range before the gun is ever in play; the 7-tile envelope then covers him backing away across his own shop.  Eight shells and he is dry, left clubbing with the barrel - that bounds the encounter.",
-    "//9": "Costs stay at the vanilla 150.  Firing at the player is two-stage - one attempt spends targeting_cost to aim and the next spends move_cost to shoot (src/mattack_actors.h:170-177) - and the biker build already proved that raising costs and shortening range together means they never fire at all.",
+    "//9": "targeting_timeout MUST stay above cooldown.  gun_actor fires in two stages: the first attempt only aims and applies effect_targeted for targeting_timeout turns (default 8, src/mattack_actors.h:176), and the second fires only while that effect is live.  But attempt_shoot returns true even when it merely aimed, so src/monmove.cpp:1551 resets the full cooldown on an attempt that never fired.  With cooldown 25 against an 8-turn lock the lock always expired first and the gun could never go off at all - he just walked up and clubbed people.  24 > 10 keeps the lock alive from one attempt to the next.",
     "starting_ammo": {
       "shot_bird": 8
     },
     "special_attacks": [
       {
         "type": "gun",
-        "cooldown": 25,
+        "cooldown": 10,
         "gun_type": "pipe_shotgun",
         "ammo_type": "shot_bird",
         "max_ammo": 2,
@@ -574,8 +574,46 @@
         ],
         "move_cost": 150,
         "targeting_cost": 150,
-        "description": "The store owner fires a barrel of birdshot!"
+        "description": "The store owner fires a barrel of birdshot!",
+        "targeting_timeout": 24,
+        "targeting_timeout_extend": 24
       }
     ]
+  },
+  {
+    "//": "Sprites 160-163.  Ordinary bystander statline - a shop assistant is not a fighter.  What makes them worth adding is where they are and what they are wearing, not what they can do.",
+    "//2": "Turns exclusively into mon_cv_zombie_retail, through both routes.  Without the second the into_group inherited from mon_cv_bystander would produce an ordinary zombie and the uniform would be lost - the trap the clown hit.",
+    "id": "mon_cv_retail",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "retail worker"
+    },
+    "description": "Green vest, name badge, and the particular thousand-yard stare of somebody who was told to keep the store open.  They are still standing roughly where the tills are, because that is where they were standing when it started.",
+    "speed": 92,
+    "zombify_into": "mon_cv_zombie_retail",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_RETAIL_UPGRADE"
+    },
+    "death_drops": "cv_retail_drops"
+  },
+  {
+    "//": "Sprites 164-167.  Ordinary bystander statline - a shop assistant is not a fighter.  What makes them worth adding is where they are and what they are wearing, not what they can do.",
+    "//2": "Turns exclusively into mon_cv_zombie_retail, through both routes.  Without the second the into_group inherited from mon_cv_bystander would produce an ordinary zombie and the uniform would be lost - the trap the clown hit.",
+    "id": "mon_cv_retail_f",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "retail worker"
+    },
+    "description": "Still in uniform, still on shift, in a shop that has not had a paying customer in some time.  The vest is the only clean thing about them.",
+    "speed": 92,
+    "zombify_into": "mon_cv_zombie_retail",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_RETAIL_UPGRADE"
+    },
+    "death_drops": "cv_retail_drops_f"
   }
 ]

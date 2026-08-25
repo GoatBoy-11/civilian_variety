@@ -1,7 +1,7 @@
 [
   {
     "//": "Channel 1 - street presence.  Extends vanilla GROUP_ZOMBIE; monstergroups auto-extend (src/mongroup.cpp:385-390), so this appends and coexists with the Civilians mod.  Never set \"override\".",
-    "//2": "freq is per-mille of a freq_total of 1000 that extending does NOT enlarge, so it is zero-sum against vanilla zombies.  Mod cap is 80; this uses 70.",
+    "//2": "freq is per-mille of a freq_total of 1000 that extending does NOT enlarge, so it is zero-sum against vanilla zombies.  Mod cap is 80; this uses 74.",
     "//3": "ends 72 is in hours (src/mongroup.cpp:409), scaled by the MONSTER_UPGRADE_FACTOR option.",
     "type": "monstergroup",
     "name": "GROUP_ZOMBIE",
@@ -71,6 +71,11 @@
       {
         "monster": "mon_cv_zombie_nun",
         "freq": 3,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_retail",
+        "freq": 4,
         "cost_multiplier": 0
       }
     ]
@@ -369,32 +374,42 @@
     "monsters": [
       {
         "monster": "mon_cv_bystander",
-        "freq": 622,
+        "freq": 596,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_bystander_panicked",
-        "freq": 92,
+        "freq": 88,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_bystander_fat",
-        "freq": 74,
+        "freq": 71,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_bystander_fat_f",
-        "freq": 74,
+        "freq": 71,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_elderly",
-        "freq": 69,
+        "freq": 66,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_elderly_f",
-        "freq": 69,
+        "freq": 66,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail",
+        "freq": 21,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail_f",
+        "freq": 21,
         "cost_multiplier": 0
       }
     ]
@@ -523,42 +538,57 @@
     "monsters": [
       {
         "monster": "mon_cv_bystander",
-        "freq": 509,
+        "freq": 391,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_police",
-        "freq": 136,
+        "freq": 105,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail",
+        "freq": 100,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail_f",
+        "freq": 100,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_geek",
-        "freq": 109,
+        "freq": 84,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_office_worker",
-        "freq": 55,
+        "freq": 42,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_office_worker_f",
-        "freq": 55,
+        "freq": 42,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_clown",
-        "freq": 55,
+        "freq": 42,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_sex_worker",
-        "freq": 45,
+        "freq": 35,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_retail",
+        "freq": 31,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_zombie_clown",
-        "freq": 36,
+        "freq": 28,
         "cost_multiplier": 0
       }
     ]
@@ -864,6 +894,68 @@
       {
         "monster": "mon_cv_bystander_panicked",
         "freq": 50,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Retail workers turn into zombie retail workers and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_RETAIL_UPGRADE",
+    "default": "mon_cv_zombie_retail",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_retail",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Shops.  Customer-heavy, because shops are: two or three people on shift and rather more people in the aisles.  Staff 19%, customers 74%.",
+    "//2": "A few have already turned - they were the ones who could not leave.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_RETAIL",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 430,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat",
+        "freq": 115,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat_f",
+        "freq": 115,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail",
+        "freq": 95,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail_f",
+        "freq": 95,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_retail",
+        "freq": 70,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 40,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 40,
         "cost_multiplier": 0
       }
     ]

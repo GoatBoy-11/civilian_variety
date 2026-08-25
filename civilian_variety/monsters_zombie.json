@@ -75,5 +75,20 @@
     "hp": 74,
     "speed": 72,
     "death_drops": "cv_zombie_nun_drops"
+  },
+  {
+    "//": "Sprites 168-171.  copy-from mon_zombie inherits species [ZOMBIE, HUMAN], the zombie faction, zombie harvest and the GROUP_ZOMBIE_UPGRADE path, so it plays as a plain zombie in every way the player can feel.",
+    "//2": "Near the baseline on purpose: hp 78 vs 80, speed 72 vs 70.  Nothing about working a till makes a better or worse corpse.  The vest is the whole point of it.",
+    "//3": "upgrades is deliberately untouched.  Setting `into` here would collide with the inherited `into_group` and fail to load - see DESIGN.md 13.4.",
+    "id": "mon_cv_zombie_retail",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie retail worker"
+    },
+    "description": "The vest survived better than the person did.  It is still facing the aisles, and it still moves as though it has been on its feet for nine hours.",
+    "hp": 78,
+    "speed": 72,
+    "death_drops": "cv_zombie_retail_drops"
   }
 ]
