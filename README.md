@@ -49,9 +49,9 @@ per-mille cap), so vanilla zombie spawns aren't starved. Never sets
 
 ## Credits and licence
 
-Design and Json by **LebronJane**
-Code **Claude** (Anthropic)
-Sprites by **Goat_Boy11**. 
+-Design and Json by **LebronJane**
+-Code **Claude** (Anthropic)
+-Sprites by **Goat_Boy11**. 
 
 
 [CC BY-SA 4.0](LICENSE).
