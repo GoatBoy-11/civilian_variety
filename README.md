@@ -1,91 +1,76 @@
 # Civilian Variety
 
-A content mod for **Cataclysm: Bright Nights** that repopulates the collapse with
-ordinary people.
+A content mod for **Cataclysm: Bright Nights**. Repopulates the world with
+ordinary people — the ones who were simply *there* when it happened.
 
-The world of the Cataclysm was inhabited by individuals before it ended, and this
-mod tries to make that visible: 37 monster types across 24 living archetypes and
-5 zombies, spread across the places those people would actually have been. A
-priest in a church. Two old people on a park bench who cannot outrun anything. A
-clown, in full paint, doing a bit for nobody. A shopkeeper who has worked out
-that nobody is coming to enforce anything ever again.
+---
 
-It works **standalone or alongside the bundled `civilians` mod**, with no hard
-dependency on it in either direction.
+## Up front: this mod is mostly AI-written
+
+Nearly all of it — the JSON, the Lua, the balance, the monster and item design,
+and every line of dialogue and description — was written by Claude, with me
+directing it, testing in-game and making the calls.
+
+**The art is the exception: most of the sprites are hand-drawn by me.**
+
+I wouldn't have finished this without the help, and it's a real mod that works.
+But if AI-generated content is a dealbreaker for you, better to know that now
+than after you've downloaded it.
 
 ---
 
 ## Requirements
 
-- **Cataclysm: Bright Nights** with **Lua support** — the mod declares
-  `lua_api_version: 2` and will not load on a build without it.
-- The **UNDEAD_PEOPLE tileset** for the sprites. Without it the mod still works;
-  the new archetypes just fall back to the default `@` glyph.
+- **Cataclysm: Bright Nights with Lua support** (declares `lua_api_version: 2`;
+  it won't load on a build without it)
+- **UNDEAD_PEOPLE tileset** for the sprites — optional, you just get `@` glyphs
+  without it
 
-The only hard dependency is `bn` itself.
+Only hard dependency is `bn`.
 
-## Installing
+## Install
 
-1. Download this repository — green **Code** button → **Download ZIP**, or clone.
-2. Inside it you will find a **`civilian_variety`** folder. Drop *that folder* into
-   your game's `mods/` directory, so you end up with
-   `mods/civilian_variety/modinfo.json`.
-3. Enable **Civilian Variety** in the mod list when creating a world.
+1. Green **Code** button → **Download ZIP**
+2. Copy the `civilian_variety` folder into your game's `mods/` folder
+3. Enable **Civilian Variety** when you create a world
 
-The mod is deliberately kept in its own folder here so the thing you copy is
-already the right shape — nothing to rename, nothing to unpack twice.
+## Features
 
----
-
-## What it adds
-
-**24 living archetypes.** Bystanders (ordinary, heavyset, panicked, elderly,
-geeky), trades (mechanic, construction worker, farmer), emergency services
-(firefighter, doctor, nurse, police, SWAT), white collar (businessman,
-businesswoman, office worker), clergy (priest, nun), and the odder end — clown,
-sex worker, store owner. Plus biker bandits, the mod's one hostile faction.
-
-**Five zombies of its own.** Clowns, nerds, priests and nuns leave behind their
-own kind of corpse rather than a generic one, so a costume that dies stays a
-costume.
-
-**People are somewhere for a reason.** 50 location rules put archetypes where
-they belong: mechanics in garages, geeks in libraries and LAN centres, clergy in
-churches, the elderly in parks and cemeteries, store owners in pawn shops and
-jewellers.
-
-**You can talk to them.** 20 archetypes have dialogue — some of it spoken, some
-of it described, because a mime in full paint is not going to answer you.
-
-**Some of them will help you, once.** Doctors treat wounds. Nurses hand over
-supplies. Firefighters give you water and farmers give you food. Clergy bless
-you, and it is worth considerably more if your character is Spiritual. Store
-owners will accept protection money.
-
-**Three ways to behave.** Most civilians are friendly. Biker bandits are hostile.
-Store owners are *territorial* — perfectly civil until you are inside the shop,
-and they do not calm down on their own.
-
-**21 items**, including keepsakes with snippet-driven descriptions so no two
-finds read the same, and a small collection of nerd paraphernalia that also turns
-up in bookshops, toy shops and bedrooms.
-
----
+- **40 monsters** — 34 civilian archetypes and 6 zombies
+- **Archetypes**: bystanders (ordinary, heavyset, panicked, elderly, geeky),
+  retail workers, clergy, doctors, nurses, firefighters, police and SWAT,
+  mechanics, construction workers, farmers, office workers, business people,
+  clown, sex worker, store owner, and biker bandits
+- **61 location rules** — people show up where they'd actually be: mechanics in
+  garages, geeks in libraries and LAN centres, clergy in churches, the elderly in
+  parks and cemeteries, staff in shops
+- **Six zombie counterparts** — clowns, nerds, clergy, firefighters and retail
+  staff keep their uniform after they turn
+- **Talk to people** — 22 archetypes have dialogue
+- **One-shot favours** — doctors treat wounds, nurses hand over supplies,
+  firefighters give water, farmers give food, clergy bless you (worth more with
+  the Spiritual trait), store owners take protection money
+- **Three behaviours** — most civilians are friendly, biker bandits are hostile,
+  store owners are territorial and turn on you once you're inside the shop
+- **27 items** — keepsakes with 79 randomised descriptions, a nerd collection,
+  and findable dead bodies you can loot like containers
+- **114 ambient barks**
+- Works **with or without** the bundled `civilians` mod
 
 ## Compatibility
 
-Designed so that it never references an id owned by another mod. It declares the
-`civilians` monster faction itself, which merges cleanly if that mod is also
-loaded, and it detects the bundled mod at runtime and thins its own generic
-spawns so the two together do not double civilian density.
+Never references an id owned by another mod. It declares the `civilians` monster
+faction itself, which merges cleanly if that mod is loaded, and thins its own
+spawns at runtime so the two don't double civilian density.
 
-It injects a deliberately small share into the vanilla `GROUP_ZOMBIE` — a
-self-imposed cap of 80 per-mille, currently using 70 — so vanilla zombie spawns
-are not starved. It never sets `"override": true` on a monstergroup.
+Adds only a small share to vanilla `GROUP_ZOMBIE` (74 of a self-imposed 80
+per-mille cap), so vanilla zombie spawns aren't starved. Never sets
+`"override": true` on a monstergroup.
 
 ## Credits and licence
 
-Sprites by **GoatBoy-11**.
+Sprites by **GoatBoy-11**. Code and design by Claude (Anthropic), directed and
+tested by GoatBoy-11.
 
-Licensed under [CC BY-SA 4.0](LICENSE). Cataclysm: Bright Nights is its own
-project with its own licensing; this mod is an independent addition to it.
+[CC BY-SA 4.0](LICENSE). Cataclysm: Bright Nights is its own project with its own
+licensing; this is an independent addition to it.
