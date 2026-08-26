@@ -32,6 +32,7 @@ the rest of it was AI generated as well but heavily edited.
 - New passive civilian type "monsters" with different variants
 - Special occupational variants with unique interactions
 - New zombie types
+- New type of human biker enemy
 - New ambient barks (descriptive text of events/audio)
 - New dead body types that can be found at random
 - New items, mostly flavour for variety
@@ -54,4 +55,4 @@ per-mille cap), so vanilla zombie spawns aren't starved. Never sets
 -Sprites by **Goat_Boy11**. 
 
 
-[CC BY-SA 4.0](LICENSE).
+[CC BY-SA 4.0](LICENSE)
