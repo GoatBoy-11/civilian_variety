@@ -617,5 +617,47 @@
       "into_group": "GROUP_CV_RETAIL_UPGRADE"
     },
     "death_drops": "cv_retail_drops_f"
+  },
+  {
+    "//": "Sprites 172-175, mixed gender under one id, so the description and dialogue avoid pronouns.",
+    "//2": "TAZER is hardcoded and registered from JSON (src/monstergenerator.cpp:635).  It is adjacent-only, costs the attacker 200 moves, and deals rng(1,5) DT_ELECTRIC to a random body part after a dodge check (src/monattack.cpp:3616-3662).  It does NOT stun in BN.  That is a genuinely feeble attack, which is the joke and also why it needs no balancing.",
+    "//3": "mattack::tazer returns false while the monster is disarmed, and monster_weapon is the tazer, so disarming one actually stops it shocking - a real interaction rather than decoration.",
+    "//4": "Friendly civilian, so the tazer is used on zombies rather than on the player.  Made territorial like the store owner it would turn on you inside the shop; that was not asked for and is a separate decision.",
+    "//5": "Slightly sturdier than a bystander - hp 85 vs 75, light armor from the uniform - because they are the one civilian who signed up to stand between trouble and the merchandise.  Speed stays under the player's 100.",
+    "id": "mon_cv_mallcop",
+    "type": "MONSTER",
+    "copy-from": "mon_cv_bystander",
+    "name": {
+      "str": "mall cop"
+    },
+    "description": "Private security, in a uniform chosen to look official from a distance and not one step closer.  Still doing the rounds, still carrying the tazer, still behaving as though the mall has rules and somebody is going to enforce them.",
+    "hp": 85,
+    "speed": 90,
+    "diff": 3,
+    "dodge": 1,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 3
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "vision_day": 25,
+    "monster_weapon": "cv_mallcop_weapon",
+    "death_drops": "cv_mallcop_drops",
+    "special_attacks": [
+      [
+        "TAZER",
+        8
+      ],
+      [
+        "PARROT_AT_DANGER",
+        6
+      ]
+    ]
   }
 ]

@@ -538,57 +538,62 @@
     "monsters": [
       {
         "monster": "mon_cv_bystander",
-        "freq": 391,
+        "freq": 357,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_police",
-        "freq": 105,
+        "freq": 96,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_retail",
-        "freq": 100,
+        "freq": 92,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_retail_f",
-        "freq": 100,
+        "freq": 92,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_mallcop",
+        "freq": 83,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_geek",
-        "freq": 84,
+        "freq": 77,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_office_worker",
-        "freq": 42,
+        "freq": 39,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_office_worker_f",
-        "freq": 42,
+        "freq": 39,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_clown",
-        "freq": 42,
+        "freq": 39,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_sex_worker",
-        "freq": 35,
+        "freq": 32,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_zombie_retail",
-        "freq": 31,
+        "freq": 28,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_zombie_clown",
-        "freq": 28,
+        "freq": 26,
         "cost_multiplier": 0
       }
     ]
@@ -955,6 +960,59 @@
       },
       {
         "monster": "mon_cv_elderly_f",
+        "freq": 40,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Megastores and supermarkets: the retail mix, plus the one security guard on shift.  Split out from GROUP_CV_RETAIL so the mall cop does not turn up in bike shops and garden centres.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_BIGSTORE",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_mallcop",
+        "freq": 90,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail",
+        "freq": 90,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail_f",
+        "freq": 90,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 400,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat",
+        "freq": 105,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander_fat_f",
+        "freq": 105,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 40,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 40,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_retail",
         "freq": 40,
         "cost_multiplier": 0
       }

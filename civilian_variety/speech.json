@@ -1013,5 +1013,70 @@
     ],
     "sound": "someone saying the manager has the keys, and the manager has gone.",
     "volume": 36
+  },
+  {
+    "//": "Procedure outliving the institution that issued it.  Same register as the retail worker - still on shift, nobody left to end the shift - but with a badge.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "somebody asking whether you have a receipt for that.",
+    "volume": 38
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "a voice saying this is a restricted area, in a mall with no doors left.",
+    "volume": 40
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "someone reciting a badge number to nobody.",
+    "volume": 32
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "a radio hissing, and somebody answering it anyway.",
+    "volume": 30
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "a voice warning that they are authorised to detain.",
+    "volume": 42
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "somebody saying they have called it in.  They have not called it in.",
+    "volume": 36
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "the tinny crackle of a tazer being tested against the air.",
+    "volume": 34
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_mallcop"
+    ],
+    "sound": "someone telling a corpse to have a nice day.",
+    "volume": 28
   }
 ]

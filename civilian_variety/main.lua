@@ -189,11 +189,15 @@ local DEFAULT_CONFIG = {
     -- 19-tile megastore stays sparse rather than filling with employees.
     -- Deliberately kept off the food venues (s_restaurant*, s_teashop): waiting
     -- tables is its own archetype, not this one.
-    { match = "s_grocery", group = "GROUP_CV_RETAIL" },
+    -- The two big formats first: location_entry_for returns the FIRST match, so
+    -- these must precede the GROUP_CV_RETAIL entries below or they never fire.
+    -- Security guards belong in a supermarket and a megastore, and would be
+    -- absurd in a bike shop, so only these two get the mall cop.
+    { match = "megastore", group = "GROUP_CV_BIGSTORE" },
+    { match = "s_grocery", group = "GROUP_CV_BIGSTORE" },
     { match = "s_clothes", group = "GROUP_CV_RETAIL" },
     { match = "s_hardware", group = "GROUP_CV_RETAIL" },
     { match = "dollarstore", group = "GROUP_CV_RETAIL" },
-    { match = "megastore", group = "GROUP_CV_RETAIL" },
     { match = "s_butcher", group = "GROUP_CV_RETAIL" },
     { match = "s_thrift", group = "GROUP_CV_RETAIL" },
     { match = "s_sports", group = "GROUP_CV_RETAIL" },

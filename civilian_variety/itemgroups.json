@@ -5396,5 +5396,194 @@
         "prob": 45
       }
     ]
+  },
+  {
+    "//": "What they are holding.  The tazer is vanilla: a battery TOOL, bashing 6, and the item mattack::tazer checks for when deciding whether they have been disarmed.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_mallcop_weapon",
+    "entries": [
+      {
+        "item": "tazer",
+        "prob": 100
+      }
+    ]
+  },
+  {
+    "//": "Uniform chosen to read as official at a glance.  BN has no security-guard clothing item, so a plain shirt and dark trousers carry it, with badge_deputy as the rare and very telling touch - it is a sheriff's badge, and they are not a sheriff.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_mallcop_worn",
+    "entries": [
+      {
+        "distribution": [
+          {
+            "item": "dress_shirt",
+            "prob": 45
+          },
+          {
+            "item": "polo_shirt",
+            "prob": 35
+          },
+          {
+            "item": "longshirt",
+            "prob": 20
+          }
+        ],
+        "prob": 92
+      },
+      {
+        "distribution": [
+          {
+            "item": "pants",
+            "prob": 60
+          },
+          {
+            "item": "pants_army",
+            "prob": 25
+          },
+          {
+            "item": "jeans",
+            "prob": 15
+          }
+        ],
+        "prob": 90
+      },
+      {
+        "item": "leather_belt",
+        "prob": 60
+      },
+      {
+        "item": "boots",
+        "prob": 70
+      },
+      {
+        "item": "socks",
+        "prob": 45
+      },
+      {
+        "item": "boxer_shorts",
+        "prob": 40
+      },
+      {
+        "item": "jacket_light",
+        "prob": 20
+      },
+      {
+        "item": "sunglasses",
+        "prob": 30
+      },
+      {
+        "item": "badge_deputy",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "The rounds kit, plus the snack.  Sweets are deliberately common: it is the stereotype the archetype is built on, and a comestible off a friendly civilian is harmless.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_mallcop_carried",
+    "entries": [
+      {
+        "item": "baton",
+        "prob": 40
+      },
+      {
+        "item": "two_way_radio",
+        "prob": 45
+      },
+      {
+        "item": "flashlight",
+        "prob": 40
+      },
+      {
+        "item": "wristwatch",
+        "prob": 25
+      },
+      {
+        "item": "thermos",
+        "prob": 15
+      },
+      {
+        "distribution": [
+          {
+            "item": "donut_holes",
+            "prob": 40
+          },
+          {
+            "item": "cookies",
+            "prob": 20
+          },
+          {
+            "item": "candy",
+            "prob": 20
+          },
+          {
+            "item": "chocolate",
+            "prob": 20
+          }
+        ],
+        "prob": 55
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 40
+      },
+      {
+        "item": "coin_quarter",
+        "prob": 30,
+        "count": [
+          1,
+          10
+        ]
+      },
+      {
+        "item": "money_bundle",
+        "prob": 15
+      },
+      {
+        "item": "cash_card",
+        "prob": 25,
+        "charges": [
+          0,
+          20000
+        ]
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 18
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 12
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "Uniform, pockets, and a spare battery for the tazer often enough to matter.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_mallcop_drops",
+    "entries": [
+      {
+        "group": "cv_mallcop_worn"
+      },
+      {
+        "group": "cv_mallcop_carried"
+      },
+      {
+        "item": "battery",
+        "prob": 35,
+        "charges": [
+          10,
+          100
+        ]
+      }
+    ]
   }
 ]
