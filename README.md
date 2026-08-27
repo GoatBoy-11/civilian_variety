@@ -1,5 +1,9 @@
 # Civilian Variety
 
+<p align="center">
+  <img src="civilian_variety/title1.png" width="640" alt="The Civilian Variety roster gathered in a field">
+</p>
+
 A content mod for **Cataclysm: Bright Nights**. Adds new civilian type "monsters",
 heavily inspired by the "**Civilians**" mod by NetSysFire, Kota and jeremy7986.
 
