@@ -3,6 +3,12 @@ gdebug.log_info("Civilian Variety: initializing...")
 local mod = game.mod_runtime[game.current_mod]
 local storage = game.mod_storage[game.current_mod]
 local faction_civ_id = MonsterFactionId.new("civilians"):int_id()
+-- The store owner sits in his own faction so that killing him in self-defence
+-- does not turn every bystander hostile (FRIEND_ATTACKED propagates by faction
+-- identity - see faction.json).  He is still a civilian for every purpose this
+-- file cares about, so both ids go into the proximity queries below.
+local faction_shop_id = MonsterFactionId.new("cv_shopkeeper"):int_id()
+local CIVILIAN_FACTIONS = { faction_civ_id, faction_shop_id }
 
 --- Returns true if a mod with this id is loaded in the current world.
 --- game.active_mods is a read-only array of every loaded mod id, populated
@@ -496,7 +502,7 @@ mod.on_every_x_ambulance = function()
   local vehicles = map:get_vehicles()
   if not vehicles or #vehicles == 0 then return end
 
-  local civilians = gapi.get_monsters_if({ ["faction_ids"] = { faction_civ_id } })
+  local civilians = gapi.get_monsters_if({ ["faction_ids"] = CIVILIAN_FACTIONS })
 
   for _, wrapped in ipairs(vehicles) do
     if wrapped and wrapped:type() == "ambulance" then
@@ -1080,7 +1086,7 @@ mod.on_every_x_ambient = function()
   else
     -- get_monsters_if filters by faction engine-side, so this is one query and a
     -- short distance walk rather than a scan of every tile in radius.
-    local civilians = gapi.get_monsters_if({ ["faction_ids"] = { faction_civ_id } })
+    local civilians = gapi.get_monsters_if({ ["faction_ids"] = CIVILIAN_FACTIONS })
     if civilian_near(civilians, pos, CONFIG.AMBIENT_CIVILIAN_RADIUS) then
       bucket = "civilians"
     else

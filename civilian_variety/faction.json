@@ -18,7 +18,8 @@
       "insect"
     ],
     "neutral": [
-      "bot"
+      "bot",
+      "cv_shopkeeper"
     ]
   },
   {
@@ -37,6 +38,32 @@
       "nether",
       "zombie_aquatic",
       "blob"
+    ]
+  },
+  {
+    "//": "The store owner alone.  He is territorial rather than hostile, so the player will often end up killing him in self-defence - and while he shared the `civilians` faction that turned every other civilian in sight against them.",
+    "//2": "FRIEND_ATTACKED propagates by exact faction identity, not attitude (src/monster.cpp:4222: `if( critter.faction != this->faction ) continue;`), so separating him is the only thing that actually stops it.",
+    "//3": "base_faction human, exactly like `civilians` and `cv_bandit`: resolve_attitude_map walks the target's base chain (src/monfaction.cpp:136-151), so everything that hates humans still hates him without listing him.",
+    "//4": "player MUST stay friendly.  attitude() returns MATT_FRIEND below anger 10 and only reaches MATT_ATTACK above it - that threshold IS the territorial behaviour.",
+    "type": "MONSTER_FACTION",
+    "name": "cv_shopkeeper",
+    "base_faction": "human",
+    "friendly": [
+      "cv_shopkeeper",
+      "player"
+    ],
+    "hate": [
+      "zombie",
+      "nether",
+      "zombie_aquatic",
+      "blob",
+      "leech_plant",
+      "jabberwock",
+      "insect"
+    ],
+    "neutral": [
+      "civilians",
+      "bot"
     ]
   }
 ]

@@ -578,7 +578,9 @@
         "targeting_timeout": 24,
         "targeting_timeout_extend": 24
       }
-    ]
+    ],
+    "default_faction": "cv_shopkeeper",
+    "//11": "His own faction, not `civilians`.  FRIEND_ATTACKED raises anger on every monster sharing the victim's faction id (src/monster.cpp:4205-4222), so while he was a civilian, killing him in self-defence turned the whole street hostile.  He is still friendly to the player until his own anger crosses 10, and still hated by zombies through base_faction human."
   },
   {
     "//": "Sprites 160-163.  Ordinary bystander statline - a shop assistant is not a fighter.  What makes them worth adding is where they are and what they are wearing, not what they can do.",
