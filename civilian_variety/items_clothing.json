@@ -1,0 +1,99 @@
+[
+  {
+    "//": "Torso only, as specified.  Statted next to vanilla polo_shirt (coverage 90, encumbrance 7, warmth 15, thickness 2) and given a little more body plus a uniform shirt's chest pockets.",
+    "//2": "looks_like polo_shirt so it still renders on a tileset that lacks this mod's sheet.",
+    "id": "cv_shirt_security",
+    "type": "ARMOR",
+    "name": {
+      "str": "security shirt"
+    },
+    "description": "A tan uniform shirt with epaulettes and a badge loop, cut to look official from across a car park.  Whoever wore it was not a police officer, and the shirt was doing most of the work of suggesting otherwise.",
+    "weight": "200 g",
+    "volume": "850 ml",
+    "price": "25 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "polo_shirt",
+    "color": "brown",
+    "covers": [
+      "torso"
+    ],
+    "coverage": 90,
+    "encumbrance": 6,
+    "storage": "500 ml",
+    "warmth": 15,
+    "material_thickness": 2,
+    "flags": [
+      "VARSIZE",
+      "POCKETS"
+    ]
+  },
+  {
+    "//": "Torso and legs, as specified - deliberately NOT arms, since scrubs are short-sleeved and the sprite shows bare forearms.",
+    "//2": "Loose and light: encumbrance 4 against the jumpsuit's 2 and the polo's 7, warmth 14, thickness 1.  They are pyjamas with a job.",
+    "id": "cv_scrubs",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "medical scrubs"
+    },
+    "description": "Loose teal cotton, short-sleeved top and drawstring trousers.  Comfortable, quick to get out of, and marked with nothing at all - which was the point, since everything that happened in them had to wash out.",
+    "weight": "480 g",
+    "volume": "2 L",
+    "price": "30 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "jumpsuit",
+    "color": "light_cyan",
+    "covers": [
+      "torso",
+      "legs"
+    ],
+    "coverage": 90,
+    "encumbrance": 4,
+    "storage": "1 L",
+    "warmth": 14,
+    "material_thickness": 1,
+    "flags": [
+      "VARSIZE",
+      "POCKETS"
+    ]
+  },
+  {
+    "//": "Torso only, statted identically to the security shirt so the two uniform shirts sit level with each other and with vanilla polo_shirt.",
+    "//2": "looks_like polo_shirt so it still renders without this mod's spritesheet.",
+    "id": "cv_shirt_retail",
+    "type": "ARMOR",
+    "name": {
+      "str": "retail uniform shirt"
+    },
+    "description": "A green work shirt with the store's logo on the breast and a name badge sewn above it.  The name has been scratched out, thoroughly and by hand, at some point after it stopped mattering what anyone was called.",
+    "weight": "190 g",
+    "volume": "800 ml",
+    "price": "20 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "polo_shirt",
+    "color": "green",
+    "covers": [
+      "torso"
+    ],
+    "coverage": 90,
+    "encumbrance": 6,
+    "storage": "500 ml",
+    "warmth": 15,
+    "material_thickness": 2,
+    "flags": [
+      "VARSIZE",
+      "POCKETS"
+    ]
+  }
+]

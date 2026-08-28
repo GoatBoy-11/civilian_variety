@@ -654,6 +654,23 @@ TALK["mon_cv_retail"] = {
 }
 TALK["mon_cv_retail_f"] = TALK["mon_cv_retail"]
 
+-- The mall cop takes the job entirely seriously, and the joke is that nobody
+-- has told them the job stopped existing.  Played straight rather than winking:
+-- the authority is imaginary but the courage is real, which is funnier and also
+-- slightly sad.  No pronouns - the sprite pool is mixed.
+TALK["mon_cv_mallcop"] = {
+  "\"Stand back, citizen.  I'll deal with this.\"",
+  "\"This is a secure site.  I'd need to see some ID.\"",
+  "\"I've radioed it in.  Someone will be along.\"",
+  "\"Level two clearance.  That's food court and above.\"",
+  "\"You can't park there.  I appreciate the circumstances.  You still can't park there.\"",
+  "They straighten up as you approach, and adjust a badge that is not a police badge.",
+  "\"Shoplifting is still theft.  I don't care what's happened.\"",
+  "\"Nine years, no incidents.  Well.  No incidents until recently.\"",
+  "They rest a hand on the tazer, in a way clearly practised in a mirror.",
+  "\"Between you and me, I've been thinking about applying to the real force.\"",
+}
+
 -- Every line is a warning wearing a sentence.  They are not frightened of you and
 -- not making conversation; they are telling you where the line is while there is
 -- still time to hear it.  Written without pronouns: sprite 153 is a woman.

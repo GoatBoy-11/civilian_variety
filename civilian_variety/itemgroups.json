@@ -1177,12 +1177,29 @@
         "prob": 85
       },
       {
-        "item": "dress_shirt",
-        "prob": 55
-      },
-      {
-        "item": "jeans",
-        "prob": 50
+        "distribution": [
+          {
+            "collection": [
+              {
+                "item": "cv_scrubs"
+              }
+            ],
+            "prob": 55
+          },
+          {
+            "collection": [
+              {
+                "item": "dress_shirt",
+                "prob": 100
+              },
+              {
+                "item": "jeans",
+                "prob": 90
+              }
+            ],
+            "prob": 45
+          }
+        ]
       },
       {
         "item": "dress_shoes",
@@ -1192,7 +1209,8 @@
         "item": "gloves_medical",
         "prob": 35
       }
-    ]
+    ],
+    "//2": "Scrubs or street clothes under the lab coat, never both - a distribution rather than two independent rolls, so one body does not drop two outfits."
   },
   {
     "//": "Nurse's uniform.",
@@ -1201,8 +1219,17 @@
     "id": "cv_nurse_worn",
     "entries": [
       {
-        "item": "dress",
-        "prob": 70
+        "distribution": [
+          {
+            "item": "cv_scrubs",
+            "prob": 70
+          },
+          {
+            "item": "dress",
+            "prob": 30
+          }
+        ],
+        "prob": 95
       },
       {
         "item": "coat_lab",
@@ -1447,16 +1474,38 @@
         "prob": 85
       },
       {
-        "item": "dress_shirt",
-        "prob": 55
-      },
-      {
-        "item": "skirt",
-        "prob": 45
-      },
-      {
-        "item": "jeans",
-        "prob": 25
+        "distribution": [
+          {
+            "collection": [
+              {
+                "item": "cv_scrubs"
+              }
+            ],
+            "prob": 55
+          },
+          {
+            "collection": [
+              {
+                "item": "dress_shirt",
+                "prob": 100
+              },
+              {
+                "distribution": [
+                  {
+                    "item": "skirt",
+                    "prob": 65
+                  },
+                  {
+                    "item": "jeans",
+                    "prob": 35
+                  }
+                ],
+                "prob": 90
+              }
+            ],
+            "prob": 45
+          }
+        ]
       },
       {
         "item": "stockings",
@@ -1470,7 +1519,8 @@
         "item": "gloves_medical",
         "prob": 35
       }
-    ]
+    ],
+    "//2": "Scrubs or street clothes under the lab coat, never both - a distribution rather than two independent rolls, so one body does not drop two outfits."
   },
   {
     "//": "Identical to the men's set apart from the wardrobe group.",
@@ -5140,8 +5190,12 @@
     "id": "cv_retail_worn_m",
     "entries": [
       {
-        "item": "vest",
+        "item": "cv_shirt_retail",
         "prob": 85
+      },
+      {
+        "item": "vest",
+        "prob": 20
       },
       {
         "item": "socks",
@@ -5175,7 +5229,7 @@
             "prob": 20
           }
         ],
-        "prob": 90
+        "prob": 30
       },
       {
         "distribution": [
@@ -5194,7 +5248,8 @@
         "item": "boxer_shorts",
         "prob": 50
       }
-    ]
+    ],
+    "//2": "cv_shirt_retail is the uniform.  `vest` predates the item and is now the tabard some stores layer over it, and the plain shirts are what is worn underneath - so all three can co-occur without reading as three outfits."
   },
   {
     "//": "As the men, with the skirt option a uniform shop would actually issue.",
@@ -5203,8 +5258,12 @@
     "id": "cv_retail_worn_f",
     "entries": [
       {
-        "item": "vest",
+        "item": "cv_shirt_retail",
         "prob": 85
+      },
+      {
+        "item": "vest",
+        "prob": 20
       },
       {
         "item": "socks",
@@ -5238,7 +5297,7 @@
             "prob": 25
           }
         ],
-        "prob": 90
+        "prob": 30
       },
       {
         "distribution": [
@@ -5265,7 +5324,8 @@
         "item": "panties",
         "prob": 55
       }
-    ]
+    ],
+    "//2": "cv_shirt_retail is the uniform.  `vest` predates the item and is now the tabard some stores layer over it, and the plain shirts are what is worn underneath - so all three can co-occur without reading as three outfits."
   },
   {
     "//": "What was in the vest.",
@@ -5418,16 +5478,16 @@
       {
         "distribution": [
           {
+            "item": "cv_shirt_security",
+            "prob": 70
+          },
+          {
             "item": "dress_shirt",
-            "prob": 45
+            "prob": 15
           },
           {
             "item": "polo_shirt",
-            "prob": 35
-          },
-          {
-            "item": "longshirt",
-            "prob": 20
+            "prob": 15
           }
         ],
         "prob": 92
@@ -5583,6 +5643,40 @@
           10,
           100
         ]
+      }
+    ]
+  },
+  {
+    "//": "Hospital lockers.  gear_medical is what f_locker tiles in hospital.json place from, alongside harddrugs and drugs_analgesic.  Vanilla weights sum to 210, so scrubs at 25 is about 11% of a locker roll - common enough to be the obvious place to look for a set, without displacing the drugs anyone actually goes there for.",
+    "//2": "subtype MUST be distribution: vanilla gear_medical declares no subtype, which loads as `old` and therefore distribution.  A mismatch is a hard load error - DESIGN.md 13.12.",
+    "id": "gear_medical",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_scrubs",
+        "prob": 25
+      },
+      {
+        "item": "cv_shirt_security",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "//": "Clothing shops, deliberately very low.  shirts_unisex is the torso rack in clothes_store_palette and its vanilla weights sum to 600, so 6 and 5 are roughly 1% and 0.8% of a rack roll - a rare find rather than a reliable source.",
+    "//2": "Work uniforms in a high-street clothes shop should be an oddity.  The retail shirt is deliberately NOT here: a store's own uniform is not stock.",
+    "id": "shirts_unisex",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "cv_shirt_security",
+        "prob": 6
+      },
+      {
+        "item": "cv_scrubs",
+        "prob": 5
       }
     ]
   }

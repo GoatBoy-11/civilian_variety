@@ -929,6 +929,46 @@
               }
             ],
             "rotates": false
+          },
+          {
+            "id": "cv_shirt_security",
+            "fg": 176,
+            "rotates": false
+          },
+          {
+            "id": "overlay_female_worn_cv_shirt_security",
+            "fg": 177,
+            "rotates": false
+          },
+          {
+            "id": "overlay_male_worn_cv_shirt_security",
+            "fg": 178,
+            "rotates": false
+          },
+          {
+            "id": "cv_scrubs",
+            "fg": 179,
+            "rotates": false
+          },
+          {
+            "id": "overlay_worn_cv_scrubs",
+            "fg": 180,
+            "rotates": false
+          },
+          {
+            "id": "cv_shirt_retail",
+            "fg": 181,
+            "rotates": false
+          },
+          {
+            "id": "overlay_female_worn_cv_shirt_retail",
+            "fg": 182,
+            "rotates": false
+          },
+          {
+            "id": "overlay_male_worn_cv_shirt_retail",
+            "fg": 183,
+            "rotates": false
           }
         ],
         "sprite_width": 32,
