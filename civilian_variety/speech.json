@@ -1078,5 +1078,38 @@
     ],
     "sound": "someone telling a corpse to have a nice day.",
     "volume": 28
+  },
+  {
+    "//": "Service register: the manners are the last thing to go.",
+    "type": "speech",
+    "speaker": [
+      "mon_cv_butler"
+    ],
+    "sound": "\"The family is not receiving.  I am very sorry.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_butler"
+    ],
+    "sound": "\"If sir would care to wait in the morning room, I shall enquire.\"",
+    "volume": 20
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_maid"
+    ],
+    "sound": "\"I've done the upstairs.  I don't know what else to do.\"",
+    "volume": 22
+  },
+  {
+    "type": "speech",
+    "speaker": [
+      "mon_cv_maid"
+    ],
+    "sound": "someone quietly straightening things that do not need straightening.",
+    "volume": 18
   }
 ]

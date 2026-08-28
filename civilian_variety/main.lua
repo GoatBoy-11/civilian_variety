@@ -174,7 +174,7 @@ local DEFAULT_CONFIG = {
     { match = "small_office", group = "GROUP_CV_OFFICE" },
     { match = "post_office", group = "GROUP_CV_OFFICE" },
     { match = "bank", group = "GROUP_CV_OFFICE" },
-    { match = "mansion", group = "GROUP_CV_BUSINESS" },
+    { match = "mansion", group = "GROUP_CV_MANSION" },
     { match = "golfcourse", group = "GROUP_CV_BUSINESS", count = { 1, 2 } },
 
     -- Nightlife.  Both bars and motels are furniture-rich, so interior mode.
@@ -658,6 +658,28 @@ TALK["mon_cv_retail_f"] = TALK["mon_cv_retail"]
 -- has told them the job stopped existing.  Played straight rather than winking:
 -- the authority is imaginary but the courage is real, which is funnier and also
 -- slightly sad.  No pronouns - the sprite pool is mixed.
+TALK["mon_cv_butler"] = {
+  "\"The family is not receiving today.  I am very sorry.\"",
+  "\"I have not been given any instruction to the contrary, so I am continuing.\"",
+  "\"If sir would leave a card, I shall see that it is passed on.\"",
+  "\"There has been no word from the house since Tuesday.  I have kept to the routine.\"",
+  "He inclines his head very slightly, and does not move out of the doorway.",
+  "\"I could not say where the family have gone.  I would not say, in any case.\"",
+  "\"The silver is accounted for.  I checked it twice this morning.\"",
+  "\"One does what one can, in the circumstances.  One goes on doing it.\"",
+}
+
+TALK["mon_cv_maid"] = {
+  "\"I've done the upstairs twice.  I don't know what else to do with myself.\"",
+  "\"Nobody's rung the bell since yesterday morning.  I keep listening for it.\"",
+  "\"Mr. Ashcombe said to stay at our posts.  So I'm at my post.\"",
+  "She stops, straightens something on a table that did not need straightening, and moves on.",
+  "\"I'm not to go in the west wing.  I never have been.\"",
+  "\"There's a room up there I've stopped cleaning.  Don't ask me why.\"",
+  "\"They'll want it all in order when they come back.  If they come back.\"",
+  "\"I've a bus to catch at six.  I know.  I know there isn't.\"",
+}
+
 TALK["mon_cv_mallcop"] = {
   "\"Stand back, citizen.  I'll deal with this.\"",
   "\"This is a secure site.  I'd need to see some ID.\"",

@@ -138,5 +138,34 @@
         }
       ]
     }
+  },
+  {
+    "//": "Slower and tougher than mon_zombie's 80 hp / 70 speed, as asked: hp 96, speed 62. The heaviest and slowest thing this mod puts in a mansion.",
+    "//2": "No special_attacks key at all, deliberately.  A bare special_attacks does not merge with the parent's list, it CLEARS it (src/monstergenerator.cpp:1009-1012), which would silently cost this monster mon_zombie's bite and with it the infection vector.",
+    "//3": "Sprite 193.",
+    "id": "mon_cv_zombie_butler",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie butler"
+    },
+    "description": "The tailcoat has held together better than the man wearing it.  It still moves at the measured pace of somebody crossing a room they know, and it is still, somehow, unhurried.",
+    "hp": 96,
+    "speed": 62,
+    "death_drops": "cv_zombie_butler_drops"
+  },
+  {
+    "//": "Same hp as mon_zombie at 80, slightly quicker at 78 against its 70, as asked.",
+    "//2": "Sprites 194-195, picked at random per spawn.",
+    "id": "mon_cv_zombie_maid",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie maid"
+    },
+    "description": "The apron is past saving and the cap is long gone.  It still stops at doorways, briefly, as though about to knock.",
+    "hp": 80,
+    "speed": 78,
+    "death_drops": "cv_zombie_maid_drops"
   }
 ]

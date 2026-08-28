@@ -1093,5 +1093,114 @@
         "cost_multiplier": 0
       }
     ]
+  },
+  {
+    "//": "Single-member: they turn into their own kind and nothing else.  A group rather than a bare `into`, which would collide with the inherited into_group and fail to load.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_BUTLER_UPGRADE",
+    "default": "mon_cv_zombie_butler",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_butler",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Single-member: they turn into their own kind and nothing else.  A group rather than a bare `into`, which would collide with the inherited into_group and fail to load.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_MAID_UPGRADE",
+    "default": "mon_cv_zombie_maid",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_maid",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "The mod's own mansion pool, replacing GROUP_CV_BUSINESS on the Lua spawner's `mansion` rule.  Business dress was a reasonable stand-in while the mod had no household staff; it is not any more.  The golf course keeps GROUP_CV_BUSINESS.",
+    "//2": "Staff outnumber the family, because in a house this size they always did.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_MANSION",
+    "default": "mon_cv_bystander",
+    "monsters": [
+      {
+        "monster": "mon_cv_maid",
+        "freq": 242,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_butler",
+        "freq": 181,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_bystander",
+        "freq": 151,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_businessman",
+        "freq": 111,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_businesswoman",
+        "freq": 95,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly",
+        "freq": 60,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_elderly_f",
+        "freq": 60,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_maid",
+        "freq": 55,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_butler",
+        "freq": 45,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "GROUP_MANSION lists 25 monsters summing to freq 321, and BN's freq_total defaults to 1000 rather than to that sum (src/mongroup.cpp:437), so 679 of every 1000 rolls fall through to the group's default of mon_zombie.  These 60 points come out of that fallback and cost vanilla's named monsters nothing.",
+    "type": "monstergroup",
+    "name": "GROUP_MANSION",
+    "monsters": [
+      {
+        "monster": "mon_cv_maid",
+        "freq": 18,
+        "cost_multiplier": 0,
+        "ends": 72
+      },
+      {
+        "monster": "mon_cv_butler",
+        "freq": 14,
+        "cost_multiplier": 0,
+        "ends": 72
+      },
+      {
+        "monster": "mon_cv_zombie_maid",
+        "freq": 16,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_butler",
+        "freq": 12,
+        "cost_multiplier": 0
+      }
+    ]
   }
 ]

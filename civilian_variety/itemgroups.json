@@ -5755,5 +5755,254 @@
         "prob": 12
       }
     ]
+  },
+  {
+    "//": "Full service dress.  The tux is the whole outfit rather than a jacket, so the shirt and waistcoat under it are separate lower-probability rolls - that reads as the layers coming apart, not as two costumes on one body.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_butler_worn",
+    "entries": [
+      {
+        "item": "tux",
+        "prob": 70
+      },
+      {
+        "item": "dress_shirt",
+        "prob": 55
+      },
+      {
+        "item": "waistcoat",
+        "prob": 45
+      },
+      {
+        "item": "tie_bow",
+        "prob": 65
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 80
+      },
+      {
+        "item": "long_glove_white",
+        "prob": 40
+      }
+    ]
+  },
+  {
+    "//": "What a butler has about him.  A pocket watch and cufflinks rather than a wristwatch: this is service dress, not office wear.  The good watch is deliberately rare - it is the household's, not his.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_butler_carried",
+    "entries": [
+      {
+        "item": "pocketwatch",
+        "prob": 24
+      },
+      {
+        "item": "cufflinks",
+        "prob": 16
+      },
+      {
+        "item": "silver_watch",
+        "prob": 16
+      },
+      {
+        "item": "matches",
+        "prob": 12,
+        "charges": [
+          2,
+          20
+        ]
+      },
+      {
+        "item": "bandana",
+        "prob": 12
+      },
+      {
+        "item": "flask_hip",
+        "prob": 8
+      },
+      {
+        "item": "gold_watch",
+        "prob": 6
+      },
+      {
+        "item": "pen",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "//": "maid_dress and maid_hat are vanilla items - the game already has French maid clothes and the cap, so neither needed inventing.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_maid_worn",
+    "entries": [
+      {
+        "item": "maid_dress",
+        "prob": 85
+      },
+      {
+        "item": "maid_hat",
+        "prob": 60
+      },
+      {
+        "item": "stockings",
+        "prob": 50
+      },
+      {
+        "item": "dress_shoes",
+        "prob": 60
+      },
+      {
+        "item": "long_glove_white",
+        "prob": 35
+      }
+    ]
+  },
+  {
+    "//": "Cleaning things she has no further use for and has not put down.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_maid_carried",
+    "entries": [
+      {
+        "item": "rag",
+        "prob": 30
+      },
+      {
+        "item": "soap",
+        "prob": 22
+      },
+      {
+        "item": "bleach",
+        "prob": 14,
+        "charges": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "sponge",
+        "prob": 12
+      },
+      {
+        "item": "detergent",
+        "prob": 10
+      },
+      {
+        "item": "wristwatch",
+        "prob": 6
+      },
+      {
+        "item": "hairpin",
+        "prob": 6
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_butler_drops",
+    "entries": [
+      {
+        "group": "cv_butler_worn"
+      },
+      {
+        "group": "cv_butler_carried",
+        "prob": 75
+      },
+      {
+        "group": "cv_butler_carried",
+        "prob": 30
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 14
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 10
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_maid_drops",
+    "entries": [
+      {
+        "group": "cv_maid_worn"
+      },
+      {
+        "group": "cv_maid_carried",
+        "prob": 75
+      },
+      {
+        "group": "cv_maid_carried",
+        "prob": 30
+      },
+      {
+        "group": "cv_common_civilian_items",
+        "prob": 20
+      },
+      {
+        "item": "cv_note_work",
+        "prob": 14
+      },
+      {
+        "item": "cv_note_personal",
+        "prob": 10
+      },
+      {
+        "item": "cv_photo",
+        "prob": 8
+      }
+    ]
+  },
+  {
+    "//": "The same dress, worse for it.  Heavier damage on the butler because the tailcoat is the older garment and it has been through more.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_butler_drops",
+    "entries": [
+      {
+        "group": "cv_butler_worn",
+        "damage": [
+          2,
+          4
+        ]
+      },
+      {
+        "group": "cv_butler_carried",
+        "prob": 45
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_maid_drops",
+    "entries": [
+      {
+        "group": "cv_maid_worn",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "group": "cv_maid_carried",
+        "prob": 45
+      }
+    ]
   }
 ]
