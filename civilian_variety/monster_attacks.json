@@ -1,0 +1,67 @@
+[
+  {
+    "//": "A mod-owned monster_attack rather than vanilla's `inject`.  Vanilla's runs on cooldown 1 and stacks bleed on top of poison (data/json/monster_attacks.json:84-105), which on a monster that can appear in twos would be exactly the hassle this is meant to avoid.  Referencing it by id would also mean inheriting any future upstream retune.",
+    "//2": "Poison is not a damage type - src/damage.h has no DT_POISON.  It is an effect_type applied on a landed hit, rolled per effect through x_in_y(chance, 100) at src/mattack_actors.cpp:460, with duration read as turns (:462).  60 turns is one in-game minute; the effect itself caps at 30 minutes however often it is reapplied.",
+    "//3": "Deliberately mild.  `poison` alone, never `badpoison`: badpoison adds speed_mod -10 on top of roughly doubled stat penalties, and being slowed while surrounded is how a fight stops being winnable.  Plain poison is stat penalties, pain and the occasional point of damage - unpleasant, survivable, and cured by any antitoxin.",
+    "//4": "move_cost 200 is the real balancing lever: at speed 72 the jab costs it most of three turns, so a doctor that injects is a doctor that is not otherwise attacking.  cooldown 20 stops a pair of them from chaining it.",
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "cv_syringe_inject",
+    "cooldown": 20,
+    "move_cost": 200,
+    "//5": "armor_multiplier 0.5 halves armor rather than vanilla's 0.25.  A needle should find a way past clothing, but not treat a riot suit as though it were not there.",
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 4,
+        "armor_multiplier": 0.5
+      }
+    ],
+    "//6": "Where a needle can actually reach on someone fighting back - no feet, no head.",
+    "body_parts": [
+      [
+        "torso",
+        6
+      ],
+      [
+        "arm_l",
+        3
+      ],
+      [
+        "arm_r",
+        3
+      ],
+      [
+        "hand_l",
+        2
+      ],
+      [
+        "hand_r",
+        2
+      ],
+      [
+        "leg_l",
+        1
+      ],
+      [
+        "leg_r",
+        1
+      ]
+    ],
+    "//7": "chance 60, so four jabs in ten land nothing but the 4 stab.  bp torso because poison is systemic - affect_hit_bp would tie it to whichever limb the needle went into, which reads wrong and interacts badly with limb-specific effect handling.",
+    "effects": [
+      {
+        "id": "poison",
+        "duration": 60,
+        "bp": "torso",
+        "chance": 60
+      }
+    ],
+    "hit_dmg_u": "The %1$s jabs a syringe into your %2$s!",
+    "hit_dmg_npc": "The %1$s jabs a syringe into <npcname>'s %2$s!",
+    "miss_msg_u": "The %s swings a syringe at you, but you twist away!",
+    "miss_msg_npc": "The %s swings a syringe at <npcname>, but they twist away!",
+    "no_dmg_msg_u": "The %1$s scrapes a needle across your %2$s without breaking skin.",
+    "no_dmg_msg_npc": "The %1$s scrapes a needle across <npcname>'s %2$s without breaking skin."
+  }
+]

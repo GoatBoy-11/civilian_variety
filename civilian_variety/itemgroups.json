@@ -5679,5 +5679,81 @@
         "prob": 5
       }
     ]
+  },
+  {
+    "//": "The same uniform and pockets as the living mall cop, rolled with damage and less often.  Heavier damage than the zombie retail worker's [1, 4]: this one has been electrocuting things at arm's length.",
+    "//2": "The tazer is absent, and needs no exclusion to be so - it reaches the living archetype through monster_weapon rather than through this table, and on the zombie it is fused to the arm and never had a monster_weapon entry to drop from.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_mallcop_drops",
+    "entries": [
+      {
+        "group": "cv_mallcop_worn",
+        "damage": [
+          2,
+          4
+        ]
+      },
+      {
+        "group": "cv_mallcop_carried",
+        "prob": 50
+      },
+      {
+        "item": "battery",
+        "prob": 20,
+        "charges": [
+          5,
+          60
+        ]
+      }
+    ]
+  },
+  {
+    "//": "One monster covers both of the living doctors, so the outfit is picked from either wardrobe.  A distribution, not a collection: a body must not drop two full outfits.",
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "cv_zombie_doctor_worn",
+    "entries": [
+      {
+        "group": "cv_doctor_worn_m",
+        "prob": 50
+      },
+      {
+        "group": "cv_doctor_worn_f",
+        "prob": 50
+      }
+    ]
+  },
+  {
+    "//": "The living doctor's kit, rolled with damage and less of it.  `damage` on a group entry reaches every item the nested group produces, at any depth - Single_item_creator::create applies the modifier to each item the sub-group returns (src/item_group.cpp:121-127) - so one field covers both wardrobes.",
+    "//2": "The syringe is present at 30%: it is the thing the description is about, and the attack does not consume it.  Supplies drop from the living doctor's two rolls at 70/30 to one at 45 - this one has been wandering a while.",
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "cv_zombie_doctor_drops",
+    "entries": [
+      {
+        "group": "cv_zombie_doctor_worn",
+        "damage": [
+          1,
+          4
+        ]
+      },
+      {
+        "item": "syringe",
+        "prob": 30
+      },
+      {
+        "group": "cv_medical_tools",
+        "prob": 55
+      },
+      {
+        "group": "cv_medical_supplies",
+        "prob": 45
+      },
+      {
+        "item": "cv_note_medical",
+        "prob": 12
+      }
+    ]
   }
 ]

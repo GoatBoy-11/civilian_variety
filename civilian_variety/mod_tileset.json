@@ -969,6 +969,25 @@
             "id": "overlay_male_worn_cv_shirt_retail",
             "fg": 183,
             "rotates": false
+          },
+          {
+            "id": "mon_cv_zombie_mallcop",
+            "fg": [
+              {
+                "weight": 1,
+                "sprite": 184
+              },
+              {
+                "weight": 1,
+                "sprite": 185
+              }
+            ],
+            "rotates": false
+          },
+          {
+            "id": "mon_cv_zombie_doctor",
+            "fg": 186,
+            "rotates": false
           }
         ],
         "sprite_width": 32,

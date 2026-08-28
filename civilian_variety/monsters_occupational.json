@@ -133,7 +133,12 @@
       "str": "doctor"
     },
     "description": "Lab coat still on over hospital greens, stethoscope still round their neck.  They keep starting toward one thing and then another, the way somebody does when the list of people who need them has become longer than the day.",
-    "death_drops": "cv_doctor_drops_m"
+    "death_drops": "cv_doctor_drops_m",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_DOCTOR_UPGRADE"
+    },
+    "//2": "A small chance, so unlike the clown or the mall cop this deliberately does NOT set zombify_into.  That field is a single mtype_id with no group form (src/mtype.h:416), so pointing it here would make EVERY doctor corpse revive as a zombie doctor - the same asymmetry already documented for the elderly.  The chance rides on the timed upgrade, which does take a weighted group.  mon_cv_doctor_f inherits this through copy-from."
   },
   {
     "//": "Two sprites (sheet 56-57), both female.",
@@ -658,6 +663,12 @@
         "PARROT_AT_DANGER",
         6
       ]
-    ]
+    ],
+    "zombify_into": "mon_cv_zombie_mallcop",
+    "upgrades": {
+      "half_life": 1,
+      "into_group": "GROUP_CV_MALLCOP_UPGRADE"
+    },
+    "//6": "Turns exclusively into mon_cv_zombie_mallcop, through both routes.  Without the second the into_group inherited from mon_cv_bystander would produce an ordinary zombie and the uniform and tazer would be lost - the trap the clown hit."
   }
 ]

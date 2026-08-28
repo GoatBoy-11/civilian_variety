@@ -90,5 +90,53 @@
     "hp": 78,
     "speed": 72,
     "death_drops": "cv_zombie_retail_drops"
+  },
+  {
+    "//": "copy-from mon_zombie inherits species [ZOMBIE, HUMAN], the zombie faction, zombie harvest and the GROUP_ZOMBIE_UPGRADE path, so it plays as a plain zombie in every way the player can feel - apart from the tazer.",
+    "//2": "The tazer is fused to the arm, and that is enforced rather than described.  mattack::tazer only honours the disarm check when monster_weapon is set (src/monattack.cpp:3618), so omitting monster_weapon means nothing can ever take the tazer off it.  The living mall cop sets it and CAN be disarmed.",
+    "//3": "TAZER is adjacent-only, costs 200 moves and deals rng(1,5) DT_ELECTRIC after a dodge check (src/monattack.cpp:3616-3662).  It does not stun.  Feeble on purpose - the shock is characterisation, and the bite is what actually threatens you.",
+    "//4": "upgrades is deliberately untouched.  Setting `into` here would collide with the inherited `into_group` and fail to load - see DESIGN.md 13.4.",
+    "//5": "Two sprites, cells 184-185, picked at random per spawn.",
+    "id": "mon_cv_zombie_mallcop",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie mall cop"
+    },
+    "description": "The uniform is still recognisable, and so is the tazer - though it is no longer being held so much as worn, the grip swallowed by a hand that closed around it and never opened again.  It still walks a route.",
+    "hp": 82,
+    "speed": 70,
+    "death_drops": "cv_zombie_mallcop_drops",
+    "extend": {
+      "special_attacks": [
+        [
+          "TAZER",
+          8
+        ]
+      ]
+    },
+    "//6": "`extend` rather than a bare `special_attacks`.  A bare one does not merge with the parent's list, it clears it (src/monstergenerator.cpp:1009-1012), which silently cost this monster mon_zombie's bite - and with it the infection vector - along with GRAB and scratch.  `extend` is the branch at :1016-1020."
+  },
+  {
+    "//": "`extend` keeps mon_zombie's bite, GRAB and scratch and adds the syringe on top.  A bare special_attacks would clear them - see mon_cv_zombie_mallcop above.",
+    "//2": "Rare on purpose, and weak for a zombie: hp 76 against mon_zombie's 80, speed 72 against its 70.  What it adds is an occasional jab, not a harder fight.",
+    "//3": "One sprite, cell 186.",
+    "id": "mon_cv_zombie_doctor",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "zombie doctor"
+    },
+    "description": "The lab coat is still buttoned.  One hand holds a syringe the way a hand holds something it has forgotten it is holding, thumb resting on the plunger, and whatever is left in the barrel stopped being medicine a long time ago.",
+    "hp": 76,
+    "speed": 72,
+    "death_drops": "cv_zombie_doctor_drops",
+    "extend": {
+      "special_attacks": [
+        {
+          "id": "cv_syringe_inject"
+        }
+      ]
+    }
   }
 ]

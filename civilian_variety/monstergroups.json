@@ -1,7 +1,7 @@
 [
   {
     "//": "Channel 1 - street presence.  Extends vanilla GROUP_ZOMBIE; monstergroups auto-extend (src/mongroup.cpp:385-390), so this appends and coexists with the Civilians mod.  Never set \"override\".",
-    "//2": "freq is per-mille of a freq_total of 1000 that extending does NOT enlarge, so it is zero-sum against vanilla zombies.  Mod cap is 80; this uses 74.",
+    "//2": "freq is per-mille of a freq_total of 1000 that extending does NOT enlarge, so it is zero-sum against vanilla zombies.  Mod cap is 80; this uses 77.",
     "//3": "ends 72 is in hours (src/mongroup.cpp:409), scaled by the MONSTER_UPGRADE_FACTOR option.",
     "type": "monstergroup",
     "name": "GROUP_ZOMBIE",
@@ -76,6 +76,11 @@
       {
         "monster": "mon_cv_zombie_retail",
         "freq": 4,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_mallcop",
+        "freq": 3,
         "cost_multiplier": 0
       }
     ]
@@ -215,23 +220,28 @@
     "default": "mon_cv_bystander",
     "monsters": [
       {
-        "monster": "mon_cv_doctor",
-        "freq": 190,
-        "cost_multiplier": 0
-      },
-      {
-        "monster": "mon_cv_doctor_f",
-        "freq": 190,
+        "monster": "mon_cv_bystander",
+        "freq": 385,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_nurse",
-        "freq": 220,
+        "freq": 213,
         "cost_multiplier": 0
       },
       {
-        "monster": "mon_cv_bystander",
-        "freq": 400,
+        "monster": "mon_cv_doctor",
+        "freq": 184,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_doctor_f",
+        "freq": 184,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_doctor",
+        "freq": 34,
         "cost_multiplier": 0
       }
     ]
@@ -422,32 +432,32 @@
     "monsters": [
       {
         "monster": "mon_cv_firefighter",
-        "freq": 155,
+        "freq": 152,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_police",
-        "freq": 104,
+        "freq": 103,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_geek",
-        "freq": 100,
+        "freq": 99,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_mechanic",
-        "freq": 80,
+        "freq": 79,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_construction_worker",
-        "freq": 80,
+        "freq": 79,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_businessman",
-        "freq": 72,
+        "freq": 71,
         "cost_multiplier": 0
       },
       {
@@ -499,6 +509,11 @@
         "monster": "mon_cv_farmer_f",
         "freq": 20,
         "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_doctor",
+        "freq": 8,
+        "cost_multiplier": 0
       }
     ]
   },
@@ -538,62 +553,67 @@
     "monsters": [
       {
         "monster": "mon_cv_bystander",
-        "freq": 357,
+        "freq": 343,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_police",
-        "freq": 96,
+        "freq": 92,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_retail",
-        "freq": 92,
+        "freq": 88,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_retail_f",
-        "freq": 92,
+        "freq": 88,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_mallcop",
-        "freq": 83,
+        "freq": 80,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_geek",
-        "freq": 77,
+        "freq": 74,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_office_worker",
-        "freq": 39,
+        "freq": 38,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_office_worker_f",
-        "freq": 39,
+        "freq": 38,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_clown",
-        "freq": 39,
+        "freq": 38,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_mallcop",
+        "freq": 38,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_sex_worker",
-        "freq": 32,
+        "freq": 31,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_zombie_retail",
-        "freq": 28,
+        "freq": 27,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_zombie_clown",
-        "freq": 26,
+        "freq": 25,
         "cost_multiplier": 0
       }
     ]
@@ -972,48 +992,104 @@
     "default": "mon_cv_bystander",
     "monsters": [
       {
-        "monster": "mon_cv_mallcop",
-        "freq": 90,
-        "cost_multiplier": 0
-      },
-      {
-        "monster": "mon_cv_retail",
-        "freq": 90,
-        "cost_multiplier": 0
-      },
-      {
-        "monster": "mon_cv_retail_f",
-        "freq": 90,
-        "cost_multiplier": 0
-      },
-      {
         "monster": "mon_cv_bystander",
-        "freq": 400,
+        "freq": 385,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_bystander_fat",
-        "freq": 105,
+        "freq": 100,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_bystander_fat_f",
-        "freq": 105,
+        "freq": 100,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_mallcop",
+        "freq": 86,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail",
+        "freq": 86,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_retail_f",
+        "freq": 86,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_mallcop",
+        "freq": 43,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_elderly",
-        "freq": 40,
+        "freq": 38,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_elderly_f",
-        "freq": 40,
+        "freq": 38,
         "cost_multiplier": 0
       },
       {
         "monster": "mon_cv_zombie_retail",
-        "freq": 40,
+        "freq": 38,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "Mall cops turn into zombie mall cops and nothing else.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_MALLCOP_UPGRADE",
+    "default": "mon_cv_zombie_mallcop",
+    "monsters": [
+      {
+        "monster": "mon_cv_zombie_mallcop",
+        "freq": 1000,
+        "cost_multiplier": 0
+      }
+    ]
+  },
+  {
+    "//": "GROUP_CV_BYSTANDER_UPGRADE's spread scaled to 920, with the zombie doctor taking the remaining 80.  So roughly one doctor in twelve keeps the coat; the rest turn into ordinary zombies exactly as they did before.",
+    "type": "monstergroup",
+    "name": "GROUP_CV_DOCTOR_UPGRADE",
+    "default": "mon_zombie",
+    "monsters": [
+      {
+        "monster": "mon_zombie",
+        "freq": 368,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_fat",
+        "freq": 276,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_tough",
+        "freq": 138,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_crawler",
+        "freq": 92,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_cv_zombie_doctor",
+        "freq": 80,
+        "cost_multiplier": 0
+      },
+      {
+        "monster": "mon_zombie_brainless",
+        "freq": 46,
         "cost_multiplier": 0
       }
     ]
