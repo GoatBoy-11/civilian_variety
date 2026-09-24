@@ -3,9 +3,9 @@ gdebug.log_info("Civilian Variety: initializing...")
 local mod = game.mod_runtime[game.current_mod]
 local storage = game.mod_storage[game.current_mod]
 local faction_civ_id = MonsterFactionId.new("civilians"):int_id()
--- The store owner sits in his own faction so that killing him in self-defence
+-- The store owner sits in their own faction so that killing them in self-defence
 -- does not turn every bystander hostile (FRIEND_ATTACKED propagates by faction
--- identity - see faction.json).  He is still a civilian for every purpose this
+-- identity - see faction.json).  They are still a civilian for every purpose this
 -- file cares about, so both ids go into the proximity queries below.
 local faction_shop_id = MonsterFactionId.new("cv_shopkeeper"):int_id()
 local CIVILIAN_FACTIONS = { faction_civ_id, faction_shop_id }
@@ -470,10 +470,9 @@ gdebug.log_info("Civilian Variety: ready.")
 -- Ambulance crews
 -- ============================================================================
 
---- Is one of ours already standing near this spot?  Used instead of remembering
---- which ambulances have been handled: pos() is a local map coordinate that
---- shifts as the map re-centres, so anything based on stored coordinates would
---- drift.  "Is somebody already there?" cannot drift.
+--- Is one of ours already standing near this spot?  Stops an ambulance crew
+--- being placed on top of civilians who are already there, and picks the
+--- ambient bucket.
 local function civilian_near(civilians, pos, radius)
   if not civilians then return false end
   for _, mon in ipairs(civilians) do
@@ -508,16 +507,30 @@ mod.on_every_x_ambulance = function()
 
   local civilians = gapi.get_monsters_if({ ["faction_ids"] = CIVILIAN_FACTIONS })
 
+  -- One crew per ambulance, ever.  Without this, killing the crew cleared the
+  -- civilian_near check and the next sweep rolled a fresh one, making every
+  -- ambulance an endless source of hospital drops.  Keyed by ABSOLUTE position,
+  -- which does not drift as the map re-centres (unlike pos()); an unattended
+  -- ambulance does not move, and one that is driven off is not unattended.
+  storage.ambulances_seen = storage.ambulances_seen or {}
+  local seen = storage.ambulances_seen
+
   for _, wrapped in ipairs(vehicles) do
     if wrapped and wrapped:type() == "ambulance" then
       local vpos = wrapped:pos()
-      if vpos
+      local key = vpos and tostring(map:bub_to_abs(vpos))
+      if key and not seen[key]
         and not civilian_near(civilians, vpos, CONFIG.AMBULANCE_CLEAR_RADIUS)
         and gapi.rng(1, 100) <= CONFIG.AMBULANCE_CHANCE
-        and survives_the_calendar()
       then
-        local spot = free_tile_near(map, vpos, CONFIG.AMBULANCE_PLACE_RADIUS)
-        if spot then map:place_spawns("GROUP_CV_HOSPITAL", 1, spot, spot, 1.0, true) end
+        -- AMBULANCE_CHANCE only paces when the decision happens.  The decision
+        -- itself is made once: marked before the calendar roll, so a failed
+        -- roll is final rather than retried every sweep until it passes.
+        seen[key] = true
+        if survives_the_calendar() then
+          local spot = free_tile_near(map, vpos, CONFIG.AMBULANCE_PLACE_RADIUS)
+          if spot then map:place_spawns("GROUP_CV_HOSPITAL", 1, spot, spot, 1.0, true) end
+        end
       end
     end
   end
@@ -813,7 +826,7 @@ local FAVOUR = {
   -- you a thing.  They anger on proximity and the engine never lets that anger
   -- decay, so without this they are a one-mistake permanent enemy.
   ["mon_cv_shopkeeper"] = {
-    label = "Offer him money to let you browse",
+    label = "Offer them money to let you browse",
     hint = "Two bundles.  No negotiation, and no calming down on their own.",
     kind = "appease",
   },
@@ -937,17 +950,25 @@ game.activity_functions["cv_company_finished"] = function(params)
   gapi.add_msg(MsgType.good, "You feel considerably better about the state of things.")
 end
 
+--- Total charges of a stackable item across everything carried.  Presence alone
+--- is not enough when the price is more than one: use_charges takes whatever is
+--- there and does not fail short, so one bundle would buy a two-bundle favour.
+local function count_carried(who, id_str)
+  local total = 0
+  for _, it in ipairs(who:items_with(function(it) return it:get_type():str() == id_str end)) do
+    total = total + it.charges
+  end
+  return total
+end
+
 local function do_favour(mon, entry)
   local you = gapi.get_avatar()
   local name = mon:get_name()
 
   if entry.kind == "appease" then
-    -- Second argument is mandatory: the C++ default does not survive SET_FX_T
-    -- (see the company branch below).
-    local paid = you:get_item_with_id(ItypeId.new(CONFIG.APPEASE_COST), false)
-    if not paid or paid:is_null() then
+    if count_carried(you, CONFIG.APPEASE_COST) < CONFIG.APPEASE_COUNT then
       gapi.add_msg(MsgType.info, string.format(
-        "%s looks at your empty hands and does not soften at all.", name))
+        "%s looks at what you are offering and does not soften at all.", name))
       return false
     end
     you:use_charges(ItypeId.new(CONFIG.APPEASE_COST), CONFIG.APPEASE_COUNT)

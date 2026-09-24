@@ -35,7 +35,6 @@
     "volume": "600 ml",
     "fun": 4,
     "time": "15 m",
-    "chapters": 3,
     "description": "A manga in a plastic wrapper, with an age rating on the spine and a cover that is doing very little to be discreet about any of it.",
     "snippet_category": [
       {
@@ -75,7 +74,6 @@
     "volume": "600 ml",
     "fun": 3,
     "time": "12 m",
-    "chapters": 3,
     "description": "A gentle-looking manga about ordinary life, apparently, if you ignore most of the cover.",
     "snippet_category": [
       {
@@ -115,7 +113,6 @@
     "volume": "600 ml",
     "fun": 3,
     "time": "12 m",
-    "chapters": 3,
     "description": "A manga aimed squarely at teenage girls, printed on cheap paper with a very expensive-looking cover.",
     "snippet_category": [
       {
@@ -155,7 +152,6 @@
     "volume": "600 ml",
     "fun": 4,
     "time": "12 m",
-    "chapters": 3,
     "description": "An action manga, judging by the cover, on which a great many things are exploding at once.",
     "snippet_category": [
       {
@@ -195,7 +191,6 @@
     "volume": "500 ml",
     "fun": 3,
     "time": "10 m",
-    "chapters": 2,
     "description": "A monthly magazine about unexplained sightings, printed on paper barely better than newsprint.",
     "snippet_category": [
       {
@@ -235,7 +230,6 @@
     "volume": "300 ml",
     "fun": 3,
     "time": "8 m",
-    "chapters": 1,
     "description": "A thin American comic in a plastic sleeve with a cardboard backing board, kept far more carefully than it was ever read.",
     "snippet_category": [
       {
@@ -276,7 +270,6 @@
     "volume": "1200 ml",
     "fun": 3,
     "time": "20 m",
-    "chapters": 5,
     "description": "A phone-book-thick weekly anthology printed on coloured pulp, meant to be read once and thrown away.  This one was not thrown away.",
     "snippet_category": [
       {
