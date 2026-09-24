@@ -2493,9 +2493,11 @@
   },
   {
     "//": "Wielded, and the same group the gun can drop from.",
+    "//2": "magazine 100 because a magazine-fed gun from an item group spawns with no magazine unless the group asks for one (with_magazine defaults to 0, src/item_group.cpp:471).  Empty on purpose - the loose 9mm in the drop table is the ammo.",
     "type": "item_group",
     "subtype": "distribution",
     "id": "cv_biker_pistol_weapon",
+    "magazine": 100,
     "entries": [
       {
         "item": "cv_biker_pistol_gun",
@@ -3144,9 +3146,11 @@
     ]
   },
   {
+    "//": "magazine 100 for the same reason as cv_biker_pistol_weapon: without it the Glock drops with no magazine and cannot be loaded.",
     "type": "item_group",
     "subtype": "distribution",
     "id": "cv_cop_pistol_weapon",
+    "magazine": 100,
     "entries": [
       {
         "item": "cv_cop_glock22",
